@@ -85,6 +85,15 @@ const JeffGoldberg = () => {
           <FormUI heading="Contact Form" />
         </div>
       </div>
+      <div>
+        <Image
+          src={"/red-strip.jpeg"}
+          alt="strip"
+          width={1650}
+          height={300}
+          className="w-full h-auto"
+        />
+      </div>
       <div className="max-w-[1250px] m-auto sm:grid grid-cols-[1fr_1.5fr] my-12 items-center">
         <div>
           <Image
@@ -158,28 +167,46 @@ const JeffGoldberg = () => {
           </Swiper>
         </div>
       </div>
-      <div className="bg-yellow-100 p-12 text-red-800">
+      <div className="bg-red-500 p-12 text-[#e3d3d3]">
         <div className="grid gap-4 max-w-[1250px] m-auto">
           <h2 className="sm:text-4xl text-2xl text-center font-[300] max-w-[550px] m-auto">
             The Jeff Goldberg Studio Performing Arts Programs
           </h2>
           {goldArray?.map((item, index) => {
             return (
-              <div key={index}>
-                <div className="flex gap-2 items-center">
-                  <Image
-                    src={item?.imageUrl}
-                    alt="mask"
-                    width={44}
-                    height={52}
-                  />
-                  <h3 className="mb-0 font-semibold">{item?.head}</h3>
+              <div key={index} className="sm:flex gap-4 justify-between sm:my-12 my-4">
+                {index % 2 == 0 && (
+                  <div className="sm:pr-12">
+                    <Image
+                      src={"/grid.jpeg"}
+                      alt="image"
+                      width={250}
+                      height={250}
+                      className="h-auto sm:m-0 m-auto"
+                    />
+                  </div>
+                )}
+                <div>
+                  <div className="flex gap-2 items-center">
+                    <Image
+                      src={item?.imageUrl}
+                      alt="mask"
+                      width={44}
+                      height={52}
+                    />
+                    <h3 className="mb-0 font-semibold">{item?.head}</h3>
+                  </div>
+                  <ul className="list-disc">
+                    {item?.desc?.map((value, ind) => {
+                      return <li key={ind}>{value?.list}</li>;
+                    })}
+                  </ul>
                 </div>
-                <ul className="list-disc">
-                  {item?.desc?.map((value, ind) => {
-                    return <li key={ind}>{value?.list}</li>;
-                  })}
-                </ul>
+                {index % 2 !==0 &&
+                <div className="sm:pl-12">
+                    <Image src={"/grid.jpeg"} alt="image" width={250} height={250} className="h-auto sm:m-0 m-auto" />
+                    </div>
+                }
               </div>
             );
           })}
@@ -390,7 +417,6 @@ const goldArray = [
       {
         list: "Work closely with peers, enhancing teamwork and communication.",
       },
-     
     ],
   },
 ];
