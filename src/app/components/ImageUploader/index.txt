@@ -1,0 +1,95 @@
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+
+function ImageUploader() {
+  const [image, setImage] = useState(null);
+  const [uploadProgress, setUploadProgress] = useState(0);
+
+  const handleImageChange = (e: { target: { files: any[] } }) => {
+    const file = e.target.files[0];
+    setImage(file);
+  };
+
+  const handleSubmit = async () => {
+    if (!image) {
+      console.error("Please select an image.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("image", image);
+
+    try {
+      const response = await fetch("/upload", {
+        method: "POST",
+        body: formData,
+        onUploadProgress: (progressEvent: {
+          loaded: number;
+          total: number;
+        }) => {
+          const progress = Math.round(
+            (progressEvent.loaded / progressEvent.total) * 100
+          );
+          setUploadProgress(progress);
+        },
+      });
+
+      if (response.ok) {
+        console.log("Image uploaded successfully.");
+      } else {
+        console.error("Failed to upload image.");
+      }
+    } catch (error) {
+      console.error("Error uploading image:", error);
+    }
+  };
+
+  return (
+    <div className="  ">
+      <div className="imagePreview w-[200px] h-[150px]">
+        {image ? (
+          <>
+            <div>
+              <Image
+                src={URL.createObjectURL(image)}
+                alt="Preview"
+                width={200}
+                height={150}
+                className=" w-[200px] h-[150px] object-contain"
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <div>
+              <Image src="/defult.jpg" width={200} height={150} alt="defult" />
+            </div>
+          </>
+        )}
+      </div>
+      <div className=" ">
+        {image ? (
+          <>
+            <label htmlFor="uploadimage text-red-600">Remove Image</label>
+          </>
+        ) : (
+          <>
+            <label htmlFor="uploadimage">Upload Image</label>
+          </>
+        )}
+
+        <input
+          type="file"
+          onChange={handleImageChange}
+          id="uploadimage"
+          className="hidden"
+        />
+
+        {/* {uploadProgress > 0 && <div>Upload Progress: {uploadProgress}%</div>} */}
+      </div>
+    </div>
+  );
+}
+
+export default ImageUploader;
