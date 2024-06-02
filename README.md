@@ -6,6 +6,13 @@ First, run the development server:
 <!-- changes
  -->
 
+
+ <!-- git command for code push
+ git add .
+ git commit -m "changes"
+ git pull 
+ git push -->
+
 ```bash
 npm run dev
 # or
