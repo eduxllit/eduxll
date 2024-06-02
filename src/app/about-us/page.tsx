@@ -64,7 +64,10 @@ const AboutUs = () => {
             <div className="bg-white w-fit p-[3px] rounded-full">
               <Image src={"/svg/check.svg"} alt="view" width={16} height={16} />
             </div>
+            <Link href="/contact-us" >
+
             <span>Enrolled Today</span>
+            </Link>
           </button>
           {/* <Button text={"Enrolled Today"} /> */}
         </div>
