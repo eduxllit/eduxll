@@ -11,7 +11,8 @@ First, run the development server:
  git add .
  git commit -m "changes"
  git pull 
- git push -->
+ git push 
+ -->
 
 ```bash
 npm run dev

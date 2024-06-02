@@ -60,13 +60,13 @@ const ContactUs = () => {
         </div>
       </div>
       <div>
-        <div id="embedded-map-display" style={{ height: "100%" }}>
+        {/* <div id="embedded-map-display" style={{ height: "100%" }}>
           <iframe
             frameBorder="0"
             className={"w-full md:h-[400px] sm:h-[300px] h-[200px]"}
             src="https://www.google.com/maps/embed/v1/place?q=Sector+62,+Noida,+Uttar+Pradesh,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
           ></iframe>
-        </div>
+        </div> */}
       </div>
       <div className="bg-gradient-to-r from-[#ee2c3c] to-[#da202f] px-6 py-12 text-white font-semibold sm:text-[22px] text-[16px]">
         <div className="grid lg:grid-cols-[2fr_1fr] lg:gap-0 gap-4 text-center max-w-[1200px] m-auto">
