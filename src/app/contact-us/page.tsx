@@ -68,7 +68,7 @@ const ContactUs = () => {
           ></iframe>
         </div> */}
       </div>
-      <div className="bg-gradient-to-r from-[#ee2c3c] to-[#da202f] px-6 py-12 text-white font-semibold sm:text-[22px] text-[16px]">
+      {/* <div className="bg-gradient-to-r from-[#ee2c3c] to-[#da202f] px-6 py-12 text-white font-semibold sm:text-[22px] text-[16px]">
         <div className="grid lg:grid-cols-[2fr_1fr] lg:gap-0 gap-4 text-center max-w-[1200px] m-auto">
           <div>
             <h2>
@@ -109,7 +109,7 @@ const ContactUs = () => {
             <p className="ml-4 sm:text-2xl text-lg">+91 8448 198 656</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </HeaderLayout>
   );
 };
