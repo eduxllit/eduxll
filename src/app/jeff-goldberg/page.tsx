@@ -69,9 +69,9 @@ const JeffGoldberg = () => {
         <Image
           src={"/lights.png"}
           alt="banner"
-          width={450}
-          height={550}
-          className="absolute sm:w-[40%] w-[30%] sm:left-8 left-0 top-0"
+          width={350}
+          height={450}
+          className="absolute sm:w-[35%] w-[30%] sm:left-2 left-0 top-0"
         />
         <Image
           src={"/strip.jpeg"}
@@ -94,7 +94,7 @@ const JeffGoldberg = () => {
           className="w-full h-auto"
         />
       </div>
-      <div className="max-w-[1250px] m-auto sm:grid grid-cols-[1fr_1.5fr] my-12 items-center">
+      <div className="max-w-[1250px] m-auto sm:grid grid-cols-[1fr_1.5fr] my-4 items-center">
         <div>
           <Image
             src={"/jeff.jpeg"}
@@ -129,15 +129,15 @@ const JeffGoldberg = () => {
           className="w-full h-auto"
         />
       </div>
-      <div className="max-w-[1250px] m-auto my-12">
-        <h2 className="bg-red-500 p-2 text-white sm:text-3xl text-2xl font-[300] text-center tracking-wide">
+      <div className="m-auto my-4 mt-0">
+        <h2 className="bg-red-600 p-2 text-white sm:text-3xl text-2xl font-[300] text-center tracking-wide mb-1 mt-1">
           ALUMNI
         </h2>
         {/*  grid grid-cols-3 gap-4 */}
-        <div className=" mt-12">
+        <div className="px-4 mt-0 mb-0">
           <Swiper
             modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
-            spaceBetween={30}
+            spaceBetween={20}
             slidesPerView={isMobile ? 1 : 4}
             navigation
             pagination={{ clickable: true }}
@@ -152,13 +152,13 @@ const JeffGoldberg = () => {
             {actorsArray?.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className="pt-8">
+                  <div className="pt-1">
                     <Image
                       src={item?.imageUrl}
                       alt="actor"
                       width={400}
                       height={200}
-                      className="w-full h-auto rounded-xl"
+                      className="w-full h-[300px] rounded-xl"
                     />
                   </div>
                 </SwiperSlide>
@@ -167,44 +167,44 @@ const JeffGoldberg = () => {
           </Swiper>
         </div>
       </div>
-      <div className="bg-red-500 p-12 text-[#e3d3d3]">
+      <div className="bg-red-600 p-12 text-[#e3d3d3]">
         <div className="grid gap-4 max-w-[1250px] m-auto">
-          <h2 className="sm:text-4xl text-2xl text-center font-[300] max-w-[550px] m-auto">
+          <h2 className="sm:text-3xl text-2xl text-center font-[400] max-w-[550px] m-auto">
             The Jeff Goldberg Studio Performing Arts Programs
           </h2>
           {goldArray?.map((item, index) => {
             return (
-              <div key={index} className="sm:flex gap-4 justify-between sm:my-12 my-4">
+              <div key={index} className="sm:flex gap-12 justify-between items-center sm:my-6 mt-2 mb-2">
                 {index % 2 == 0 && (
-                  <div className="sm:pr-12">
+                  <div className="">
                     <Image
-                      src={"/grid.jpeg"}
+                      src={"/grid01.jpeg"}
                       alt="image"
-                      width={250}
-                      height={250}
-                      className="h-auto sm:m-0 m-auto"
+                      width={450}
+                      height={450}
+                      className="h-auto sm:m-0 m-auto rounded-xl"
                     />
                   </div>
                 )}
                 <div>
-                  <div className="flex gap-2 items-center">
+                  <div className="flex gap-4 items-center mb-2 py-0">
                     <Image
                       src={item?.imageUrl}
                       alt="mask"
                       width={44}
                       height={52}
                     />
-                    <h3 className="mb-0 font-semibold">{item?.head}</h3>
+                    <h3 className="mb-0 font-[500]">{item?.head}</h3>
                   </div>
                   <ul className="list-disc">
                     {item?.desc?.map((value, ind) => {
-                      return <li key={ind}>{value?.list}</li>;
+                      return <li key={ind} className="font-[400]">{value?.list}</li>;
                     })}
                   </ul>
                 </div>
                 {index % 2 !==0 &&
                 <div className="sm:pl-12">
-                    <Image src={"/grid.jpeg"} alt="image" width={250} height={250} className="h-auto sm:m-0 m-auto" />
+                    <Image src={"/grid02.jpeg"} alt="image" width={450} height={450} className="h-auto sm:m-0 m-auto rounded-xl" />
                     </div>
                 }
               </div>
@@ -247,14 +247,14 @@ const JeffGoldberg = () => {
       </div> */}
       <div className="my-12 items-center sm:grid sm:grid-cols-[1fr_1fr] grid-cols-[1fr_1fr]">
         <div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-1">
             <div>
               <Image
-                src={"/thtr.jpeg"}
+                src={"/thtr.png"}
                 alt="theater"
-                width={300}
-                height={450}
-                className="w-[300px] h-auto m-auto"
+                width={500}
+                height={500}
+                className="w-[600px] h-auto m-auto mr-8 sm:mr-8 sm:ml-8 ml-8"
               />
             </div>
             <div className="grid sm:pl-0 pl-4">
@@ -422,30 +422,27 @@ const goldArray = [
 ];
 const actorsArray = [
   {
-    imageUrl: "/actors/21.webp",
+    imageUrl: "/actors/Bobby-Deol-2.jpg",
   },
   {
-    imageUrl: "/actors/21.webp",
+    imageUrl: "/actors/mithun.jpeg",
   },
   {
-    imageUrl: "/actors/21.webp",
+    imageUrl: "/actors/deepaka.jpeg",
   },
   {
-    imageUrl: "/actors/22.jpg",
+    imageUrl: "/actors/prakesh.jpeg",
   },
   {
-    imageUrl: "/actors/22.jpg",
+    imageUrl: "/actors/ayushman.jpeg",
   },
   {
-    imageUrl: "/actors/22.jpg",
-  },
+    imageUrl: "/actors/anil.jpeg",
+  }, 
   {
-    imageUrl: "/actors/21.webp",
-  },
+    imageUrl: "/actors/kashup-kapoor.jpeg",
+  }, 
   {
-    imageUrl: "/actors/21.webp",
-  },
-  {
-    imageUrl: "/actors/21.webp",
-  },
+    imageUrl: "/actors/babr.jpeg",
+  }, 
 ];
