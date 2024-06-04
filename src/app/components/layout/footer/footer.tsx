@@ -156,7 +156,7 @@ const Footer = () => {
 
         <div className="md:max-w-[1200px]  px-[15px] w-[100%] mx-auto mt-[30px] border-t-[1px] border-solid border-[#7070701a]">
           <p className="pt-[30px] pb-[30px]  text-center text-[13px] text-[#808292] font-medium  leading-[1.5em]">
-            Copyright. All Rights Reserved{" "}
+          © 2024 edUXLL A UNIT OF EDOVU VENTURES PRIVATE LIMITED. All Rights Reserved{" "}
           </p>
         </div>
 

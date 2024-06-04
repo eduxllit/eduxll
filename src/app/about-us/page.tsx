@@ -34,6 +34,11 @@ const AboutUs = () => {
             tools, knowledge, and skills they need to excel in their careers and
             personal development.
           </p>
+          
+          <p className="text-sm mb-[16px]">
+          (eduXLL, a company owned by EDOVU VENTURES PRIVATE LIMITED committed to deliver world class education all over the world.)
+          </p>
+
           <p className="text-sm  mb-[16px]">
             Our unique educational model is built on the foundation of
             partnership with pioneering institutions and distinguished industry
@@ -53,6 +58,7 @@ const AboutUs = () => {
             can interact, share ideas, and collaborate on projects, making
             learning with us a truly international experience.
           </p>
+          
           <p className="text-sm">
             In a world where continuous learning is the key to success, EduXLL
             stands as a beacon for those who seek to elevate themselves. Join us
@@ -197,7 +203,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <div className="bg-gradient-to-r from-[#ee2c3c] to-[#da202f] px-6 py-12 text-white font-semibold sm:text-[22px] text-[16px]">
+      {/*  <div className="bg-gradient-to-r from-[#ee2c3c] to-[#da202f] px-6 py-12 text-white font-semibold sm:text-[22px] text-[16px]">
         <div className="grid lg:grid-cols-[2fr_1fr] lg:gap-0 gap-4 text-center max-w-[1200px] m-auto">
           <div>
             <h2>
@@ -238,7 +244,7 @@ const AboutUs = () => {
             <p className="ml-4 sm:text-2xl text-lg">+91 8448 198 656</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </HeaderLayout>
   );
 };
