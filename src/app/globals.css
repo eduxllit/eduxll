@@ -580,6 +580,11 @@ ul li {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .sdffsdf .boxcard:nth-child(even) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 @media only screen and (max-width: 576px) {
   .review-slider-jeff .swiper-slide {

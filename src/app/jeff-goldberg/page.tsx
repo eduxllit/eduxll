@@ -79,7 +79,7 @@ const JeffGoldberg = () => {
           alt="banner"
           width={1550}
           height={250}
-          className="w-[80%] h-auto absolute bottom-12 left-0 right-0 m-auto"
+          className="w-[80%] h-auto absolute bottom-12 left-0 right-0 m-auto  max-sm:w-[100%] max-sm:bottom-0"
         />
         <div className="grid w-[320px] justify-center sm:block absolute top-12 right-16 jjjform">
           <FormUI heading="Contact Form" />
@@ -93,7 +93,7 @@ const JeffGoldberg = () => {
             alt="icon"
             width={48}
             height={48}
-            className="m-auto"
+            className="m-auto "
           />
           <h3 className="text-2xl font-semibold my-2 mt-6 tracking-wider">
             FOUNDATION ACTING
@@ -256,63 +256,65 @@ const JeffGoldberg = () => {
         </div>
       </div>
       <div className="bg-red-600 p-12 text-[#e3d3d3]">
-        <div className="grid gap-4 max-w-[1250px] m-auto">
+        <div className="grid gap-4 max-w-[1250px] m-auto dfgdfgdfg">
           <h2 className="sm:text-3xl text-2xl text-center font-[400] max-w-[550px] m-auto">
             The Jeff Goldberg Studio Performing Arts Programs
           </h2>
-          {goldArray?.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className="sm:flex gap-12 justify-between items-center sm:my-6 mt-2 mb-2"
-              >
-                {index % 2 == 0 && (
-                  <div className="">
-                    <Image
-                      src={item?.gridImage}
-                      alt="image"
-                      width={450}
-                      height={450}
-                      className="h-auto sm:m-0 m-auto rounded-xl"
-                    />
+          <div className="sdffsdf">
+            {goldArray?.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="sm:flex gap-12 justify-between items-center sm:my-6 mt-2 mb-2 boxcard"
+                >
+                  {index % 2 == 0 && (
+                    <div className="">
+                      <Image
+                        src={item?.gridImage}
+                        alt="image"
+                        width={450}
+                        height={450}
+                        className="h-auto sm:m-0 m-auto rounded-xl"
+                      />
+                    </div>
+                  )}
+                  <div>
+                    <div className="flex gap-4 items-center mb-2 py-0">
+                      <Image
+                        src={item?.imageUrl}
+                        alt="mask"
+                        width={44}
+                        height={52}
+                      />
+                      <h3 className="mb-0 font-[600] text-[20px]">
+                        {item?.head}
+                      </h3>
+                    </div>
+                    <ul className="list-disc">
+                      {item?.desc?.map((value, ind) => {
+                        return (
+                          <li key={ind} className="font-[400]">
+                            {value?.list}
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </div>
-                )}
-                <div>
-                  <div className="flex gap-4 items-center mb-2 py-0">
-                    <Image
-                      src={item?.imageUrl}
-                      alt="mask"
-                      width={44}
-                      height={52}
-                    />
-                    <h3 className="mb-0 font-[600] text-[20px]">
-                      {item?.head}
-                    </h3>
-                  </div>
-                  <ul className="list-disc">
-                    {item?.desc?.map((value, ind) => {
-                      return (
-                        <li key={ind} className="font-[400]">
-                          {value?.list}
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  {index % 2 !== 0 && (
+                    <div className="sm:pl-12">
+                      <Image
+                        src={item?.gridImage}
+                        alt="image"
+                        width={450}
+                        height={450}
+                        className="h-auto sm:m-0 m-auto rounded-xl"
+                      />
+                    </div>
+                  )}
                 </div>
-                {index % 2 !== 0 && (
-                  <div className="sm:pl-12">
-                    <Image
-                      src={item?.gridImage}
-                      alt="image"
-                      width={450}
-                      height={450}
-                      className="h-auto sm:m-0 m-auto rounded-xl"
-                    />
-                  </div>
-                )}
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
 
