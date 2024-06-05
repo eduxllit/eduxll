@@ -10,9 +10,7 @@ body {
   background-color: white;
 }
 
-
-
-@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap");
 
 .singleblog h1 {
   font-family: "Sedan SC", serif;
@@ -25,7 +23,6 @@ body {
   text-align: center;
   line-height: 1.2em;
 }
-
 
 .logoslider .slick-track {
   align-items: center;
@@ -46,7 +43,7 @@ body {
 .reviewSlider button {
   display: none;
 }
-.banner-text p{
+.banner-text p {
   font-size: 12px !important;
   line-height: 1.4 !important;
   white-space: nowrap;
@@ -70,7 +67,6 @@ body {
   background-position: bottom;
   /* background: linear-gradient(270deg, rgba(91, 90, 90, 0) -2.59%, hsla(0, 4%, 5%, .746) 49.82%, rgba(0, 0, 0, .854) 98.45%); */
   background-image: url("https://static.vecteezy.com/system/resources/previews/006/852/804/non_2x/abstract-blue-background-simple-design-for-your-website-free-vector.jpg");
-
 }
 
 .singleblog {
@@ -78,7 +74,6 @@ body {
   /* background: linear-gradient(270deg, rgba(91, 90, 90, 0) -2.59%, hsla(0, 4%, 5%, .746) 49.82%, rgba(0, 0, 0, .854) 98.45%); */
   background-image: url("/360_F_322033323_ClvhgLXQXRRJXh7mkWhGTzbnvNzUOPXQ.jpg");
   background-size: cover;
-
 }
 
 /* Track */
@@ -118,17 +113,17 @@ body {
   position: relative;
   top: 15px;
 }
-.review-slider-jeff  .swiper-slide-next{
+.review-slider-jeff .swiper-slide-next {
   transform: scale(1.3) !important;
   z-index: 9;
   transition: 800ms;
-  
+
   opacity: 1 !important;
 }
-.review-slider-jeff  .swiper-slide{
+.review-slider-jeff .swiper-slide {
   opacity: 0.4;
 }
-.review-slider-jeff .swiper{
+.review-slider-jeff .swiper {
   padding-bottom: 80px !important;
 }
 .tabsliderlayout .swiper-wrapper .swiper-slide {
@@ -438,10 +433,10 @@ body {
 .blogcontentbox ul li {
   margin-left: 30px;
 }
- .swiper-button-next::after, .swiper-button-prev::after{
+.swiper-button-next::after,
+.swiper-button-prev::after {
   font-size: 22px !important;
 }
-
 
 .swiper-button-disabled {
   display: none;
@@ -454,8 +449,7 @@ h4 {
   margin-bottom: 10px;
 }
 
-
-.rankcontentbox>div {
+.rankcontentbox > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -470,8 +464,8 @@ h4 {
 
 .rankcontentbox p {
   font-size: 12px;
-    color: #000000;
-    font-weight: 500;
+  color: #000000;
+  font-weight: 500;
 }
 
 .rankcontentbox {
@@ -480,9 +474,8 @@ h4 {
   align-items: center;
 }
 
-
-section, .section {
-
+section,
+.section {
   scroll-margin-top: 130px;
   overflow: clip;
 }
@@ -495,29 +488,25 @@ section, .section {
   border: 5px solid #707070;
 }
 
-.Fashion.Design ,.Cloud.Computing , .Machine.Learning {
-    padding-right: 66px;
+.Fashion.Design,
+.Cloud.Computing,
+.Machine.Learning {
+  padding-right: 66px;
 }
 
 .studyabroadstyle {
-  background: url('../../public/ranger-4df6c1b6.png');
+  background: url("../../public/ranger-4df6c1b6.png");
   background-size: cover;
 }
-.online-cards:hover .register-button{
+.online-cards:hover .register-button {
   display: flex;
 }
 
-
-
 .certting {
-  background: url('../../public/pngtree-white-.jpg');
+  background: url("../../public/pngtree-white-.jpg");
   background-size: cover;
   background-position: center center;
 }
-
-
-
- 
 
 .coursesyllabusui ul li {
   margin-left: 30px;
@@ -530,24 +519,25 @@ section, .section {
 }
 
 .coursesyllabusui ul li::marker {
-color: #de2232; 
+  color: #de2232;
 }
 
-
-h1,h2,h3,h4,h5,h6 {
-   
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
   margin-bottom: 16px;
 }
- 
- 
+
 p {
   font-size: 16px;
   line-height: 25px;
- 
-  font-weight: 400; 
-}
 
+  font-weight: 400;
+}
 
 ul li {
   font-size: 16px;
@@ -555,12 +545,9 @@ ul li {
   margin-bottom: 10px;
 }
 
-
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .mobileoverflow-x {
-        
     overflow-x: scroll;
-    
   }
   .mobileoverflow-x::-webkit-scrollbar {
     height: 4px;
@@ -581,13 +568,24 @@ ul li {
   /* Handle on hover */
   .mobileoverflow-x::-webkit-scrollbar-thumb:hover {
     background: #555;
-  } 
+  }
+
+  .bannerimagejjj {
+    height: 540px;
+  }
+
+  .jjjform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
-@media only screen and (max-width:576px){
-  .review-slider-jeff  .swiper-slide{
+@media only screen and (max-width: 576px) {
+  .review-slider-jeff .swiper-slide {
     opacity: 1;
   }
-  .review-slider-jeff  .swiper-slide-next{
+  .review-slider-jeff .swiper-slide-next {
     transform: scale(1) !important;
   }
 }

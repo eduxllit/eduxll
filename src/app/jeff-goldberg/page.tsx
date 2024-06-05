@@ -58,14 +58,15 @@ const JeffGoldberg = () => {
           />
         </div>
       </div>
-      <div className="relative lg:h-[90vh] lg:overflow-hidden">
+      <div className="relative  ">
         <Image
           src={"/jeff-banner-new.jpeg"}
           alt="banner"
           width={1550}
-          height={850}
-          className="w-full"
+          height={500}
+          className="w-full h-[800px] object-cover bannerimagejjj  "
         />
+
         <Image
           src={"/lights.png"}
           alt="banner"
@@ -80,13 +81,12 @@ const JeffGoldberg = () => {
           height={250}
           className="w-[80%] h-auto absolute bottom-12 left-0 right-0 m-auto"
         />
-
-        <div className="grid w-[320px] justify-center sm:block absolute top-12 right-16">
+        <div className="grid w-[320px] justify-center sm:block absolute top-12 right-16 jjjform">
           <FormUI heading="Contact Form" />
         </div>
       </div>
 
-      <div className="sm:grid grid-cols-3 items-center justify-center text-center text-white">
+      <div className="sm:grid grid-cols-3 items-center justify-center text-center text-white ">
         <div className="bg-red-600 p-4 h-full">
           <Image
             src={"/svg/mask.svg"}
@@ -161,7 +161,10 @@ const JeffGoldberg = () => {
           className="w-full h-auto"
         />
       </div> */}
-      <div className="p-8 pb-0 lg:flex bg-[url('/jeff-banner-new.jpeg')] sm:bg-contain !bg-cover bg-no-repeat w-full" style={{backgroundSize:"100%"}}>
+      <div
+        className="p-8 pb-0 lg:flex bg-[url('/jeff-banner-new.jpeg')] sm:bg-contain !bg-cover bg-no-repeat w-full"
+        style={{ backgroundSize: "100%" }}
+      >
         <div className="flex-none">
           <Image
             src={"/demo.png"}
@@ -180,16 +183,35 @@ const JeffGoldberg = () => {
           <div className="flex gap-2 justify-between">
             <div className="flex m-auto">
               <div>
-                <Image src={"/online.png"} alt="image" width={300} height={80} className="h-[80px]" style={{objectFit:"cover"}} />
-               
+                <Image
+                  src={"/online.png"}
+                  alt="image"
+                  width={300}
+                  height={80}
+                  className="h-[80px]"
+                  style={{ objectFit: "cover" }}
+                />
               </div>
               <div className="mt-2">
-                <Image src={"/second.png"} alt="image" width={300} height={80}  className="h-[80px]" style={{objectFit:"cover"}} />
-                
+                <Image
+                  src={"/second.png"}
+                  alt="image"
+                  width={300}
+                  height={80}
+                  className="h-[80px]"
+                  style={{ objectFit: "cover" }}
+                />
               </div>
             </div>
             <div>
-              <Image src={"/enroll-new.png"} alt="enroll" width={300} height={80} className="h-[80px]" style={{objectFit:"cover"}}  />
+              <Image
+                src={"/enroll-new.png"}
+                alt="enroll"
+                width={300}
+                height={80}
+                className="h-[80px]"
+                style={{ objectFit: "cover" }}
+              />
             </div>
           </div>
         </div>
@@ -224,7 +246,7 @@ const JeffGoldberg = () => {
                       width={400}
                       height={200}
                       className="w-full h-[300px] rounded-xl"
-                      style={{objectFit:"cover"}}
+                      style={{ objectFit: "cover" }}
                     />
                   </div>
                 </SwiperSlide>
@@ -263,7 +285,9 @@ const JeffGoldberg = () => {
                       width={44}
                       height={52}
                     />
-                    <h3 className="mb-0 font-[500]">{item?.head}</h3>
+                    <h3 className="mb-0 font-[600] text-[20px]">
+                      {item?.head}
+                    </h3>
                   </div>
                   <ul className="list-disc">
                     {item?.desc?.map((value, ind) => {
@@ -291,39 +315,7 @@ const JeffGoldberg = () => {
           })}
         </div>
       </div>
-      {/* <div className="max-w-[1250px] m-auto my-12">
-        <Image
-          src={"/logo.webp"}
-          alt="logo"
-          width={300}
-          height={150}
-          className="m-auto sm:w-[30%] w-[50%]"
-        />
-        <div className="bg-yellow-100 text-red-800 p-4 my-6">
-          <h3 className="text-center text-2xl mb-0 tracking-wide font-[300]">
-            The official{" "}
-            <span className="font-bold"> Global Online Partners</span> of The
-            Jeff Goldberg Studio
-          </h3>
-        </div>
-        <p className="text-justify p-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sequi
-          quasi repudiandae veritatis, doloremque vero aspernatur magni
-          similique eos, molestiae sunt quas esse aliquid quod provident,
-          officiis adipisci perspiciatis nobis! Sunt omnis neque, eveniet
-          doloribus maxime alias eos distinctio placeat nulla voluptates dolorum
-          quidem officiis deleniti error, vel asperiores earum facere quis
-          dignissimos soluta? Eveniet consequuntur obcaecati praesentium
-          corrupti, labore atque. Doloribus modi ex, reiciendis debitis rem
-          dolorum inventore repellat! Consequuntur est enim veritatis, esse
-          voluptatem omnis, sequi quo excepturi quos tempore cumque nobis. Est
-          earum cupiditate minus pariatur. Ipsa incidunt perspiciatis libero
-          reiciendis assumenda nisi laborum, aperiam quidem, possimus iure
-          consequatur voluptate sed, nulla provident. Nihil eius doloribus
-          quidem officiis suscipit exercitationem asperiores eaque quo magnam?
-          Molestias, debitis nam.
-        </p>
-      </div> */}
+
       <div className="my-12 items-center sm:grid sm:grid-cols-[1fr_1fr] grid-cols-[1fr_1fr]">
         <div>
           <div className="grid grid-cols-2 gap-1">
@@ -346,10 +338,10 @@ const JeffGoldberg = () => {
               />
             </div>
           </div>
-          <div className="sm:flex gap-2 justify-between sm:px-12 px-4 my-8">
+          <div className="sm:flex gap-2 justify-between    sm:px-12 px-4 my-8 ">
             <Link
               href="tel:+918448699637"
-              className="flex items-center font-semibold gap-2 sm:mb-0 mb-4"
+              className="flex items-center font-semibold gap-2 sm:mb-0 mb-4 max-sm:justify-center"
             >
               {" "}
               <span className="bg-red-500 p-2 flex justify-center w-[40px] h-[40px] rounded-full block">
@@ -365,7 +357,7 @@ const JeffGoldberg = () => {
             </Link>{" "}
             <Link
               href="mailto:info@eduxll.com"
-              className="flex items-center font-semibold gap-2"
+              className="flex items-center font-semibold gap-2 max-sm:justify-center"
             >
               <span className="bg-red-500 p-2 flex justify-center w-[40px] h-[40px] rounded-full block">
                 {" "}
@@ -413,7 +405,7 @@ export default JeffGoldberg;
 const goldArray = [
   {
     imageUrl: "/svg/mask.svg",
-    gridImage:"/grid01.jpeg",
+    gridImage: "/grid01.jpeg",
     head: "3-Months Online Foundation Acting Program",
     desc: [
       {
@@ -438,7 +430,7 @@ const goldArray = [
   },
   {
     imageUrl: "/svg/media.svg",
-    gridImage:"/grid02.jpeg",
+    gridImage: "/grid02.jpeg",
 
     head: "3-Months Online Screenplay Writing Program Films & OTT",
     desc: [
@@ -464,7 +456,7 @@ const goldArray = [
   },
   {
     imageUrl: "/svg/arts.svg",
-    gridImage:"/cin.jpg",
+    gridImage: "/cinema(2).jpg",
 
     head: "3-Months Online Script Writing Program Theatre & Films",
     desc: [
@@ -487,7 +479,7 @@ const goldArray = [
   },
   {
     imageUrl: "/svg/printer.svg",
-    gridImage:"/cinema.jpg",
+    gridImage: "/cinema.jpg",
 
     head: "1-Month performing Arts Immersion Program (optional)",
     desc: [
