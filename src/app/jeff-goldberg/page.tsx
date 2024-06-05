@@ -38,14 +38,14 @@ const JeffGoldberg = () => {
   }, []);
   return (
     <>
-      <div className="flex justify-between p-2 items-center">
+      <div className="flex justify-between items-center">
         <div>
           <Image
             src={"/png/jeff-logo.jpg"}
             alt="jeff"
             width={200}
             height={60}
-            className="sm:w-[70%] w-[50%]"
+            className="sm:w-[50%] w-[50%]"
           />
         </div>
         <div>
@@ -54,11 +54,11 @@ const JeffGoldberg = () => {
             alt="jeff"
             width={200}
             height={60}
-            className="sm:w-[70%] w-[60%] m-auto"
+            className="sm:w-[50%] w-[60%] m-auto"
           />
         </div>
       </div>
-      <div className="relative">
+      <div className="relative lg:h-[90vh] lg:overflow-hidden">
         <Image
           src={"/jeff-banner-new.jpeg"}
           alt="banner"
@@ -71,28 +71,60 @@ const JeffGoldberg = () => {
           alt="banner"
           width={350}
           height={450}
-          className="absolute sm:w-[35%] w-[30%] sm:left-2 left-0 top-0"
+          className="absolute sm:w-[25%] w-[30%] sm:left-2 left-0 top-0"
         />
         <Image
           src={"/strip.jpeg"}
           alt="banner"
           width={1550}
           height={250}
-          className="w-[80%] h-auto absolute bottom-4 left-0 right-0 m-auto"
+          className="w-[80%] h-auto absolute bottom-12 left-0 right-0 m-auto"
         />
 
-        <div className="grid w-[320px] justify-center sm:block absolute top-8 right-8">
+        <div className="grid w-[320px] justify-center sm:block absolute top-12 right-16">
           <FormUI heading="Contact Form" />
         </div>
       </div>
-      <div>
-        <Image
-          src={"/red-strip.jpeg"}
-          alt="strip"
-          width={1650}
-          height={300}
-          className="w-full h-auto"
-        />
+
+      <div className="sm:grid grid-cols-3 items-center justify-center text-center text-white">
+        <div className="bg-red-600 p-4 h-full">
+          <Image
+            src={"/svg/mask.svg"}
+            alt="icon"
+            width={48}
+            height={48}
+            className="m-auto"
+          />
+          <h3 className="text-2xl font-semibold my-2 mt-6 tracking-wider">
+            FOUNDATION ACTING
+          </h3>
+        </div>
+        <div className="bg-red-700 p-4 h-full">
+          <Image
+            src={"/svg/media.svg"}
+            alt="icon"
+            width={48}
+            height={48}
+            className="m-auto"
+          />
+          <h3 className="text-2xl font-semibold my-2 mt-6 tracking-wider">
+            SCREENPLAY WRITING
+          </h3>
+          <p>FILMS & OTT</p>
+        </div>
+        <div className="bg-red-600 p-4 h-full">
+          <Image
+            src={"/svg/printer.svg"}
+            alt="icon"
+            width={48}
+            height={48}
+            className="m-auto"
+          />
+          <h3 className="text-2xl font-semibold my-2 mt-6 tracking-wider">
+            SCRIPT WRITING
+          </h3>
+          <p>THEATRE & FILMS</p>
+        </div>
       </div>
       <div className="max-w-[1250px] m-auto sm:grid grid-cols-[1fr_1.5fr] my-4 items-center">
         <div>
@@ -120,7 +152,7 @@ const JeffGoldberg = () => {
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <Image
           src={"/ticket.jpeg"}
           alt="ticket"
@@ -128,6 +160,39 @@ const JeffGoldberg = () => {
           height={950}
           className="w-full h-auto"
         />
+      </div> */}
+      <div className="p-8 pb-0 lg:flex bg-[url('/jeff-banner-new.jpeg')] sm:bg-contain !bg-cover bg-no-repeat w-full" style={{backgroundSize:"100%"}}>
+        <div className="flex-none">
+          <Image
+            src={"/demo.png"}
+            alt="ticket"
+            width={300}
+            height={280}
+            className="sm:h-auto sm:m-0 m-auto !h-[125px] sm:object-cover object-contain"
+          />
+        </div>
+        <div className="text-white sm:text-4xl leading-normal text-center">
+          <h3>
+            Live Online Interactive Sessions I Practical Hands-on Training 3
+            Months Program I 3 hours Per Class I Twice a Week Placement
+            Assistance I Weekend Offline Workshop
+          </h3>
+          <div className="flex gap-2 justify-between">
+            <div className="flex m-auto">
+              <div>
+                <Image src={"/online.png"} alt="image" width={300} height={80} className="h-[80px]" style={{objectFit:"cover"}} />
+               
+              </div>
+              <div className="mt-2">
+                <Image src={"/second.png"} alt="image" width={300} height={80}  className="h-[80px]" style={{objectFit:"cover"}} />
+                
+              </div>
+            </div>
+            <div>
+              <Image src={"/enroll-new.png"} alt="enroll" width={300} height={80} className="h-[80px]" style={{objectFit:"cover"}}  />
+            </div>
+          </div>
+        </div>
       </div>
       <div className="m-auto my-4 mt-0">
         <h2 className="bg-red-600 p-2 text-white sm:text-3xl text-2xl font-[300] text-center tracking-wide mb-1 mt-1">
@@ -159,6 +224,7 @@ const JeffGoldberg = () => {
                       width={400}
                       height={200}
                       className="w-full h-[300px] rounded-xl"
+                      style={{objectFit:"cover"}}
                     />
                   </div>
                 </SwiperSlide>
@@ -174,11 +240,14 @@ const JeffGoldberg = () => {
           </h2>
           {goldArray?.map((item, index) => {
             return (
-              <div key={index} className="sm:flex gap-12 justify-between items-center sm:my-6 mt-2 mb-2">
+              <div
+                key={index}
+                className="sm:flex gap-12 justify-between items-center sm:my-6 mt-2 mb-2"
+              >
                 {index % 2 == 0 && (
                   <div className="">
                     <Image
-                      src={"/grid01.jpeg"}
+                      src={item?.gridImage}
                       alt="image"
                       width={450}
                       height={450}
@@ -198,15 +267,25 @@ const JeffGoldberg = () => {
                   </div>
                   <ul className="list-disc">
                     {item?.desc?.map((value, ind) => {
-                      return <li key={ind} className="font-[400]">{value?.list}</li>;
+                      return (
+                        <li key={ind} className="font-[400]">
+                          {value?.list}
+                        </li>
+                      );
                     })}
                   </ul>
                 </div>
-                {index % 2 !==0 &&
-                <div className="sm:pl-12">
-                    <Image src={"/grid02.jpeg"} alt="image" width={450} height={450} className="h-auto sm:m-0 m-auto rounded-xl" />
-                    </div>
-                }
+                {index % 2 !== 0 && (
+                  <div className="sm:pl-12">
+                    <Image
+                      src={item?.gridImage}
+                      alt="image"
+                      width={450}
+                      height={450}
+                      className="h-auto sm:m-0 m-auto rounded-xl"
+                    />
+                  </div>
+                )}
               </div>
             );
           })}
@@ -254,7 +333,7 @@ const JeffGoldberg = () => {
                 alt="theater"
                 width={500}
                 height={500}
-                className="w-[600px] h-auto m-auto mr-8 sm:mr-8 sm:ml-8 ml-8"
+                className="w-[300px] h-auto m-0 sm:ml-8 ml-8"
               />
             </div>
             <div className="grid sm:pl-0 pl-4">
@@ -267,10 +346,10 @@ const JeffGoldberg = () => {
               />
             </div>
           </div>
-          <div className="flex gap-2 justify-between sm:px-12 px-4 my-8">
+          <div className="sm:flex gap-2 justify-between sm:px-12 px-4 my-8">
             <Link
               href="tel:+918448699637"
-              className="flex items-center font-semibold gap-2"
+              className="flex items-center font-semibold gap-2 sm:mb-0 mb-4"
             >
               {" "}
               <span className="bg-red-500 p-2 flex justify-center w-[40px] h-[40px] rounded-full block">
@@ -334,6 +413,7 @@ export default JeffGoldberg;
 const goldArray = [
   {
     imageUrl: "/svg/mask.svg",
+    gridImage:"/grid01.jpeg",
     head: "3-Months Online Foundation Acting Program",
     desc: [
       {
@@ -358,6 +438,8 @@ const goldArray = [
   },
   {
     imageUrl: "/svg/media.svg",
+    gridImage:"/grid02.jpeg",
+
     head: "3-Months Online Screenplay Writing Program Films & OTT",
     desc: [
       {
@@ -382,6 +464,8 @@ const goldArray = [
   },
   {
     imageUrl: "/svg/arts.svg",
+    gridImage:"/cin.jpg",
+
     head: "3-Months Online Script Writing Program Theatre & Films",
     desc: [
       {
@@ -403,6 +487,8 @@ const goldArray = [
   },
   {
     imageUrl: "/svg/printer.svg",
+    gridImage:"/cinema.jpg",
+
     head: "1-Month performing Arts Immersion Program (optional)",
     desc: [
       {
@@ -422,27 +508,27 @@ const goldArray = [
 ];
 const actorsArray = [
   {
-    imageUrl: "/actors/Bobby-Deol-2.jpg",
+    imageUrl: "/actors/01.jpg",
   },
   {
-    imageUrl: "/actors/mithun.jpeg",
+    imageUrl: "/actors/02.jpg",
   },
   {
-    imageUrl: "/actors/deepaka.jpeg",
+    imageUrl: "/actors/03.jpg",
   },
   {
-    imageUrl: "/actors/prakesh.jpeg",
+    imageUrl: "/actors/04.jpg",
   },
   {
-    imageUrl: "/actors/ayushman.jpeg",
+    imageUrl: "/actors/05.jpg",
   },
   {
-    imageUrl: "/actors/anil.jpeg",
-  }, 
+    imageUrl: "/actors/06.jpg",
+  },
   {
-    imageUrl: "/actors/kashup-kapoor.jpeg",
-  }, 
+    imageUrl: "/actors/07.jpg",
+  },
   {
-    imageUrl: "/actors/babr.jpeg",
-  }, 
+    imageUrl: "/actors/08.jpg",
+  },
 ];
