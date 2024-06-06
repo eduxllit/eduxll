@@ -78,6 +78,13 @@ const AboradCard = ({
     }
   };
 
+  useEffect(()=>{
+    if(!activeCourseBranch){
+      getAllCourses()
+    }
+
+  }, [activeCourseBranch])
+
   useEffect(() => {
     if (activeCourseBranch) {
       getNestedCoursesbyBranch();
