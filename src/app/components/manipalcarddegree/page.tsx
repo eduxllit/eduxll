@@ -105,9 +105,12 @@ const ManipalCardDegree = ({
           {universityname}
         </div>
 
-        <div className="text-[12px] underline leading-[20px] tracking-[0.12px] text-[#343634] ">
+        <a
+          className="text-[12px] underline leading-[20px] tracking-[0.12px] text-[#343634] "
+          href="#CareerCounseling"
+        >
           Know More
-        </div>
+        </a>
       </div>
     </>
   );
