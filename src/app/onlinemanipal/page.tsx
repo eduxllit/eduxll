@@ -117,7 +117,7 @@ const OnlineManipal = () => {
               {bannerbottomarry?.map((items, index) => {
                 return (
                   <>
-                    <div>
+                    <div key={index}>
                       <h3 className="text-[#ff6600] text-[30px] pb-[5px] leading-[30px] font-[700] mb-0 max-sm:font-[500] max-sm:text-[20px] max-sm:leading-[24px]">
                         {items.number}
                       </h3>

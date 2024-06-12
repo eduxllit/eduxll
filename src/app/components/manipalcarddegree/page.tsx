@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-interface ManipalCardDegreePRE {
-  degreename?: string;
-  coursename?: string;
-  amount?: string;
-  universityname?: string;
-  colour?: string;
-  Months?: "36" | "24";
-}
+// interface ManipalCardDegreePRE {
+//   degreename?: string;
+//   coursename?: string;
+//   amount?: any;
+//   universityname?: string;
+//   colour?: string;
+//   Months?: "36" | "24";
+// }
 
 const ManipalCardDegree = ({
   degreename,
@@ -17,7 +17,7 @@ const ManipalCardDegree = ({
   universityname,
   colour,
   Months,
-}: ManipalCardDegreePRE) => {
+}: any) => {
   return (
     <>
       <div className="bg-[#F7F7F7] pt-[14px] pr-[18px] pb-[10px] pl-[18px] rounded-br-[5px] rounded-bl-[5px] ">
