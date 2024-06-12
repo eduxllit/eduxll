@@ -78,15 +78,11 @@ const CourseCard = ({
     }
   };
 
-
-  useEffect(()=>{
-    if(!activeCourseBranch){
-      getAllCourses()
+  useEffect(() => {
+    if (!activeCourseBranch) {
+      getAllCourses();
     }
-
-  }, [activeCourseBranch])
-
-
+  }, [activeCourseBranch]);
 
   useEffect(() => {
     if (activeCourseBranch) {

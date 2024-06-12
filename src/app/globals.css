@@ -594,3 +594,101 @@ ul li {
     transform: scale(1) !important;
   }
 }
+
+
+
+
+/* manipallandingpage */
+.styleboxcolororange {
+  background: #FEE8DA;
+}
+.styleboxcolororange h3 {
+  color: #ff6600;
+}
+
+
+.styleboxcolorpurple {
+  background: #EADDF8;
+}
+.styleboxcolorpurple h3 {
+  color: #3F2B55;
+}
+
+.styleboxcolorBlue {
+  background: #DFECF5;
+}
+.styleboxcolorBlue h3 {
+  color: #074A76;
+}
+
+
+.FormUIstyle>div {
+  width: 100%;
+  max-width: 100%;
+  background:#fff;
+}
+
+.FormUIstyle>div .formbox .max-w-sm {
+  max-width: 100%;
+}
+
+.FormUIstyle input, .FormUIstyle    select {
+  border-radius: 0px;
+  background: #efefef !important;
+  border: none;
+}
+
+.FormUIstyle button {
+  width:100%;
+  border-radius:0px;
+background:#000;
+  margin:0px;
+  margin-top:10px;    
+}
+.checkboxonlinemanipal {
+  margin-bottom: 25px;
+  margin-top: 10px; 
+}
+
+.checkboxonlinemanipal label {
+  position: relative;
+}
+.checkboxonlinemanipal label:before {
+  content: "";
+  background-color: transparent;
+  border: 2px solid #cecece;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 5px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  height: 2px;
+}
+
+
+.checkboxonlinemanipal input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+    left: 5px;
+  width: 3px;
+  height: 6px;
+  border: solid #cecece;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+.checkboxonlinemanipalbutton {
+  background: transparent linear-gradient(90deg, #FF6600 0%, #FF5204 0%, #FF270D 100%) 0% 0% no-repeat padding-box !important;
+  border: none;
+  border-radius: 2px !important;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  margin-top: 5px;
+  color: #fff;
+}
