@@ -363,7 +363,7 @@ const OnlineManipal = () => {
 
                 <Swiper
                   // slidesPerView={window.innerWidth < mobileSize ? 1 : 4}
-                  slidesPerView={4}
+                  slidesPerView={isMobile ? 1 : 4}
                   spaceBetween={10}
                   loop={true}
                   height={200}
