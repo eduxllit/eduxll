@@ -16,14 +16,12 @@ import ManipalCardDegree from "../components/manipalcarddegree/page";
 import ExperienceCard2 from "../components/manipalcarddegree/experiencecard2";
 import OnlineManipalForm from "../components/form/onlinemanipalform";
 import FormUI from "../components/form/FormUI";
-import useWindowSize from "../components/hooks/useWindowSize";
 
 const OnlineManipal = () => {
   const [activeTab, setActiveTab] = useState("Master's Degree");
 
   const mobileSize = 500;
   const desktopsize = 501;
-  const { width } = useWindowSize();
 
   return (
     <>
@@ -145,7 +143,6 @@ const OnlineManipal = () => {
               <Slidernav1 navfix="4" navsize="40" />
 
               <Swiper
-                slidesPerView={window.innerWidth < mobileSize ? 1 : 6}
                 spaceBetween={10}
                 loop={true}
                 height={200}
@@ -347,7 +344,8 @@ const OnlineManipal = () => {
                 <Slidernav1 navfix="5" navsize="40" />
 
                 <Swiper
-                  slidesPerView={window.innerWidth < mobileSize ? 1 : 4}
+                  // slidesPerView={window.innerWidth < mobileSize ? 1 : 4}
+                  slidesPerView={4}
                   spaceBetween={10}
                   loop={true}
                   height={200}
