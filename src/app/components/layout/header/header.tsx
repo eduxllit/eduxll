@@ -31,6 +31,7 @@ import "swiper/css/scrollbar";
 import Slidernav1 from "../../slidernav";
 import FormUI from "../../form/FormUI";
 import MobileMenu from "../../mobilemenu/page";
+import { menuArray } from "./menuArray";
 
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -55,6 +56,8 @@ const Header = () => {
     item === "About Us" && router.push("/about-us");
     item === "Contact us" && router.push("/contact-us");
     item === "Study Abroad" && router.push("/study-abroad");
+    item === "Career Support" && router.push("/careersupport");
+
   };
   const toggleSidebar = (val: any) => {
     setColor(val);
@@ -443,25 +446,6 @@ const Header = () => {
   );
 };
 export default Header;
-const menuArray = [
-  {
-    menu: "Study Abroad",
-  },
-
-  {
-    menu: "Career Support",
-  },
-  {
-    menu: "More",
-    submenu: [
-      { navlink: "About Us" },
-      // { navlink: "Free Master Class" },
-      { navlink: "Blog" },
-      // { navlink: "Webinars" },
-      { navlink: "Contact us" },
-    ],
-  },
-];
 const mobileMenuArray = [
   {
     menu: "Home",
