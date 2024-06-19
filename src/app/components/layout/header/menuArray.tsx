@@ -6,7 +6,7 @@ export const menuArray = [
 
   {
     menu: "Career Support",
-    navlink: "About Us",
+    
   },
   {
     menu: "More",

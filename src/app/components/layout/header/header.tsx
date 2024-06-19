@@ -56,6 +56,7 @@ const Header = () => {
     item === "About Us" && router.push("/about-us");
     item === "Contact us" && router.push("/contact-us");
     item === "Study Abroad" && router.push("/study-abroad");
+    item === "Career Support" && router.push("/study-abroad");
   };
   const toggleSidebar = (val: any) => {
     setColor(val);
