@@ -16,14 +16,29 @@ import ManipalCardDegree from "../components/manipalcarddegree/page";
 import ExperienceCard2 from "../components/manipalcarddegree/experiencecard2";
 import OnlineManipalForm from "../components/form/onlinemanipalform";
 import FormUI from "../components/form/FormUI";
-import useWindowSize from "../components/hooks/useWindowSize";
 
 const OnlineManipal = () => {
   const [activeTab, setActiveTab] = useState("Master's Degree");
 
   const mobileSize = 500;
   const desktopsize = 501;
-  const { width } = useWindowSize();
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 500);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -145,7 +160,7 @@ const OnlineManipal = () => {
               <Slidernav1 navfix="4" navsize="40" />
 
               <Swiper
-                slidesPerView={window.innerWidth < mobileSize ? 1 : 6}
+              slidesPerView={isMobile ? 1 : 6}
                 spaceBetween={10}
                 loop={true}
                 height={200}
@@ -175,9 +190,9 @@ const OnlineManipal = () => {
                             <Image
                               src={item.image}
                               alt={item.text}
-                              width={133}
-                              height={133}
-                              className="m-auto block w-full"
+                              width={150}
+                              height={150}
+                              className="m-auto w-[150px]"
                             />
                           </div>
                           <p className="text-[#000] text-[12px] min-h-[30px] font-bold leading-[17px] text-center mb-0">
@@ -347,7 +362,8 @@ const OnlineManipal = () => {
                 <Slidernav1 navfix="5" navsize="40" />
 
                 <Swiper
-                  slidesPerView={window.innerWidth < mobileSize ? 1 : 4}
+                  // slidesPerView={window.innerWidth < mobileSize ? 1 : 4}
+                  slidesPerView={isMobile ? 1 : 4}
                   spaceBetween={10}
                   loop={true}
                   height={200}
