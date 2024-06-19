@@ -12,6 +12,15 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+.amithh {
+  font-family: "Oswald", sans-serif;
+}
+
+
+
 .singleblog h1 {
   font-family: "Sedan SC", serif;
   font-weight: 400;
@@ -692,3 +701,6 @@ background:#000;
   margin-top: 5px;
   color: #fff;
 }
+
+
+
