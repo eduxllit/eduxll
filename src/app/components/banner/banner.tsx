@@ -37,8 +37,8 @@ const Banner = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 max-w-[700px] m-auto gap-6 items-center relative">
-              <div className="grid gap-[10px] md:justify-end ">
+            <div className="grid grid-cols-1 max-w-[700px] m-auto gap-6 items-center relative">
+              {/* <div className="grid gap-[10px] md:justify-end ">
                 <Image
                   src="/banner/1.jpg"
                   alt="banner"
@@ -53,22 +53,22 @@ const Banner = () => {
                   height={150}
                   className="rounded-tr-[25%] object-cover h-[200px] w-full z-[2] relative"
                 />
-              </div>
+              </div> */}
               <div className="grid gap-[10px] md:justify-end ">
                 <Image
-                  src="/banner/3.jpg"
+                  src="/banner/smiling-woman-walking-outdoors-holding-folded-map.jpg"
                   alt="banner"
-                  width={300}
-                  height={150}
-                  className="rounded-tl-[25%] object-cover h-[200px] w-full z-[2] relative"
+                  width={450}
+                  height={300}
+                  className="rounded-tl-[0%] object-cover h-[300px] w-full z-[2] relative"
                 />
-                <Image
+                {/* <Image
                   src="/banner/4.jpg"
                   alt="banner"
                   width={300}
                   height={150}
                   className="rounded-tr-[25%] object-cover h-[200px] w-full z-[2] relative"
-                />
+                /> */}
               </div>
               <Image
                 src="/dotts.png"
