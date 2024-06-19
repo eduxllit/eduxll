@@ -213,7 +213,7 @@ const Resourseslink = [
   // { navname: "Free Course" },
   { navname: "Privacy Policy", link: "/privacy-policy" },
   { navname: "Terms & Conditions", link: "/terms-and-conditions" },
-  { navname: "Refund & Cancellation policy ", link: "/refund-policy" },
+  { navname: "Refund & Cancellation Policy ", link: "/refund-policy" },
 ];
 const QuickLink = [
   { link: "/blogs", navname: "Blogs" },

@@ -1,5 +1,15 @@
 "use client";
 export const menuArray = [
+  
+  {
+    menu: "About Us",
+    submenu: [
+      { navlink: "About EduXLL" },
+       { navlink: "Management Team" },
+       { navlink: "Our Faculty" },
+    ],
+  },
+
   {
     menu: "Study Abroad",
   },
