@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 interface InfoSection {
@@ -9,8 +10,8 @@ interface InfoSection {
 const InfoSection = ({ image, heading, content }: InfoSection) => {
   return (
     <>
-      <div className="shadow-md flex bg-[#fff] p-[30px] shadow-[10px 10px 10px #00000022] rounded-[20px] ">
-        <div className="image w-[90px] px-[10px]">
+      <div className="shadow-md flex bg-[#fff] p-[30px] shadow-[10px 10px 10px #00000022] rounded-[20px] max-sm:block max-sm:text-center ">
+        <div className="image w-[90px] px-[10px] max-sm:m-auto">
           <Image src={image} alt={""} width={70} height={70} />
         </div>
         <div className="contentbox usp-info-detail flex-1 pl-[30px]">

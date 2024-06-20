@@ -704,3 +704,11 @@ background:#000;
 
 
 
+.UniqueAdvantages .advantage-item:nth-child(odd) {
+  background-color: #ffaa17;
+  color: #000;
+}
+.UniqueAdvantages .advantage-item:nth-child(even) {
+ background-color: #002e5e;
+  color: #fff;
+}
