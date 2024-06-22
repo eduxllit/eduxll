@@ -96,10 +96,10 @@ const logosliderarry = [
     logo: "/logoslider/3.webp",
     link: "https://upesonline.ac.in/enrollment?pc_code=Eduxll%20",
   },
-  // {
-  //   logo: "/logoslider/4.webp",
-  //   link: "#",
-  // },
+  {
+    logo: "/logoslider/amity.png",
+    link: "/amityonline/",
+  },
   // {
   //   logo: "/logoslider/5.webp",
   //   link: "#",
