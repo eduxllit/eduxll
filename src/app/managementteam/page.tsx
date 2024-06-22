@@ -57,10 +57,10 @@ const ManagementTeam = () => {
 
             <div className="flex pt-[60px] max-sm:flex-col-reverse max-sm:flex-col gap-[20px] ">
             <div className="w-[70%] max-sm:w-[100%] max-sm:mt-[50px]">
-                <h2 className="sm:text-[35px] text-2xl text-[#da202f] leading-[1.3] font-bold mb-[10px]">
+                <h2 className="sm:text-[35px] text-right max-sm:text-left text-2xl text-[#da202f] leading-[1.3] font-bold mb-[10px]">
                 Mr. PK Samal
                 </h2>
-                <h5 className="text-[16px] font-[500] text-[#21225F] ">
+                <h5 className="text-[16px] text-right max-sm:text-left font-[500] text-[#21225F] ">
                 Founder and MD
                 </h5>
                 <p className="text-sm mb-[16px] text-[#333] text-justify">
@@ -125,10 +125,10 @@ President of Lal Bahadur Shastri Memorial Foundation which is engaged in social 
 
             <div className="flex pt-[60px] max-sm:flex-col-reverse max-sm:flex-col gap-[20px] ">
             <div className="w-[70%] max-sm:w-[100%]  max-sm:mt-[50px]">
-                <h2 className="sm:text-[35px] text-2xl text-[#da202f] leading-[1.3] font-bold mb-[10px]">
+                <h2 className="sm:text-[35px] text-2xl text-right max-sm:text-left text-[#da202f] leading-[1.3] font-bold mb-[10px]">
                 Mr. Parag Goel
                 </h2>
-                <h5 className="text-[16px] font-[500] text-[#21225F] ">
+                <h5 className="text-[16px] font-[500] text-right max-sm:text-left text-[#21225F] ">
                 Chief Business Officer
                 </h5>
                 <p className="text-sm mb-[16px] text-[#333] text-justify">
