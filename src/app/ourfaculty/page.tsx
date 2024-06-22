@@ -39,7 +39,7 @@ const ManagementTeam = () => {
 
 <div className="cardlist grid grid-cols-2 max-sm:grid-cols-1 gap-[20px]">
   <div className="imagecard">
-    <Image src="/managementteam/5.png" width={300} height={300} alt={""} objectFit="cover" className="w-[100%]" />
+    <Image src="/managementteam/15.png" width={300} height={300} alt={""} objectFit="cover" className="w-[100%]" />
   </div>
   <div className="contentcard">
     <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Name: Dr. Ravikesh Srivastava</h3>
@@ -59,7 +59,7 @@ reputed B-Schools. </p>
 
 <div className="cardlist grid grid-cols-2 max-sm:grid-cols-1 gap-[20px]">
   <div className="imagecard">
-    <Image src="/managementteam/6.webp" width={300} height={300} alt={""} objectFit="cover" className="w-[100%]" />
+    <Image src="/managementteam/766.PNG" width={300} height={300} alt={""} objectFit="cover" className="w-[100%]" />
   </div>
   <div className="contentcard">
     <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Name: Dr. Rakhi Singh </h3>
