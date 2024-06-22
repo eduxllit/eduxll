@@ -41,6 +41,8 @@ const Header = () => {
   const [isToggled, setIsToggled] = useState(false);
   const [openPopup, setOpenPopup] = useState(false);
 
+  const [isToggleAbout,setIsToggledAbout] = useState(false);
+
   // const userModelRef = useOnClickOutside(() => setIsToggled(false));
 
   const [moreMenu, setMoreMenu] = useState("");
@@ -53,7 +55,9 @@ const Header = () => {
     item === "Free Master Class" && router.push("/free-masterclass");
     item === "Webinars" && router.push("/webinars");
     item === "Blog" && router.push("/blogs");
-    item === "About Us" && router.push("/about-us");
+    item === "About EduXLL" && router.push("/about-us");
+    item === "Management Team" && router.push("/managementteam");
+    item === "Our Faculty" && router.push("/ourfaculty");
     item === "Contact us" && router.push("/contact-us");
     item === "Study Abroad" && router.push("/study-abroad");
     item === "Career Support" && router.push("/careersupport");
@@ -187,7 +191,53 @@ const Header = () => {
                               )}
                             </div>
                           </div>
-                        ) : (
+                        ) :
+                        item?.menu==="About Us" ? (
+                          <div
+                            className="flex items-center text-[15px] font-[400] text-[#000] relative"
+                            onClick={() => setIsToggledAbout(!isToggleAbout)}
+                            ref={ref}
+                          >
+                            {item.menu}
+                            <div className="">
+                              {item.menu === "About Us" && (
+                                <div>
+                                  <Image
+                                    src={"/arrow-down-s-line-black.svg"}
+                                    alt="dropdown"
+                                    width={16}
+                                    height={16}
+                                  />
+                                </div>
+                              )}
+
+                              {isToggleAbout === true && (
+                                <>
+                                  {item?.submenu && (
+                                    <ul className="absolute top-[48px] left-0 z-10  w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                      {item?.submenu?.map((item, ind) => {
+                                        return (
+                                          <li
+                                            key={ind}
+                                            className="py-1 hover:bg-[#f9f9f9] text-[15px] font-[400] text-[#000]  block px-4 py-2  "
+                                            role="none"
+                                            onClick={() =>
+                                              toggleMore(item.navlink)
+                                            }
+                                          >
+                                            {item.navlink}
+                                          </li>
+                                        );
+                                      })}
+                                    </ul>
+                                  )}
+                                </>
+                              )}
+                            </div>
+                          </div>
+                        )
+                        :
+                        (
                           <a
                             onClick={() => toggleMore(item.menu)}
                             className="text-[15px] font-[400] text-[#000] !rounded-lg p-[10px] hover:bg-[#fcf1f5] hover:text-[#ee2c3c]"
