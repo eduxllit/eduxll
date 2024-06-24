@@ -95,11 +95,13 @@ const Header = () => {
       : [];
 
   const ref = useRef<any>(null);
+  const refAbout = useRef<any>(null)
 
   useEffect(() => {
     const handleOutSideClick = (event: any) => {
       if (!ref.current?.contains(event.target)) {
         setIsToggled(false);
+       
       }
     };
 
@@ -109,6 +111,20 @@ const Header = () => {
       window.removeEventListener("mousedown", handleOutSideClick);
     };
   }, [ref]);
+  useEffect(() => {
+    const handleOutSideClick = (event: any) => {
+      if (!refAbout.current?.contains(event.target)) {
+        setIsToggledAbout(false);
+       
+      }
+    };
+
+    window.addEventListener("mousedown", handleOutSideClick);
+
+    return () => {
+      window.removeEventListener("mousedown", handleOutSideClick);
+    };
+  }, [refAbout]);
   const [colorMagic, setCOlorMagic] = useState("");
 
   return (
@@ -196,7 +212,7 @@ const Header = () => {
                           <div
                             className="flex items-center text-[15px] font-[400] text-[#000] relative"
                             onClick={() => setIsToggledAbout(!isToggleAbout)}
-                            ref={ref}
+                            ref={refAbout}
                           >
                             {item.menu}
                             <div className="">
