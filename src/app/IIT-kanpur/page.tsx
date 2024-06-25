@@ -68,7 +68,7 @@ const IITKanpur = () => {
           className="w-full h-auto"
         />
         <div className="grid sm:grid-cols-2 gap-8 items-center sm:px-12 px-4">
-          <div>
+          <div className="bg-">
             <p className="mb-4 text-[18px]">
               IIT Kanpur, established in 1959, is one of the premier
               institutions of higher education in India, renowned for its
@@ -82,13 +82,14 @@ const IITKanpur = () => {
               science.
             </p>
             <p className="text-[18px]">
-              The institution&apos;s involvement in ESG and Business Sustainability
-              exemplifies its commitment to expanding its academic purview into
-              critical contemporary areas like sustainability and corporate
-              governance. This program underscores IIT Kanpur&apos;s dedication to
-              developing forward-thinking leaders capable of integrating ethical
-              practices into business strategies, thereby contributing
-              positively to global environmental and social challenges.
+              The institution&apos;s involvement in ESG and Business
+              Sustainability exemplifies its commitment to expanding its
+              academic purview into critical contemporary areas like
+              sustainability and corporate governance. This program underscores
+              IIT Kanpur&apos;s dedication to developing forward-thinking
+              leaders capable of integrating ethical practices into business
+              strategies, thereby contributing positively to global
+              environmental and social challenges.
             </p>
           </div>
           <div>
@@ -102,7 +103,156 @@ const IITKanpur = () => {
           </div>
         </div>
       </div>
+      <div className="grid grid-cols-2 gap-8 items-center sm:px-12 px-4 my-12 bg-green-100 py-12">
+        <Image
+          src={"/kanpur/certificate.png"}
+          alt="certificate"
+          width={850}
+          height={850}
+          className="w-full h-auto rounded-xl"
+        />
+        <div>
+          <h2 className="font-semibold text-6xl mb-8">CERTIFICATION</h2>
+          <p className="text-xl mb-4">
+            Participants who fulfill the evaluation and attendance requirements
+            will receive a <b>Certificate of Completion</b>.
+          </p>
+          <p className="text-xl">
+            Participants who meet the attendance requirements but do not pass
+            the evaluation will receive a <b>Participation Certificate</b>.
+          </p>
+        </div>
+      </div>
+      <div className="grid grid-cols-[60%_40%]">
+        <div>
+          <Image
+            src={"/kanpur/hat.png"}
+            alt="kanpur"
+            width={850}
+            height={450}
+            className="w-full h-[180px]"
+          />
+        </div>
+        <div>
+          <Image
+            src={"/kanpur/green-logo.png"}
+            alt="kanpur"
+            width={850}
+            height={450}
+            className="w-full h-[180px]"
+          />
+        </div>
+      </div>
+      <div className="grid grid-cols-[60%_40%]">
+        <div>
+          <div className="bg-yellow-100 p-8 h-full">
+            <h2 className="text-3xl font-semibold text-green-800 tracking-wider mb-2">
+              LEARNING OUTCOMES
+            </h2>
+            <span className="w-24 h-[3px] bg-green-800 block"></span>
+            <h3 className="mt-4 font-semibold text-lg">
+              At the end of the "ESG and Business Sustainability" program,
+              learners should have acquired the following knowledge and skills:
+            </h3>
+            <ul className="list-disc">
+              {learningArray?.map((item,index)=>{
+                return(
+
+                  <li className="ml-8" key={index}>{item?.content}</li>
+                )
+              })}
+            </ul>
+          </div>
+        </div>
+        <div className="bg-green-300 pb-4">
+              <h3 className="text-3xl font-semibold text-green-800 tracking-wider mb-0 py-4 px-8">KEY SKILLS YOU&apos;LL LEARN</h3>
+              <ul className="list-disc max-w-[460px] m-auto mb-2">
+                {skillsArray?.map((item,index)=>{
+                  return(
+                    <li className="mb-0" key={index}>{item?.list}</li>
+
+                  )
+                })}
+              </ul>
+              <h3 className="text-3xl font-semibold text-green-800 tracking-wider mb-0 py-4 px-8">CAREER PROSPECTS</h3>
+
+              <ul className="list-disc max-w-[460px] m-auto">
+                {careerAray?.map((item,index)=>{
+                  return(
+                    <li className="mb-0" key={index}>{item?.list}</li>
+
+                  )
+                })}
+              </ul>
+        </div>
+      </div>
     </div>
   );
 };
 export default IITKanpur;
+const learningArray = [
+  {
+    content:"Understanding overall concept of ESG and its relevance in business to ensure the sustainability."
+  },
+  {
+    content:"Clarity on climate change mitigation and resource conservation processes."
+  },
+  {
+    content:"Relevance of social inclusion and social impact assessment tools."
+  },
+  {
+    content:"Corporate Governance and best practices to ensure business ethics and value system."
+  },
+  {
+    content:"Strategy and Policy implication for effective adoption of ESG in India."
+  },
+  {
+    content:"Learning from peers and best case for better application of ESG."
+  },
+  {
+    content:"Developing training module for capacity development programs."
+  },
+]
+const skillsArray = [
+  {
+    list:"Sustainability Analysis"
+  },
+  {
+    list:"Strategic Planning"
+  },
+  {
+    list:"Regulatory Compliance"
+  },
+  {
+    list:"Project Management"
+  },
+  {
+    list:"Collaboration and Teamwork"
+  },
+]
+const careerAray = [
+  {
+    list:"Sustainability Consultant"
+  },
+  {
+    list:"CSR Manager"
+  },
+  {
+    list:"Environmental Analyst"
+  },
+  {
+    list:"Chief Sustainability Officer (CSO)"
+  },
+  {
+    list:"ESG Analyst/Investor"
+  },
+  {
+    list:"Risk and Compliance Manager"
+  },
+  {
+    list:"Public Policy Advisor"
+  },
+  {
+    list:"Sustainability Communications Specialist"
+  },
+]
