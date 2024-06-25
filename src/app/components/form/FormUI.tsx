@@ -5,9 +5,10 @@ type FormUIProps  ={
   setOpenPopup?: any;
   className?:any,
   heading?:string,
+  formWidth?:string
 }
 
-const FormUI = ({ setOpenPopup,className,heading }: FormUIProps) => {
+const FormUI = ({ setOpenPopup,className,heading,formWidth }: FormUIProps) => {
   const [selectedOption, setSelectedOption] = useState("");
 
   const handleChange = (event: any) => {
@@ -35,7 +36,7 @@ const FormUI = ({ setOpenPopup,className,heading }: FormUIProps) => {
   };
   return (
     <>
-      <div className="max-w-[400px] z-0 rounded-[10px] border-[1px] border-slate-200 bg-slate-100 relative p-[20px]">
+      <div className={`max-w-[400px] z-0 rounded-[10px] border-[1px] border-slate-200 bg-slate-100 relative p-[20px] ${formWidth}`}>
         <h3 className="text-[20px] text-center font-[600] mb-[10px]">{heading? heading : "Career Counseling"}</h3>
         <div className={`formbox flex flex-col gap-[10px] ${className}`}>
           <div className="max-w-sm space-y-3">
