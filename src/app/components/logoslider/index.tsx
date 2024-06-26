@@ -90,7 +90,7 @@ const logosliderarry = [
   },
   {
     logo: "/logoslider/33.png",
-    link: "https://jeffgoldbergstudio.com/",
+    link: "https://eduxll.com/jeff-goldberg",
   },
   {
     logo: "/logoslider/3.webp",
@@ -110,11 +110,11 @@ const logosliderarry = [
   // },
   {
     logo: "/logoslider/IIT-Kanpur.png",
-    link: "#",
+    link: "/IIT-kanpur",
   },
   {
     logo: "/logoslider/manipal-Univ.webp",
-    link: "#",
+    link: "/onlinemanipal",
   },
   {
     logo: "/logoslider/nasscom.jpg",
