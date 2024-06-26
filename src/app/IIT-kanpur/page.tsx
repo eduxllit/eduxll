@@ -152,7 +152,7 @@ const IITKanpur = () => {
             </h2>
             <span className="w-24 h-[3px] bg-green-800 block"></span>
             <h3 className="mt-4 font-semibold text-lg">
-              At the end of the "ESG and Business Sustainability" program,
+              At the end of the &quot;ESG and Business Sustainability&quot; program,
               learners should have acquired the following knowledge and skills:
             </h3>
             <ul className="list-disc">
@@ -232,7 +232,7 @@ const IITKanpur = () => {
       </div>
       {/* faq */}
       <div className="py-12 sm:px-8 px-4 bg-green-700">
-        <h2 className="text-4xl font-semibold tracking-wider text-center mb-8 text-white">FAQ's</h2>
+        <h2 className="text-4xl font-semibold tracking-wider text-center mb-8 text-white">FAQ&apos;s</h2>
       <FaqComponent faqCollection={faqArray} />
       </div>
     </div>
