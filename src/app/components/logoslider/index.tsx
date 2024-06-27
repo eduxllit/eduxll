@@ -110,11 +110,11 @@ const logosliderarry = [
   // },
   {
     logo: "/logoslider/IIT-Kanpur.png",
-    link: "#",
+    link: "/IIT-kanpur",
   },
   {
     logo: "/logoslider/manipal-Univ.webp",
-    link: "#",
+    link: "/onlinemanipal",
   },
   {
     logo: "/logoslider/nasscom.jpg",

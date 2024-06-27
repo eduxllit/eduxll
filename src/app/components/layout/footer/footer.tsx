@@ -219,5 +219,5 @@ const QuickLink = [
   { link: "/blogs", navname: "Blogs" },
   // { link: "/webinars", navname: "webinars" },
   // { link: "/free-masterclass", navname: "Free Masterclass" },
-  { link: "#", navname: "Career Support" },
+  { link: "/careersupport", navname: "Career Support" },
 ];
