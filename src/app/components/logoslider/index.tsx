@@ -80,14 +80,14 @@ const LogoSlider = () => {
 export default LogoSlider;
 
 const logosliderarry = [
-  {
+  /* {
     logo: "/logoslider/1.webp",
     link: "#",
   },
   {
     logo: "/logoslider/2.webp",
     link: "#",
-  },
+  }, */
   {
     logo: "/logoslider/33.png",
     link: "https://eduxll.com/jeff-goldberg",
@@ -104,10 +104,10 @@ const logosliderarry = [
   //   logo: "/logoslider/5.webp",
   //   link: "#",
   // },
-  // {
-  //   logo: "/logoslider/6.webp",
-  //   link: "#",
-  // },
+   {
+     logo: "/logoslider/miauniv.png",
+     link: "#",
+   },
   {
     logo: "/logoslider/IIT-Kanpur.png",
     link: "/IIT-kanpur",

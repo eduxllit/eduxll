@@ -56,16 +56,16 @@ export const MasterBranch = [
     label: "Master of Business Administration (MBA)",
     value: "master-of-business-administration",
   },
-  {
+  /* {
     id: 2,
     label: "PGDM in Banking and Insurance",
     value: "pgdm-in-banking-and-insurance",
-  },
-  {
+  }, */
+  /* {
     id: 3,
     label: "MA in  Journalism and Mass Communication (MAJMC)",
     value: "ma-in-journalism-and-mass-communication",
-  },
+  }, */
   {
     id: 4,
     label: "Master of Computer Applications (MCA)",
@@ -81,7 +81,7 @@ export const MasterBranch = [
     label: "MA in Public Policy & Governance",
     value: "ma-in-public-policy-and-governance",
   },
-  {
+  /* {
     id: 7,
     label: "MBA in Power Management",
     value: "mba-in-power-management",
@@ -111,11 +111,11 @@ export const MasterBranch = [
     id: 12,
     label: "MBA in Finance Management",
     value: "mba-in-finance-management",
-  },
+  }, */
 ];
 
 export const BachelorBranch = [
-  {
+  /* {
     id: 1,
     label: "B.A International Hospitality",
     value: "b-a-international-hospitality",
@@ -129,19 +129,19 @@ export const BachelorBranch = [
     id: 3,
     label: "B.Sc in Computer Engineering",
     value: "b-sc-in-computer-engineering",
-  },
+  }, */
   {
     id: 4,
     label: "Bachelor of Business Administration (BBA)",
     value: "bachelor-of-business-administration",
   },
 
-  {
+ /*  {
     id: 5,
     label: "B.Sc in Computer Science",
     value: "b-sc-in-computer-science",
-  },
-  {
+  }, */
+  /* {
     id: 6,
     label: "Bachelor of Computer Applications (BCA)",
     value: "bachelor-of-computer-applications",
@@ -150,7 +150,7 @@ export const BachelorBranch = [
     id: 13,
     label: "Bachelor of Arts (BA)",
     value: "bachelor-of-arts",
-  },
+  }, */
   {
     id: 14,
     label: "Bachelor of Commerce (B.Com)",
@@ -170,7 +170,7 @@ export const CertificateBranch = [
     label:"AR/VR Consultant",
     value:"AR/VR Consultant"
   },
-  {
+  /* {
     id:3,
     label:"IoT- Product Manager",
     value:"IoT- Product Manager"
@@ -179,7 +179,7 @@ export const CertificateBranch = [
     id:4,
     label:"Robotics Process Automation Consultant",
     value:"Robotics Process Automation Consultant"
-  },
+  },  */
   {
     id:5,
     label:"Blockchain Strategist",
