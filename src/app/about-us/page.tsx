@@ -22,10 +22,10 @@ const AboutUs = () => {
       <div className="grid md:grid-cols-2 items-center gap-6 max-w-[1200px] m-auto md:py-20 sm:py-12 py-8 lg:px-0 px-4">
         <div>
           <h3 className="sm:text-3xl text-2xl sm:text-left text-center font-semibold mb-2">
-            About Eduxll
+            About eduXLL
           </h3>
-          <p className="text-sm mb-[16px]">
-            At EduXLL, we are redefining the boundaries of online education by
+          <p className="text-sm mb-[16px] text-justify">
+            At eduXLL, we are redefining the boundaries of online education by
             offering a platform where ambition meets opportunity. Born from a
             vision to make high-quality education accessible to all, EduXLL
             bridges the gap between learners and their aspirations through a
@@ -35,22 +35,22 @@ const AboutUs = () => {
             personal development.
           </p>
           
-          <p className="text-sm mb-[16px]">
+          <p className="text-sm mb-[16px] text-justify">
           (eduXLL, a company owned by EDOVU VENTURES PRIVATE LIMITED committed to deliver world class education all over the world.)
           </p>
 
-          <p className="text-sm  mb-[16px]">
+          <p className="text-sm  mb-[16px] text-justify">
             Our unique educational model is built on the foundation of
             partnership with pioneering institutions and distinguished industry
             experts. This collaborative approach ensures our curriculum is not
             just academically rigorous but also rich in real-world relevance. At
-            EduXLL, we believe in the power of education to transform lives.
+            eduXLL, we believe in the power of education to transform lives.
             Thus, our courses are designed to cater to a diverse range of
             interests and career paths, from business and technology to creative
             arts and beyond.
           </p>
-          <p className="text-sm">
-            What sets EduXLL apart is our commitment to creating an engaging and
+          <p className="text-sm text-justify">
+            What sets eduXLL apart is our commitment to creating an engaging and
             supportive learning environment. Our platform is intuitive,
             user-friendly, and equipped with cutting-edge technology to deliver
             an unparalleled online learning experience. We pride ourselves on
@@ -59,14 +59,14 @@ const AboutUs = () => {
             learning with us a truly international experience.
           </p>
           
-          <p className="text-sm">
-            In a world where continuous learning is the key to success, EduXLL
+          <p className="text-sm text-justify">
+            In a world where continuous learning is the key to success, eduXLL
             stands as a beacon for those who seek to elevate themselves. Join us
             on this journey of discovery and growth. Your future starts here, at
-            EduXLL, where learning knows no boundaries.
+            eduXLL, where learning knows no boundaries.
           </p>
 
-          <button className="bg-green-700 flex md:mx-0 m-auto gap-2 py-3 text-white px-6 rounded-md mt-6">
+          {/* <button className="bg-green-700 flex md:mx-0 m-auto gap-2 py-3 text-white px-6 rounded-md mt-6">
             <div className="bg-white w-fit p-[3px] rounded-full">
               <Image src={"/svg/check.svg"} alt="view" width={16} height={16} />
             </div>
@@ -74,7 +74,7 @@ const AboutUs = () => {
 
             <span>Enrolled Today</span>
             </Link>
-          </button>
+          </button> */}
           {/* <Button text={"Enrolled Today"} /> */}
         </div>
         <div>
@@ -114,8 +114,9 @@ const AboutUs = () => {
               <h3 className="sm:text-3xl text-center text-2xl sm:text-left text-center font-semibold ">
                 Our Vision
               </h3>
-              <p>
-                EduXLL envisions becoming a pivotal gateway for learners
+                       <p className="text-sm text-justify">
+
+              eduXLL envisions becoming a pivotal gateway for learners
                 worldwide, seeking to unlock their full potential and embark on
                 prosperous career paths in Europe. By offering meticulously
                 designed courses that are aligned with the European job
@@ -129,11 +130,12 @@ const AboutUs = () => {
                 establish meaningful lives there.
               </p>
             </div>
-            <div>
+            <div className="text-sm text-justify">
               <h3 className="text-3xl sm:text-left text-center font-semibold ">Our Mission</h3>
               <p className=" ">
+                
                 {" "}
-                EduXLL is committed to empowering students with the tools and
+                eduXLL is committed to empowering students with the tools and
                 knowledge necessary for successful careers and life in Europe.
                 Our mission encompasses:
               </p>
@@ -187,7 +189,7 @@ const AboutUs = () => {
               Our Aim
             </h3>
             <p>
-              EduXLL envisions becoming a pivotal gateway for learners
+            eduXLL envisions becoming a pivotal gateway for learners
               worldwide, seeking to unlock their full potential and embark on
               prosperous career paths in Europe. By offering meticulously
               designed courses that are aligned with the European job

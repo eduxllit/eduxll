@@ -53,17 +53,17 @@ const BestCourses = () => {
         <div className=" md:max-w-[1200px] w-[100%] mx-auto   ">
           <div className="sm:flex justify-between items-center sm:mb-0 mb-4">
             <h2 className="sm:text-[35px] text-2xl text-black leading-[1.3] font-bold mb-[20px]">
-              Leading Global Courses
+              Leading Courses
             </h2>
 
-            {/* <Link href="/all-course" className="max-sm:hidden">
+            { <Link href="/all-course" className="max-sm:hidden">
               <Button
                 text={"View All  "}
                 className={
                   "  whitespace-nowrap bg-gradient-to-r from-[#ee2c3c] to-[#da202f] !rounded-lg   text-white font-medium px-spacing24    "
                 }
               />
-            </Link> */}
+            </Link>}
           </div>
           <div className="flex  sm:gap-[45px] gap-4 mb-[10px] max-sm:justify-between">
             {CourseFilter?.map((item, index) => {

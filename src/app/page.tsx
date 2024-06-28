@@ -92,12 +92,12 @@ const page = () => {
               with us!
             </p>
           </div>
-          <div className="md:mt-0 mt-8">
+          {/* <div className="md:mt-0 mt-8">
             <Button
               text={"View All Categories"}
               className="justify-center items-center gap-spacing8 inline-flex whitespace-nowrap bg-gradient-to-r from-[#ee2c3c] to-[#da202f] rounded-lg shadow-cta text-white font-medium px-spacing24 py-spacing14 md:py-spacing10 z-10 min-w-124px"
             ></Button>
-          </div>
+          </div> */}
         </div>
         <section className="my-12">
           <CoursesBox />

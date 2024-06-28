@@ -61,6 +61,7 @@ const Header = () => {
     item === "Contact us" && router.push("/contact-us");
     item === "Study Abroad" && router.push("/study-abroad");
     item === "Career Support" && router.push("/careersupport");
+    item === "Pay Now" && router.push("https://eduxll.letzpe.com/");
   };
   const toggleSidebar = (val: any) => {
     setColor(val);

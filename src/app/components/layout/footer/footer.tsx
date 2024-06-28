@@ -1,4 +1,5 @@
 "use client";
+import { link } from "fs";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -42,7 +43,7 @@ const Footer = () => {
                   />
                 </div>
                 <p className="text-[15px] text-[#808292] font-medium  leading-[1.5em] pr-[15px]">
-                  EduXLL is a higher education platform which delivers an
+                  eduXLL is a higher education platform which delivers an
                   INNOVATIVE Methodology and latest and niche courses for
                   students and working professionals.
                 </p>
@@ -156,7 +157,7 @@ const Footer = () => {
 
         <div className="md:max-w-[1200px]  px-[15px] w-[100%] mx-auto mt-[30px] border-t-[1px] border-solid border-[#7070701a]">
           <p className="pt-[30px] pb-[30px]  text-center text-[13px] text-[#808292] font-medium  leading-[1.5em]">
-            © 2024 edUXLL A UNIT OF EDOVU VENTURES PRIVATE LIMITED. All Rights
+            © 2024 eduXLL A UNIT OF EDOVU VENTURES PRIVATE LIMITED. All Rights
             Reserved{" "}
           </p>
         </div>
@@ -209,7 +210,7 @@ const Aboutlink = [
   // { link: "/free-courses", navname: "Free Courses" },
 ];
 const Resourseslink = [
-  { navname: "Home" },
+  { navname: "Home", link: "https://eduxll.com/" },
   // { navname: "Free Course" },
   { navname: "Privacy Policy", link: "/privacy-policy" },
   { navname: "Terms & Conditions", link: "/terms-and-conditions" },
@@ -220,4 +221,5 @@ const QuickLink = [
   // { link: "/webinars", navname: "webinars" },
   // { link: "/free-masterclass", navname: "Free Masterclass" },
   { link: "/careersupport", navname: "Career Support" },
+  { link: "https://eduxll.letzpe.com/",  navname: "Pay Now" },
 ];

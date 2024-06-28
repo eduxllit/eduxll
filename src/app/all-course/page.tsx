@@ -41,7 +41,7 @@ const Courses = async () => {
         <div className="max-w-[1280px] m-auto grid md:grid-cols-2 items-center px-4 pb-4">
           <div className="sm:p-8 pt-8 pb-8">
             <h1 className="sm:text-[42px] text-3xl sm:text-left text-center font-semibold mb-4">
-              Leading Global Courses
+              Leading Courses
             </h1>
             <p>
               Studying abroad exposes students to diverse cultures and global
