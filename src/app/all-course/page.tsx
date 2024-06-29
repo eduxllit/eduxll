@@ -43,13 +43,13 @@ const Courses = async () => {
             <h1 className="sm:text-[42px] text-3xl sm:text-left text-center font-semibold mb-4">
               Leading Courses
             </h1>
-            <p>
-              Studying abroad exposes students to diverse cultures and global
-              education systems, enhancing personal and professional growth. It
-              broadens perspectives, improves language skills, and provides
-              networking opportunities with a diverse peer group, significantly
-              boosting employability and offering a competitive edge in career
-              advancements.
+            <p className="text-justify">
+            Studying various courses at eduXLL offers a unique, immersive experience, enhancing personal and professional
+            growth of students as they engage with cutting-edge technologies, innovative business practices, and sustainable
+            development principles. It broadens perspectives, improves language skills, and provides networking opportunities
+            with a diverse peer group, significantly boosting employability and offering a competitive edge in career advancements.
+
+
             </p>
             <div className="grid gap-2 mt-8">
               <div className="flex gap-2 items-center">
@@ -72,7 +72,8 @@ const Courses = async () => {
                     height={20}
                   />
                 </span>
-                <span>No GRE/TOEFL required for admission </span>
+                <span>Pursue education without leaving current job
+            </span>
               </div>
               <div className="flex gap-2 items-center">
                 <span className="bg-[#4E3CD1] w-6 h-6 p-[4px] rounded-full">
@@ -93,12 +94,14 @@ const Courses = async () => {
                     width={18}
                     height={18}
                   />
-                  <span> limited time offer</span>
+                  <span>Assured Internship Opportunities
+
+                  </span>
                 </div>
                 <h2>
                   Get a{" "}
-                  <span className="text-[#B37000]"> Comprehensive Guide</span>{" "}
-                  on Studying in the US with a{" "}
+                  <span className="text-[#B37000]">Comprehensive Guide</span>{" "}
+                  on  various courses with a  {" "}
                   <span className="text-[#B37000]">
                     {" "}
                     1 : 1 Counselling for FREE

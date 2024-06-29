@@ -89,22 +89,31 @@ const AboutUs = () => {
       </div>
 
       <section className="sm:py-[50px] py-[20px] bg-[#FFFDF8]">
-        <div className="max-w-[1200px] px-4 m-auto">
-          <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-[50px] gap-4 items-center flex-1 justify-between">
-            <h3 className="sm:text-3xl text-center text-2xl sm:text-left text-center font-semibold mb-0 pr-[30px] border-r-[1px] border-[#000]">
+            <h3 className="sm:text-3xl text-center text-2xl sm:text-center text-center font-semibold mb-0 pr-[30px] border-r-[1px] border-[#000]">
               Key Features
             </h3>
 
-            <ol>
+            <div className= "width=306 height=230">
+          <Image
+            src="/about-us/key.webp"
+            alt="girl"
+            width={506}
+            height={430}
+            className="w-full"
+          />
+        </div>
+
+
+            {/* <ol>
               <li>Global University Network</li>
               <li>Distinguished Faculty</li>
               <li>Comprehensive Courses</li>
               <li>EU-Aligned Curriculum</li>
               <li>International Career Services</li>
               <li>Partnerships with European Employers</li>
-            </ol>
-          </div>
-        </div>
+            </ol> */}
+        {/*   </div>
+        </div> */}
       </section>
 
       <section className="sm:py-[50px] py-[20px]">
@@ -116,18 +125,8 @@ const AboutUs = () => {
               </h3>
                        <p className="text-sm text-justify">
 
-              eduXLL envisions becoming a pivotal gateway for learners
-                worldwide, seeking to unlock their full potential and embark on
-                prosperous career paths in Europe. By offering meticulously
-                designed courses that are aligned with the European job
-                market&apos;s demands, we aim to equip our students with the
-                indispensable skills, knowledge, and cultural insights needed
-                for seamless integration into European workplaces. Our
-                commitment extends beyond education, aiming to bridge the
-                cultural divide and provide comprehensive support in navigating
-                employment landscapes, thereby empowering our students to not
-                only secure rewarding jobs in Europe but also to thrive and
-                establish meaningful lives there.
+                       To create a learner-friendly knowledge platform that ensures and facilitate world-class quality of learning & teaching by providing curriculum that is personalized, learner-focused, flexible and inspiring,
+                        thus motivating learners to excel in academics and professional environments..
               </p>
             </div>
             <div className="text-sm text-justify">
@@ -135,48 +134,10 @@ const AboutUs = () => {
               <p className=" ">
                 
                 {" "}
-                eduXLL is committed to empowering students with the tools and
-                knowledge necessary for successful careers and life in Europe.
-                Our mission encompasses:
+                Prosper the spirit of continuous and comprehensive academic excellence among all learners, and create courses with customized learning opportunities 
+                for all participants that enable them to achieve their professional goals...
               </p>
-              <ul className=" ">
-                <li>
-                  <b>Access to Quality European-Accredited Education:</b>{" "}
-                  Providing students with courses that are recognized and valued
-                  across European countries, ensuring smooth academic and
-                  professional integration.
-                </li>
-                <li>
-                  <b>Diverse Program Offerings:</b> Offering a wide array of
-                  programs that cater to the dynamic needs of the global job
-                  market, available anytime and anywhere to accommodate the
-                  schedules of all learners.
-                </li>
-                <li>
-                  <b>Blended Learning for the Digital Era:</b> Embracing the
-                  shift towards the fourth industrial revolution with a blended
-                  learning approach that combines online resources, real-world
-                  projects, and interactive platforms.
-                </li>
-                <li>
-                  <b>Expert International Faculty:</b> Connecting students with
-                  a network of reputable faculty and industry professionals from
-                  India, Europe and beyond, providing insights into the European
-                  job market and employment practices.
-                </li>
-                <li>
-                  <b>Global Classroom Experience:</b> Facilitating an
-                  international learning environment where students can engage
-                  with peers from various backgrounds, preparing them for the
-                  diverse workplace culture.
-                </li>
-                <li>
-                  <b>Career Integration Support:</b> Offering tailored career
-                  services, including visa guidance, job market orientation, and
-                  networking opportunities, to ensure students are well-prepared
-                  for employment.
-                </li>
-              </ul>
+               
             </div>
           </div>
         </div>

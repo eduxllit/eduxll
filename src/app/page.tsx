@@ -173,9 +173,9 @@ const page = () => {
         </div>
       </div>
 
-      <div className="my-[30px] md:max-w-[1200px] w-[100%] mx-auto px-[15px]  ">
+      {/* <div className="my-[30px] md:max-w-[1200px] w-[100%] mx-auto px-[15px]  ">
         <Image src="/attendimage.png" width={1200} height={200} alt="" />
-      </div>
+      </div> */}
 
       <div className="block md:grid  grid-cols-1 md:max-w-[1200px] w-[100%] mx-auto px-[15px] mb-[30px]">
         <div className="w-[100%]">

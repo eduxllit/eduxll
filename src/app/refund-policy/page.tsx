@@ -15,8 +15,8 @@ const AboutUs = () => {
       </div>
       <div className="grid md:grid-cols-1 items-center gap-6 max-w-[1200px] m-auto md:py-20 sm:py-12 py-8 lg:px-0 px-4">
         <div>
-          <p className="mb-[16px] ">
-            We thank you and appreciate your enrolment with us. Please read this
+        <p className="text-justify">
+        We thank you and appreciate your enrolment with us. Please read this
             policy, the terms and conditions of the course offerings and its
             benefits, which are available online and accessible at web
             <a href="www.eduxll.com" className="m-[0 5px]">
@@ -28,9 +28,9 @@ const AboutUs = () => {
             about your rights and obligations as our user, concerning any
             purchase you make through us. The policy concerning the processing
             of the refund, shall be following the clauses as set forth:
-          </p>
+          </p> <br/>
 
-          <p className="mb-[16px] ">
+          <p className="text-justify">
             eduXLL may refund for some transactions/purchases, depending on the
             applicable refund policy for the selected program/course. Any refund
             towards partly or fully paid program/course fee shall be at all
@@ -39,31 +39,29 @@ const AboutUs = () => {
             PROMOTIONAL CHARGES ETC
           </p>
 
-          <p className="mb-[16px] ">
+          <p className="text-justify">
             eduXLL reserves the right to modify and amend the refund policy/ies
             at its sole discretion.{" "}
           </p>
-
-          <p className="mb-[16px] ">
+<br/>
+          <p className="text-justify">
             You understand that no refund is payable to you, for any reason
             whatsoever, in the event you cancel or raise a ticket/request for a
             refund:
           </p>
 
           <ul className="ml-[16px]">
-            <li className="mb-[10px]">
-              post-closing of the enrolment for the program/course; and/or
+          <li><b>-</b> post-closing of the enrolment for the program/course; and/or
             </li>
-            <li className="mb-[10px]">
-              on/before 10 (Ten) days of the start of the program/course.
+             <li><b>-</b> on/before 10 (Ten) days of the start of the program/course.
             </li>
           </ul>
-
+<br/>
           <h2 className="text-[20px] font-[600] mb-[0px] capitalize">
-            For Executive Education Program
+            For Executive Education Program 
           </h2>
-
-          <p className="mb-[16px] ">
+<br/>
+          <p className="text-justify">
             Following are the terms and conditions that govern the
             selection/rejection of the applicants for the program and the Refund
             Policy for all Executive Education programs offered on eduXLL in
@@ -75,7 +73,7 @@ const AboutUs = () => {
             Applicant will receive a full fee refund for the same.
           </p>
 
-          <p className="mb-[16px] ">
+          <p className="text-justify">
             When you ( <b>“Applicant”</b> ) apply for a course on eduXLL you
             agree to our Privacy Policy, Terms of Use and the conditions covered
             below.
@@ -181,11 +179,11 @@ const AboutUs = () => {
               refund policy at their sole discretion.
             </li>
           </ol>
-
+<br/>
           <h2 className="text-[20px] font-[600] mb-[16px] capitalize">
             For Early Career Program
           </h2>
-          <p className="mb-[16px] ">
+          <p className="text-justify">
             For all Early Career programs offered by eduXLL, any payment made,
             towards fee or any charges applicable to the said course/examination
             is non-refundable. Application fee, Test/Assessment fees, Course
@@ -193,7 +191,7 @@ const AboutUs = () => {
             be refunded under any circumstance(s) whatsoever.
           </p>
 
-          <p className="mb-[16px] ">
+          <p className="text-justify">
             In the event of non-delivery of course to the Participant by eduXLL
             on the scheduled date or such extended date as decided by eduXLL at
             its discretion, the course fee/program fee would be refunded to the
@@ -202,12 +200,12 @@ const AboutUs = () => {
             account/credit card/ debit card/ finance company, from which the
             amount was received by eduXLL.
           </p>
-
+<br/>
           <h2 className="text-[20px] font-[600] mb-[16px] capitalize">
             CANCELLATION
           </h2>
 
-          <p className="mb-[16px] ">
+          <p className="text-justify">
             eduXLL reserves the right to cancel any training program at any time
             for any reason. In such event, eduXLL shall inform the Participant
             of such cancellation and offer the Participant an alternative
@@ -216,7 +214,7 @@ const AboutUs = () => {
             date, at its sole discretion.
           </p>
 
-          <p className="mb-[16px] ">
+          <p className="text-justify">
             The Participant is not allowed to cancel orders for any training.
             Once the order for training is received, there are no refunds or
             cancellations. All sales are final.
@@ -224,48 +222,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-[#ee2c3c] to-[#da202f] px-6 py-12 text-white font-semibold sm:text-[22px] text-[16px]">
-        <div className="grid lg:grid-cols-[2fr_1fr] lg:gap-0 gap-4 text-center max-w-[1200px] m-auto">
-          <div>
-            <h2>
-              {" "}
-              EduXLL Learner Support- (INDIA / Foreign Nations) Talk to our
-              experts
-            </h2>
-            <h2>We’re available 24/7.</h2>
-          </div>
-          <div className="flex items-center justify-center">
-            <div>
-              <Image
-                src={"/svg/whatsapp.svg"}
-                alt="whatsapp"
-                width={36}
-                height={36}
-                className="w-full sm:w-[36px] sm:h-[36px]"
-              />
-            </div>
-            <div>
-              <Image
-                src={"/svg/slash.svg"}
-                alt="whatsapp"
-                width={36}
-                height={36}
-                className="w-full sm:w-[36px] sm:h-[36px]"
-              />
-            </div>
-            <div>
-              <Image
-                src={"/svg/phone-white.svg"}
-                alt="whatsapp"
-                width={36}
-                height={36}
-                className="w-full sm:w-[36px] sm:h-[36px]"
-              />
-            </div>
-            <p className="ml-4 sm:text-2xl text-lg">+91 8448 198 656</p>
-          </div>
-        </div>
-      </div>
+      
     </HeaderLayout>
   );
 };
