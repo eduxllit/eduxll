@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// mongodb+srv://nehat786:<password>@cluster0.2yzdsru.mongodb.net/
+
 
 const MONGO_URI =
   "mongodb+srv://nehat786:barbi78692@cluster0.2yzdsru.mongodb.net/";
