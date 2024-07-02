@@ -88,21 +88,22 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <section className="sm:py-[50px] py-[20px] bg-[#FFFDF8]">
-            <h3 className="sm:text-3xl text-center text-2xl sm:text-center text-center font-semibold mb-0 pr-[30px] border-r-[1px] border-[#000]">
+      <section className="sm:py-[50px] py-[20px] bg-[#FFFDF8] ">
+            <h3 className="sm:text-3xl text-center text-1xl sm:text-center text-center font-semibold mb-0 pr-[30px] border-r-[1px] border-[#000]">
               Key Features
-            </h3>
+            </h3><hr/>
 
-            <div className= "width=306 height=230">
-          <Image
+           <Image
             src="/about-us/key.webp"
             alt="girl"
-            width={506}
-            height={430}
-            className="w-full"
+            width={700}
+            height={530}
+            style={{
+              margin: "auto",
+            }}
+            className=""
           />
-        </div>
-
+ 
 
             {/* <ol>
               <li>Global University Network</li>
