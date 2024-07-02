@@ -194,4 +194,11 @@ const navlist = [
     active: ["home"],
     subMenu: [],
   },
+  {
+    SvgIcon: "/user-voice-line.svg",
+    text: "Inquiry List",
+    query: "/admin/newdashboard/inquires",
+    active: ["home"],
+    subMenu: [],
+  },
 ];

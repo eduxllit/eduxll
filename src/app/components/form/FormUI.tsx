@@ -1,5 +1,6 @@
 "use client";
 import axios from "axios";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 
@@ -20,6 +21,7 @@ const FormUI = ({
   const [pendingVerification, setPendingVerification] = useState(false);
   const [isMobileNoVerified, setIsMobileNoVerified] = useState(false);
   const [otp, setOtp] = useState("");
+  console.log("pendingVerification", pendingVerification);
 
   const { id } = useParams();
 
@@ -65,11 +67,10 @@ const FormUI = ({
       alert("Please enter a valid mobile number");
       return;
     }
-    // const response = await axios.post('/api/verification/sendotp', { mobileNo:mobile });
+    const response = await axios.post("/api/verification/sendotp", {
+      mobileNo: mobile,
+    });
 
-    const response = await axios.post(
-      `https://nstechindia.co.in/api/mt/SendSMS?user=eduxll&password=nsts@123&senderid=EDUXLL&channel=Trans&DCS=0&flashsms=0&number=8743906997&text=Your login verification code is 12345 valid till 2 minutes. eduXLL  https://eduxll.com/`
-    );
     console.log("otp check", { response });
     if (response?.status === 200) {
       setPendingVerification(true);
@@ -82,12 +83,12 @@ const FormUI = ({
       mobile,
       otp,
     });
-    console.log(response);
+    console.log("testing", response);
     if (response?.status === 200) {
       setIsMobileNoVerified(true);
       setPendingVerification(false);
     } else {
-      alert("Invalid OTP");
+      alert("Invalid OTP ss");
     }
   };
 
@@ -114,8 +115,30 @@ const FormUI = ({
           workExperience: "",
         });
         console.log("nehat", response);
-        alert("Inquiry submitted successfully");
+        // alert("Inquiry submitted successfully");
       }
+
+      // email part
+      // const emailRes = await axios.post("/api/sendemail", {
+      //   name: inputValue?.name,
+      //   email: inputValue?.email,
+      //   message: inputValue?.workExperience,
+      //   phone: inputValue?.mobile,
+      //   work_experience: inputValue?.workExperience,
+      // });
+      // console.log("emailRes", emailRes);
+
+      // need to call /api/sendemail route to send email to the user who submitted the form with the details they entered
+      const emailRes = await axios.post("/api/sendemail", {
+        name: inputValue?.name,
+        email: inputValue?.email,
+        message: inputValue?.workExperience,
+        phone: inputValue?.mobile,
+        work_experience: inputValue?.workExperience,
+      });
+      console.log("emailRes", emailRes);
+
+      validate();
     } catch (error) {
       console.log(error);
     }
@@ -141,7 +164,7 @@ const FormUI = ({
               }
             />
           </div>
-          <div className="max-w-sm space-y-3">
+          <div className="flex gap-[15px] items-center">
             <input
               disabled={isMobileNoVerified || pendingVerification}
               required
@@ -157,13 +180,55 @@ const FormUI = ({
                 setInputValue({ ...inputValue, mobile: e.target.value })
               }
             />
+
+            {!pendingVerification && (
+              <button
+                onClick={verifyMobileNo}
+                disabled={isMobileNoVerified}
+                type="button"
+                className={` focus:outline-none   text-red-600     font-medium  text-sm px-0 py-0 me-0 mb-0  ${
+                  isMobileNoVerified ? "" : "border-b-1 border-red-600"
+                } `}
+              >
+                {isMobileNoVerified ? (
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Image
+                      src="/verified-badge-fill.svg"
+                      width={20}
+                      height={20}
+                      alt="check"
+                    />
+
+                    <span
+                      className="text-[10px] text-black"
+                      style={{
+                        lineHeight: "10px",
+                      }}
+                    >
+                      Verified
+                    </span>
+                  </div>
+                ) : (
+                  <>Verify</>
+                )}
+              </button>
+            )}
+          </div>
+          <div className="flex gap-[15px] items-center">
             {pendingVerification && (
               <input
                 required
                 min={5}
                 max={5}
                 type="text"
-                className="py-[10px] px-[20px] block w-full border border-[#9f9f9f] rounded-[10px] text-sm"
+                className="py-[10px] px-[20px] block w-full border border-[#9f9f9f] flex-1 rounded-[10px] text-sm"
                 placeholder="OTP:"
                 name="otp"
                 id="otp"
@@ -171,28 +236,18 @@ const FormUI = ({
                 onChange={(e) => setOtp(e.target.value)}
               />
             )}
-            {!pendingVerification && (
-              <button
-                onClick={verifyMobileNo}
-                disabled={isMobileNoVerified}
-                type="button"
-                className=" focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-              >
-                {isMobileNoVerified ? "Verified" : "Verify"}
-              </button>
-            )}
-
             {pendingVerification && (
               <button
                 onClick={verifyOtp}
                 disabled={isMobileNoVerified}
                 type="button"
-                className=" focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                className="focus:outline-none   text-red-600     font-medium  text-sm px-0 py-0 me-0 mb-0  border-b-1 border-red-600"
               >
                 Verify OTP
               </button>
             )}
           </div>
+
           <div className="max-w-sm space-y-3">
             <input
               type="email"
