@@ -107,6 +107,16 @@ const FormUI = ({
 
     try {
       const response = await axios.post("/api/inquiry", nesteddata);
+
+      const emailRes = await axios.post("/api/sendemail", {
+        name: inputValue?.name,
+        email: inputValue?.email,
+        message: inputValue?.workExperience,
+        phone: inputValue?.mobile,
+        work_experience: inputValue?.workExperience,
+      });
+      console.log("emailRes", emailRes);
+
       if (response?.status === 200) {
         setInputValue({
           name: "",
@@ -117,28 +127,6 @@ const FormUI = ({
         console.log("nehat", response);
         // alert("Inquiry submitted successfully");
       }
-
-      // email part
-      // const emailRes = await axios.post("/api/sendemail", {
-      //   name: inputValue?.name,
-      //   email: inputValue?.email,
-      //   message: inputValue?.workExperience,
-      //   phone: inputValue?.mobile,
-      //   work_experience: inputValue?.workExperience,
-      // });
-      // console.log("emailRes", emailRes);
-
-      // need to call /api/sendemail route to send email to the user who submitted the form with the details they entered
-      const emailRes = await axios.post("/api/sendemail", {
-        name: inputValue?.name,
-        email: inputValue?.email,
-        message: inputValue?.workExperience,
-        phone: inputValue?.mobile,
-        work_experience: inputValue?.workExperience,
-      });
-      console.log("emailRes", emailRes);
-
-      validate();
     } catch (error) {
       console.log(error);
     }
