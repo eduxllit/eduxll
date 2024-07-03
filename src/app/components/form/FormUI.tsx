@@ -1,23 +1,29 @@
 "use client";
 import axios from "axios";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 
-type FormUIProps  ={
+type FormUIProps = {
   setOpenPopup?: any;
-  className?:any,
-  heading?:string,
-  formWidth?:string
-}
+  className?: any;
+  heading?: string;
+  formWidth?: string;
+};
 
-const FormUI = ({ setOpenPopup,className,heading,formWidth }: FormUIProps) => {
+const FormUI = ({
+  setOpenPopup,
+  className,
+  heading,
+  formWidth,
+}: FormUIProps) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [pendingVerification, setPendingVerification] = useState(false);
   const [isMobileNoVerified, setIsMobileNoVerified] = useState(false);
   const [otp, setOtp] = useState("");
+  console.log("pendingVerification", pendingVerification);
 
- const {id}= useParams();
- 
+  const { id } = useParams();
 
   const [inputValue, setInputValue] = useState({
     name: "",
@@ -26,19 +32,21 @@ const FormUI = ({ setOpenPopup,className,heading,formWidth }: FormUIProps) => {
     workExperience: "",
   });
 
-
-
   const handleChange = (event: any) => {
     setSelectedOption(event.target.value);
-    setInputValue({...inputValue, workExperience: event.target.value});
+    setInputValue({ ...inputValue, workExperience: event.target.value });
   };
 
   // validation function for email id ,  mobile no and name , work experience in years
   const validate = () => {
-    const name:any = document.querySelector("input[placeholder='Name :']");
-    const mobile:any = document.querySelector("input[placeholder='Mobile No :']");
-    const email:any = document.querySelector("input[placeholder='Email id :']");
-    const workExperience:any = document.querySelector("select");
+    const name: any = document.querySelector("input[placeholder='Name :']");
+    const mobile: any = document.querySelector(
+      "input[placeholder='Mobile No :']"
+    );
+    const email: any = document.querySelector(
+      "input[placeholder='Email id :']"
+    );
+    const workExperience: any = document.querySelector("select");
 
     if (
       name?.value === "" ||
@@ -53,71 +61,85 @@ const FormUI = ({ setOpenPopup,className,heading,formWidth }: FormUIProps) => {
     }
   };
 
-
   const verifyMobileNo = async () => {
     const mobile = inputValue.mobile;
-    if(mobile.length !== 10){
+    if (mobile.length !== 10) {
       alert("Please enter a valid mobile number");
       return;
     }
-    const response = await axios.post('/api/verification/sendotp', { mobileNo:mobile });
-    if(response?.status === 200){
+    const response = await axios.post("/api/verification/sendotp", {
+      mobileNo: mobile,
+    });
+
+    console.log("otp check", { response });
+    if (response?.status === 200) {
       setPendingVerification(true);
     }
-  }
+  };
 
   const verifyOtp = async () => {
     const mobile = inputValue.mobile;
-    const response = await axios.post('/api/verification/verify-otp', { mobile, otp });
-    console.log(response);
-    if(response?.status === 200){
+    const response = await axios.post("/api/verification/verify-otp", {
+      mobile,
+      otp,
+    });
+    console.log("testing", response);
+    if (response?.status === 200) {
       setIsMobileNoVerified(true);
       setPendingVerification(false);
-    }else{
-      alert("Invalid OTP");
+    } else {
+      alert("Invalid OTP ss");
     }
-  }
+  };
 
   const handleSendInquiry = async () => {
-    if(!isMobileNoVerified){
+    if (!isMobileNoVerified) {
       alert("Please verify your mobile number first");
       return;
     }
     const nesteddata = {
-      courseName: id, 
+      courseName: id,
       name: inputValue?.name,
       email: inputValue?.email,
       phone: inputValue?.mobile,
-      work_experience: inputValue?.workExperience
-    }
+      work_experience: inputValue?.workExperience,
+    };
 
     try {
-      const response = await axios.post('/api/inquiry', nesteddata);
-      if(response?.status === 200){
+      const response = await axios.post("/api/inquiry", nesteddata);
+
+      const emailRes = await axios.post("/api/sendemail", {
+        name: inputValue?.name,
+        email: inputValue?.email,
+        message: inputValue?.workExperience,
+        phone: inputValue?.mobile,
+        work_experience: inputValue?.workExperience,
+      });
+      console.log("emailRes", emailRes);
+
+      if (response?.status === 200) {
         setInputValue({
           name: "",
           mobile: "",
           email: "",
           workExperience: "",
         });
-      console.log('nehat', response);
-      alert("Inquiry submitted successfully");
-    }
+        console.log("nehat", response);
+        // alert("Inquiry submitted successfully");
+      }
     } catch (error) {
       console.log(error);
     }
-    
-    
-  }
-
-
-
-
+  };
 
   return (
     <>
-      <div className={`max-w-[400px] z-0 rounded-[10px] border-[1px] border-slate-200 bg-slate-100 relative p-[20px] ${formWidth}`}>
-        <h3 className="text-[20px] text-center font-[600] mb-[10px]">{heading? heading : "Career Counseling "}</h3>
+      <div
+        className={`max-w-[400px] z-0 rounded-[10px] border-[1px] border-slate-200 bg-slate-100 relative p-[20px] ${formWidth}`}
+      >
+        <h3 className="text-[20px] text-center font-[600] mb-[10px]">
+          {heading ? heading : "Career Counseling "}
+        </h3>
         <div className={`formbox flex flex-col gap-[10px] ${className}`}>
           <div className="max-w-sm space-y-3">
             <input
@@ -125,66 +147,104 @@ const FormUI = ({ setOpenPopup,className,heading,formWidth }: FormUIProps) => {
               className="py-[10px] px-[20px] block w-full border border-[#9f9f9f] rounded-[10px] text-sm "
               placeholder="Name :"
               value={inputValue.name}
-              onChange={(e) => setInputValue({...inputValue, name: e.target.value})}
+              onChange={(e) =>
+                setInputValue({ ...inputValue, name: e.target.value })
+              }
             />
           </div>
-          <div className="max-w-sm space-y-3">
+          <div className="flex gap-[15px] items-center">
             <input
-              disabled = {isMobileNoVerified  || pendingVerification}
+              disabled={isMobileNoVerified || pendingVerification}
               required
               min={10}
               max={10}
               type="text"
               className="py-[10px] px-[20px] block w-full border border-[#9f9f9f] rounded-[10px] text-sm"
               placeholder="Mobile No :"
-              name ='mobile'
+              name="mobile"
               id="mobile"
-              value = {inputValue.mobile}
-              onChange = {(e) => setInputValue({...inputValue, mobile: e.target.value})}
+              value={inputValue.mobile}
+              onChange={(e) =>
+                setInputValue({ ...inputValue, mobile: e.target.value })
+              }
             />
+
+            {!pendingVerification && (
+              <button
+                onClick={verifyMobileNo}
+                disabled={isMobileNoVerified}
+                type="button"
+                className={` focus:outline-none   text-red-600     font-medium  text-sm px-0 py-0 me-0 mb-0  ${
+                  isMobileNoVerified ? "" : "border-b-1 border-red-600"
+                } `}
+              >
+                {isMobileNoVerified ? (
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Image
+                      src="/verified-badge-fill.svg"
+                      width={20}
+                      height={20}
+                      alt="check"
+                    />
+
+                    <span
+                      className="text-[10px] text-black"
+                      style={{
+                        lineHeight: "10px",
+                      }}
+                    >
+                      Verified
+                    </span>
+                  </div>
+                ) : (
+                  <>Verify</>
+                )}
+              </button>
+            )}
+          </div>
+          <div className="flex gap-[15px] items-center">
             {pendingVerification && (
               <input
                 required
                 min={5}
                 max={5}
                 type="text"
-                className="py-[10px] px-[20px] block w-full border border-[#9f9f9f] rounded-[10px] text-sm"
+                className="py-[10px] px-[20px] block w-full border border-[#9f9f9f] flex-1 rounded-[10px] text-sm"
                 placeholder="OTP:"
-                name ='otp'
+                name="otp"
                 id="otp"
-                value = {otp}
-                onChange = {(e) => setOtp(e.target.value)}
+                value={otp}
+                onChange={(e) => setOtp(e.target.value)}
               />
             )}
-            {!pendingVerification && (
-            <button
-              onClick={verifyMobileNo}
-              disabled={isMobileNoVerified}
-              type="button"
-              className=" focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-            >
-              {isMobileNoVerified ? 'Verified' : 'Verify'}
-            </button>
-            )}
-
             {pendingVerification && (
-            <button
-              onClick={verifyOtp}
-              disabled={isMobileNoVerified}
-              type="button"
-              className=" focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-            >
-             Verify OTP
-            </button>
+              <button
+                onClick={verifyOtp}
+                disabled={isMobileNoVerified}
+                type="button"
+                className="focus:outline-none   text-red-600     font-medium  text-sm px-0 py-0 me-0 mb-0  border-b-1 border-red-600"
+              >
+                Verify OTP
+              </button>
             )}
           </div>
+
           <div className="max-w-sm space-y-3">
             <input
               type="email"
               className="py-[10px] px-[20px] block w-full border border-[#9f9f9f] rounded-[10px] text-sm"
               placeholder="Email id :"
               value={inputValue.email}
-              onChange={(e) => setInputValue({...inputValue, email: e.target.value})}
+              onChange={(e) =>
+                setInputValue({ ...inputValue, email: e.target.value })
+              }
             />
           </div>
           <div className="max-w-sm space-y-3">
