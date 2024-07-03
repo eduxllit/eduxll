@@ -117,7 +117,8 @@ const AboutUs = () => {
         </div> */}
       </section>
 
-      <section className="sm:py-[50px] py-[20px]">
+
+            <section className="sm:py-[50px] py-[20px]">
         <div className="max-w-[1200px] px-4 m-auto">
           <div className="grid grid-cols-1 sm:gap-[50px] gap-[30px] flex-1 justify-between">
             <div>
