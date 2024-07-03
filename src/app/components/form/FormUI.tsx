@@ -124,7 +124,7 @@ const FormUI = ({
           email: "",
           workExperience: "",
         });
-        console.log("nehat", response);
+        console.log("sahiltest", response);
         // alert("Inquiry submitted successfully");
       }
     } catch (error) {
