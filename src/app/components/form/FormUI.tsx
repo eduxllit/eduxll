@@ -79,15 +79,19 @@ const FormUI = ({
 
   const verifyOtp = async () => {
     const mobile = inputValue.mobile;
-    const response = await axios.post("/api/verification/verify-otp", {
-      mobile,
-      otp,
-    });
-    console.log("testing", response);
-    if (response?.status === 200) {
-      setIsMobileNoVerified(true);
-      setPendingVerification(false);
-    } else {
+    try {
+      
+      const response = await axios.post("/api/verification/verify-otp", {
+        mobile,
+        otp,
+      });
+
+      if (response?.status === 200) {
+        setIsMobileNoVerified(true);
+        setPendingVerification(false);
+      }
+
+    } catch (error) {
       alert("Invalid OTP ss");
     }
   };
