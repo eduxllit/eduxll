@@ -76,7 +76,7 @@ const LinkModelBox = ({
                 )}
 
                 <div className="content">
-                  <p className="text-sm">{modelcontent}</p>
+                  <p className="text-sm text-black">{modelcontent}</p>
                 </div>
               </div>
             </div>
