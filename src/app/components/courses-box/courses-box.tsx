@@ -1,3 +1,4 @@
+import { link } from "fs";
 import Image from "next/image";
 
 const CoursesBox = () => {
@@ -28,13 +29,16 @@ const CoursesBox = () => {
 export default CoursesBox;
 const coursesArray = [
   {
+    
     imageUrl: "/svg/code-box-line.svg",
     title: "Computer Applications",
+    
   },
+  
   {
     imageUrl: "/svg/bar-chart-2-line.svg",
-    title: "Business Management",
-  },
+    title: "Business Management", 
+  }, 
   {
     imageUrl: "/svg/megaphone-line.svg",
     title: "Journalism & Mass Communications ",
