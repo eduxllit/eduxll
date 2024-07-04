@@ -12,18 +12,18 @@ export async function POST(request: NextRequest, response: NextResponse) {
       port: 587,
       secure: false,
       auth: {
-        user: "msahil76640@gmail.com",
-        pass: "odpizarwxhpxsvqw",
+        user: "marketing@eduxll.com",
+        pass: "jkvdqtmzxdhvkkvm",
       },
     });
 
     const info = await transporter.sendMail({
       from: email,
-      to: "msahil76640@gmail.com",
-      subject: `Inquiry from sahil mail`,
+      to: "eduxllit@gmail.com",
+      subject: `Inquiry from Eduxll`,
 
       text: "Hello world",
-      html: `<b> Name: ${name} <br> Email: ${email} <br> Phone: ${phone} <br> Work Experience: ${work_experience} <br> Message: ${message} </b>`,
+      html: `<b> Name: ${name} <br> Email: ${email} <br> Phone: ${phone} <br> Work Experience: ${work_experience}  </b>`,
     });
     const recipient = await transporter.sendMail({
       from: email,

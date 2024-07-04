@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { useState } from "react";
 
 type FormUIProps = {
@@ -21,9 +21,14 @@ const FormUI = ({
   const [pendingVerification, setPendingVerification] = useState(false);
   const [isMobileNoVerified, setIsMobileNoVerified] = useState(false);
   const [otp, setOtp] = useState("");
+  const [loading, setLoading] = useState(false);
+
   console.log("pendingVerification", pendingVerification);
 
   const { id } = useParams();
+  console.log("id check", { id });
+  const path = usePathname();
+  console.log("pathname", path);
 
   const [inputValue, setInputValue] = useState({
     name: "",
@@ -79,15 +84,17 @@ const FormUI = ({
 
   const verifyOtp = async () => {
     const mobile = inputValue.mobile;
-    const response = await axios.post("/api/verification/verify-otp", {
-      mobile,
-      otp,
-    });
-    console.log("testing", response);
-    if (response?.status === 200) {
-      setIsMobileNoVerified(true);
-      setPendingVerification(false);
-    } else {
+    try {
+      const response = await axios.post("/api/verification/verify-otp", {
+        mobile,
+        otp,
+      });
+
+      if (response?.status === 200) {
+        setIsMobileNoVerified(true);
+        setPendingVerification(false);
+      }
+    } catch (error) {
       alert("Invalid OTP ss");
     }
   };
@@ -98,7 +105,7 @@ const FormUI = ({
       return;
     }
     const nesteddata = {
-      courseName: id,
+      courseName: id ? id : path,
       name: inputValue?.name,
       email: inputValue?.email,
       phone: inputValue?.mobile,
@@ -106,6 +113,7 @@ const FormUI = ({
     };
 
     try {
+      setLoading(true);
       const response = await axios.post("/api/inquiry", nesteddata);
 
       const emailRes = await axios.post("/api/sendemail", {
@@ -124,8 +132,12 @@ const FormUI = ({
           email: "",
           workExperience: "",
         });
-        console.log("nehat", response);
+        console.log("sahiltest", response);
         // alert("Inquiry submitted successfully");
+        setLoading(false);
+        setTimeout(() => {
+          window.location.reload();
+        }, 100);
       }
     } catch (error) {
       console.log(error);
@@ -265,13 +277,27 @@ const FormUI = ({
           </div>
 
           <div className="flex justify-center">
-            <button
-              onClick={handleSendInquiry}
-              type="button"
-              className=" focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-            >
-              Submit
-            </button>
+            {loading ? (
+              <>
+                <button
+                  type="button"
+                  disabled
+                  className=" focus:outline-none text-red-700 bg-white hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                >
+                  loading...
+                </button>
+              </>
+            ) : (
+              <>
+                <button
+                  onClick={handleSendInquiry}
+                  type="button"
+                  className=" focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                >
+                  Submit
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>

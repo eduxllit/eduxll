@@ -14,6 +14,8 @@ import Slidernav1 from "../components/slidernav";
 import { useEffect, useState } from "react";
 import TestimonialsCard from "./Testimonials";
 import Image from "next/image";
+import { Button } from "@nextui-org/react";
+import FormUI from "../components/form/FormUI";
 
 const AmityOnline = () => {
   const mobileSize = 500;
@@ -36,8 +38,27 @@ const AmityOnline = () => {
     };
   }, []);
 
+  const [openPopup, setOpenPopup] = useState(false);
+
   return (
     <>
+      {openPopup && (
+        <div className="fixed backdrop-blur-md top-0 left-0 w-screen h-screen z-[99999] flex items-center justify-center">
+          <div className="w-[350px] relative">
+            <FormUI
+              heading="Apply Now"
+              className={"!gap-6"}
+              setOpenPopup={setOpenPopup}
+            />
+            <div
+              className="w-6 h-6 flex justify-center items-center bg-white border rounded-full absolute top-2 right-2 cursor-pointer"
+              onClick={() => setOpenPopup(false)}
+            >
+              <span className="mt-[-4px]">x</span>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="relative flex flex-col    bannersection">
         <div className="header relative z-[9] max-w-[1230px] w-[100%] flex-1 m-auto py-[20px] max-sm:px-[15px]">
           <div>
@@ -65,9 +86,12 @@ const AmityOnline = () => {
                   <h2 className="text-[#002e5e] amithh tracking-[-1px] font-[500] max-sm:text-[20px] text-[50px]  uppercase   leading-[1.2]">
                     Shape your future with <br /> Online Degree programmes
                   </h2>
-                  <button className="bg-[#002e5e] text-[#fff] px-[20px] py-[10px] uppercase">
-                    APPLY NOW
-                  </button>
+                  <Button
+                    onClick={() => setOpenPopup(true)}
+                    className="bg-[#002e5e] text-[#fff] px-[20px] py-[10px] uppercase !rounded-none"
+                  >
+                    Apply now
+                  </Button>
                 </div>
               </div>
             </div>
@@ -321,12 +345,12 @@ const AmityOnline = () => {
           </div>
 
           <div className="flex justfiy-center mt-[20px]">
-            <a
-              href="#"
-              className="m-auto bg-[#002e5e] text-[#fff] px-[20px] py-[10px] uppercase hover:bg-[#ffaa17] hover:text-[#002e5e]"
+            <Button
+              onClick={() => setOpenPopup(true)}
+              className="m-auto bg-[#002e5e] text-[#fff] px-[20px] py-[10px] uppercase hover:bg-[#ffaa17] hover:text-[#002e5e] !rounded-none"
             >
-              APPLY NOW
-            </a>
+              Apply now
+            </Button>
           </div>
         </div>
       </section>
@@ -512,12 +536,12 @@ const AmityOnline = () => {
 
       <footer className="bg-[#002e5e] py-[20px]">
         <div className="max-w-[1140px] flex   m-auto w-[100%]">
-          <a
-            href="#"
-            className="m-auto bg-[#ffaa17] rounded-[3px] text-[#002e5e] px-[20px] py-[10px] uppercase m-auto "
+          <Button
+            onClick={() => setOpenPopup(true)}
+            className="m-auto bg-[#002e5e] text-[#fff] px-[20px] py-[10px] uppercase hover:bg-[#ffaa17] hover:text-[#002e5e] !rounded-none"
           >
-            APPLY NOW
-          </a>
+            Apply now
+          </Button>
         </div>
       </footer>
     </>

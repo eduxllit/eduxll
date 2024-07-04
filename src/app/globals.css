@@ -12,14 +12,11 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 .amithh {
   font-family: "Oswald", sans-serif;
 }
-
-
 
 .singleblog h1 {
   font-family: "Sedan SC", serif;
@@ -604,59 +601,55 @@ ul li {
   }
 }
 
-
-
-
 /* manipallandingpage */
 .styleboxcolororange {
-  background: #FEE8DA;
+  background: #fee8da;
 }
 .styleboxcolororange h3 {
   color: #ff6600;
 }
 
-
 .styleboxcolorpurple {
-  background: #EADDF8;
+  background: #eaddf8;
 }
 .styleboxcolorpurple h3 {
-  color: #3F2B55;
+  color: #3f2b55;
 }
 
 .styleboxcolorBlue {
-  background: #DFECF5;
+  background: #dfecf5;
 }
 .styleboxcolorBlue h3 {
-  color: #074A76;
+  color: #074a76;
 }
 
-
-.FormUIstyle>div {
+.FormUIstyle > div {
   width: 100%;
   max-width: 100%;
-  background:#fff;
+  background: #fff;
 }
 
-.FormUIstyle>div .formbox .max-w-sm {
+.FormUIstyle > div .formbox .max-w-sm {
   max-width: 100%;
 }
 
-.FormUIstyle input, .FormUIstyle    select {
+.FormUIstyle input,
+.FormUIstyle select {
   border-radius: 0px;
   background: #efefef !important;
   border: none;
 }
 
 .FormUIstyle button {
-  width:100%;
-  border-radius:0px;
-background:#000;
-  margin:0px;
-  margin-top:10px;    
+  width: 100%;
+  border-radius: 0px;
+  background: #000;
+  margin: 0px;
+  margin-top: 10px;
 }
 .checkboxonlinemanipal {
   margin-bottom: 25px;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .checkboxonlinemanipal label {
@@ -666,7 +659,8 @@ background:#000;
   content: "";
   background-color: transparent;
   border: 2px solid #cecece;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
   padding: 5px;
   display: inline-block;
   position: relative;
@@ -676,13 +670,12 @@ background:#000;
   height: 2px;
 }
 
-
 .checkboxonlinemanipal input:checked + label:after {
   content: "";
   display: block;
   position: absolute;
   top: 4px;
-    left: 5px;
+  left: 5px;
   width: 3px;
   height: 6px;
   border: solid #cecece;
@@ -690,9 +683,10 @@ background:#000;
   transform: rotate(45deg);
 }
 
-
 .checkboxonlinemanipalbutton {
-  background: transparent linear-gradient(90deg, #FF6600 0%, #FF5204 0%, #FF270D 100%) 0% 0% no-repeat padding-box !important;
+  background: transparent
+    linear-gradient(90deg, #ff6600 0%, #ff5204 0%, #ff270d 100%) 0% 0% no-repeat
+    padding-box !important;
   border: none;
   border-radius: 2px !important;
   cursor: pointer;
@@ -701,14 +695,24 @@ background:#000;
   margin-top: 5px;
   color: #fff;
 }
-
-
+.checkboxonlinemanipalbuttonloading {
+  background: #fff !important;
+  border: none;
+  border-radius: 2px !important;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  margin-top: 5px;
+  color: transparent
+    linear-gradient(90deg, #ff6600 0%, #ff5204 0%, #ff270d 100%) 0% 0% no-repeat
+    padding-box !important;
+}
 
 .UniqueAdvantages .advantage-item:nth-child(odd) {
   background-color: #ffaa17;
   color: #000;
 }
 .UniqueAdvantages .advantage-item:nth-child(even) {
- background-color: #002e5e;
+  background-color: #002e5e;
   color: #fff;
 }
