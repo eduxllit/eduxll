@@ -62,7 +62,7 @@ const IITKanpur = () => {
         <div className="bg-[#002e5ea6] p-8 h-full">
           {/* <img alt="icon" loading="lazy" width="48" height="48"  className="m-auto "  src="/svg/mask.svg"> */}
           {/* <h3 className="text-2xl font-semibold my-2 mt-6 tracking-wider">FOUNDATION ACTING</h3> */}
-          <h6 className="text-[20px] font-[700] text-[#002e5e] mb-[8px]">
+          <h6 className="text-[20px] font-[700] text-[#fff] mb-[8px]">
             ELIGIBILITY
           </h6>
           <p className="text-[#fff] text-[16px] font-[400]">
@@ -73,7 +73,7 @@ const IITKanpur = () => {
         <div className="bg-[#002e5e] p-8 h-full">
           {/* <img alt="icon" loading="lazy" width="48" height="48"  className="m-auto "  src="/svg/mask.svg"> */}
           {/* <h3 className="text-2xl font-semibold my-2 mt-6 tracking-wider">FOUNDATION ACTING</h3> */}
-          <h6 className="text-[20px] font-[700] text-[#597fa6] mb-[8px]">
+          <h6 className="text-[20px] font-[700] text-[#fff] mb-[8px]">
             COURSE DURATION
           </h6>
           <p className="text-[#fff] text-[16px] font-[400]">
@@ -84,7 +84,7 @@ const IITKanpur = () => {
         <div className="bg-[#002e5ea6] p-8 h-full">
           {/* <img alt="icon" loading="lazy" width="48" height="48"  className="m-auto "  src="/svg/mask.svg"> */}
           {/* <h3 className="text-2xl font-semibold my-2 mt-6 tracking-wider">FOUNDATION ACTING</h3> */}
-          <h6 className="text-[20px] font-[700] text-[#002e5e] mb-[8px]">
+          <h6 className="text-[20px] font-[700] text-[#fff] mb-[8px]">
             Download Brochure
           </h6>
           <a
