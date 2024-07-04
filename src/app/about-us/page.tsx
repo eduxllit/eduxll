@@ -34,9 +34,10 @@ const AboutUs = () => {
             tools, knowledge, and skills they need to excel in their careers and
             personal development.
           </p>
-          
+
           <p className="text-sm mb-[16px] text-justify">
-          (eduXLL, a company owned by EDOVU VENTURES PRIVATE LIMITED committed to deliver world class education all over the world.)
+            (eduXLL, a company owned by EDOVU VENTURES PRIVATE LIMITED committed
+            to deliver world class education all over the world.)
           </p>
 
           <p className="text-sm  mb-[16px] text-justify">
@@ -58,7 +59,7 @@ const AboutUs = () => {
             can interact, share ideas, and collaborate on projects, making
             learning with us a truly international experience.
           </p>
-          
+
           <p className="text-sm text-justify">
             In a world where continuous learning is the key to success, eduXLL
             stands as a beacon for those who seek to elevate themselves. Join us
@@ -89,23 +90,23 @@ const AboutUs = () => {
       </div>
 
       <section className="sm:py-[50px] py-[20px] bg-[#FFFDF8] ">
-            <h3 className="sm:text-3xl text-center text-1xl sm:text-center text-center font-semibold mb-0 pr-[30px] border-r-[1px] border-[#000]">
-              Key Features
-            </h3><hr/>
+        <h3 className="sm:text-3xl text-center text-1xl sm:text-center text-center font-semibold mb-0  ">
+          Key Features
+        </h3>
+        <hr />
 
-           <Image
-            src="/about-us/key.webp"
-            alt="girl"
-            width={700}
-            height={530}
-            style={{
-              margin: "auto",
-            }}
-            className=""
-          />
- 
+        <Image
+          src="/about-us/key.webp"
+          alt="girl"
+          width={700}
+          height={530}
+          style={{
+            margin: "auto",
+          }}
+          className=""
+        />
 
-            {/* <ol>
+        {/* <ol>
               <li>Global University Network</li>
               <li>Distinguished Faculty</li>
               <li>Comprehensive Courses</li>
@@ -119,26 +120,30 @@ const AboutUs = () => {
 
       <section className="sm:py-[50px] py-[20px]">
         <div className="max-w-[1200px] px-4 m-auto">
-          <div className="grid grid-cols-1 sm:gap-[50px] gap-[30px] flex-1 justify-between">
-            <div>
+          <div className="grid grid-cols-2 sm:gap-[50px] gap-[30px] flex-1 justify-between">
+            <div className="text-sm text-justify p-[25px] bg-[#f3f3f3] rounded-[8px]">
               <h3 className="sm:text-3xl text-center text-2xl sm:text-left text-center font-semibold ">
                 Our Vision
               </h3>
-                       <p className="text-sm text-justify">
-
-                       To create a learner-friendly knowledge platform that ensures and facilitate world-class quality of learning & teaching by providing curriculum that is personalized, learner-focused, flexible and inspiring,
-                        thus motivating learners to excel in academics and professional environments..
+              <p className="text-sm text-justify">
+                To create a learner-friendly knowledge platform that ensures and
+                facilitate world-class quality of learning & teaching by
+                providing curriculum that is personalized, learner-focused,
+                flexible and inspiring, thus motivating learners to excel in
+                academics and professional environments..
               </p>
             </div>
-            <div className="text-sm text-justify">
-              <h3 className="text-3xl sm:text-left text-center font-semibold ">Our Mission</h3>
+            <div className="text-sm text-justify  p-[25px] bg-[#f3f3f3] rounded-[8px]">
+              <h3 className="text-3xl sm:text-left text-center font-semibold ">
+                Our Mission
+              </h3>
               <p className=" ">
-                
                 {" "}
-                Prosper the spirit of continuous and comprehensive academic excellence among all learners, and create courses with customized learning opportunities 
-                for all participants that enable them to achieve their professional goals...
+                Prosper the spirit of continuous and comprehensive academic
+                excellence among all learners, and create courses with
+                customized learning opportunities for all participants that
+                enable them to achieve their professional goals...
               </p>
-               
             </div>
           </div>
         </div>
@@ -147,11 +152,11 @@ const AboutUs = () => {
       <section className="sm:py-[50px] py-[30px] px-4 bg-[#FFFDF8]">
         <div className="max-w-[1200px]  m-auto">
           <div>
-            <h3 className="sm:text-3xl text-2xl sm:text-left text-center font-semibold ">
+            <h3 className="sm:text-3xl text-2xl text-justify font-semibold ">
               Our Aim
             </h3>
-            <p>
-            eduXLL envisions becoming a pivotal gateway for learners
+            <p className=" text-justify">
+              eduXLL envisions becoming a pivotal gateway for learners
               worldwide, seeking to unlock their full potential and embark on
               prosperous career paths in Europe. By offering meticulously
               designed courses that are aligned with the European job
