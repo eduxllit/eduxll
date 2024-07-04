@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { useState } from "react";
 
 type FormUIProps = {
@@ -24,6 +24,9 @@ const FormUI = ({
   console.log("pendingVerification", pendingVerification);
 
   const { id } = useParams();
+  console.log("id check", { id });
+  const path = usePathname();
+  console.log("pathname", path);
 
   const [inputValue, setInputValue] = useState({
     name: "",
@@ -80,7 +83,6 @@ const FormUI = ({
   const verifyOtp = async () => {
     const mobile = inputValue.mobile;
     try {
-      
       const response = await axios.post("/api/verification/verify-otp", {
         mobile,
         otp,
@@ -90,7 +92,6 @@ const FormUI = ({
         setIsMobileNoVerified(true);
         setPendingVerification(false);
       }
-
     } catch (error) {
       alert("Invalid OTP ss");
     }
@@ -102,7 +103,7 @@ const FormUI = ({
       return;
     }
     const nesteddata = {
-      courseName: id,
+      courseName: id ? id : path,
       name: inputValue?.name,
       email: inputValue?.email,
       phone: inputValue?.mobile,
@@ -129,7 +130,7 @@ const FormUI = ({
           workExperience: "",
         });
         console.log("sahiltest", response);
-        // alert("Inquiry submitted successfully");
+        alert("Inquiry submitted successfully");
       }
     } catch (error) {
       console.log(error);
