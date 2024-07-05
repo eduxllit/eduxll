@@ -37,13 +37,13 @@ const coursesArray = [
     
     imageUrl: "/svg/code-box-line.svg",
     title: "Computer Applications",
-    linkuel: "/product/manipal-university-jaipur-",
+    linkuel: "/product/mca-from-manipal-university-jaipur1",
   },
   
   {
     imageUrl: "/svg/bar-chart-2-line.svg",
     title: "Business Management",
-    linkuel: "/product/manipal-university-jaipur",
+    linkuel: "/product/mca-manipal-university-jaipur1",
   },
   {
     imageUrl: "/svg/megaphone-line.svg",
@@ -63,16 +63,16 @@ const coursesArray = [
   {
     imageUrl: "/svg/database-2-line.svg",
     title: "Augmented and Virtual Reality",
-    linkuel: "/product/arvr-consultant-from-nasscome",
+    linkuel: "/product/arvr-consultant-from-nasscome1",
   },
   {
     imageUrl: "/svg/cloud-line.svg",
     title: "Cyber Security",
-    linkuel: "/product/security-analyst-from-nasscom",
+    linkuel: "/product/security-analyst-from-nasscom1",
   },
   {
     imageUrl: "/svg/brain-line.svg",
     title: "Blockchain Technology",
-    linkuel: "/product/blockchain-strategist-from-nasscom",
+    linkuel: "/product/blockchain-strategist-from-nasscom1",
   },
 ];
