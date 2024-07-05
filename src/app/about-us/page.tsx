@@ -89,7 +89,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <section className="sm:py-[50px] py-[20px] bg-[#FFFDF8] ">
+      <section className="sm:py-[50px] py-[20px]">
         <h3 className="sm:text-3xl text-center text-1xl sm:text-center text-center font-semibold mb-0  ">
           Key Features
         </h3>

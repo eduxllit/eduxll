@@ -37,42 +37,42 @@ const coursesArray = [
     
     imageUrl: "/svg/code-box-line.svg",
     title: "Computer Applications",
-    linkuel: "#",
+    linkuel: "/product/manipal-university-jaipur-",
   },
   
   {
     imageUrl: "/svg/bar-chart-2-line.svg",
     title: "Business Management",
-    linkuel: "#",
+    linkuel: "/product/manipal-university-jaipur",
   },
   {
     imageUrl: "/svg/megaphone-line.svg",
-    title: "Journalism & Mass Communications ",
-    linkuel: "#",
+    title: "Digital Marketing",
+    linkuel: "/product/mba-in-digital-marketing-from-amity-university",
   },
   {
     imageUrl: "/svg/service-line.svg",
     title: "ESG and Business Sustainability",
-    linkuel: "#",
+    linkuel: "/product/esg-and-business-sustainability-iit-kanpur",
   },
   {
     imageUrl: "/svg/handbag-line.svg",
-    title: "Robotics Process Automation",
-    linkuel: "#",
+    title: "Public Policy",
+    linkuel: "/product/master-of-arts-public-policy-governance-from-amity-university",
   },
   {
     imageUrl: "/svg/database-2-line.svg",
-    title: "Blockchain Technology",
-    linkuel: "#",
+    title: "Augmented and Virtual Reality",
+    linkuel: "/product/arvr-consultant-from-nasscome",
   },
   {
     imageUrl: "/svg/cloud-line.svg",
     title: "Cyber Security",
-    linkuel: "#",
+    linkuel: "/product/security-analyst-from-nasscom",
   },
   {
     imageUrl: "/svg/brain-line.svg",
-    title: "Machine Learning",
-    linkuel: "#",
+    title: "Blockchain Technology",
+    linkuel: "/product/blockchain-strategist-from-nasscom",
   },
 ];
