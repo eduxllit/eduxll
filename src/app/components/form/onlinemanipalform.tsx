@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import { id } from "date-fns/locale";
 import axios from "axios";
 import { useParams, usePathname } from "next/navigation";
 import Image from "next/image";
+import LinkModelBox from "../linkmodelbox/linkmodelbox";
 
 type FormUIProps = {
   setOpenPopup?: any;
@@ -21,6 +22,8 @@ const OnlineManipalForm = ({
   const [isMobileNoVerified, setIsMobileNoVerified] = useState(false);
   const [otp, setOtp] = useState("");
   console.log("pendingVerification", pendingVerification);
+  const [blogPopup, setBlogPopup] = React.useState(false);
+
   const [loading, setLoading] = useState(false);
 
   const { id } = useParams();
@@ -120,6 +123,7 @@ const OnlineManipalForm = ({
         message: inputValue?.workExperience,
         phone: inputValue?.mobile,
         work_experience: inputValue?.workExperience,
+        pageDirection: id ? id : path,
       });
       console.log("emailRes", emailRes);
 
@@ -132,17 +136,34 @@ const OnlineManipalForm = ({
         });
         console.log("sahiltest", response);
         setLoading(false);
-        setTimeout(() => {
-          window.location.reload();
-        }, 100);
+        setBlogPopup(true);
+
+        // setTimeout(() => {
+        //   window.location.reload();
+        // }, 100);
         // alert("Inquiry submitted successfully");
       }
     } catch (error) {
       console.log(error);
     }
   };
+
+  const handleSavePop = () => {
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
+  };
   return (
     <>
+      {blogPopup && (
+        <LinkModelBox
+          buttonclose={() => setBlogPopup(false)}
+          buttonsave={handleSavePop}
+          modelheading="Form Submitted Successfully"
+          itemicon="sussess"
+          modelcontent="Thanks for submitting your inquiry. Our team will get back to you soon."
+        />
+      )}
       <div className="max-w-[400px]   rounded-[5px]    bg-[#535353] relative p-[27px]">
         <h3 className="text-[15px] text-center font-bold mb-[10px] text-[#fff]">
           {heading

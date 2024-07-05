@@ -716,3 +716,8 @@ ul li {
   background-color: #002e5e;
   color: #fff;
 }
+
+.faqstyle .p-4.bg-white.rounded-md:hover {
+  background: #5b7ea6;
+  color: #fff;
+}

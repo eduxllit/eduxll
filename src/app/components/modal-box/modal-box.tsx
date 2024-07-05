@@ -74,7 +74,7 @@ export default function ModalBox() {
         onClick={() => setOpenPopup(true)}
         className="  justify-center items-center gap-spacing8 inline-flex whitespace-nowrap bg-gradient-to-r from-[#ee2c3c] to-[#da202f] rounded-lg shadow-cta text-white font-medium px-spacing24 py-spacing14 md:py-spacing10 z-10 min-w-124px"
       >
-        Apply now
+        Apply Now
       </Button>
       {openPopup && (
         <div className="fixed backdrop-blur-md top-0 left-0 w-screen h-screen z-[99999] flex items-center justify-center">
