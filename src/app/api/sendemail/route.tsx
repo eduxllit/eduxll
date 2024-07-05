@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest, response: NextResponse) {
   try {
-    const { name, email, message, phone, work_experience } =
+    const { name, email, message, phone, work_experience, pageDirection } =
       await request.json();
 
     const transporter = nodemailer.createTransport({
@@ -22,8 +22,8 @@ export async function POST(request: NextRequest, response: NextResponse) {
       to: "eduxllit@gmail.com",
       subject: `Inquiry from Eduxll`,
 
-      text: "Hello world",
-      html: `<b> Name: ${name} <br> Email: ${email} <br> Phone: ${phone} <br> Work Experience: ${work_experience}  </b>`,
+      text: "Eduxll form",
+      html: `<b> Name: ${name} <br> Email: ${email} <br> Phone: ${phone} <br> Work Experience: ${work_experience}  <br> Page : ${pageDirection}  </b>`,
     });
     const recipient = await transporter.sendMail({
       from: email,

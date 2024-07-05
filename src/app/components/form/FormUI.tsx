@@ -1,8 +1,9 @@
 "use client";
 import axios from "axios";
 import Image from "next/image";
-import { useParams, usePathname } from "next/navigation";
-import { useState } from "react";
+import { useParams, usePathname, useRouter } from "next/navigation";
+import React, { useState } from "react";
+import LinkModelBox from "../linkmodelbox/linkmodelbox";
 
 type FormUIProps = {
   setOpenPopup?: any;
@@ -21,6 +22,9 @@ const FormUI = ({
   const [pendingVerification, setPendingVerification] = useState(false);
   const [isMobileNoVerified, setIsMobileNoVerified] = useState(false);
   const [otp, setOtp] = useState("");
+  const [blogPopup, setBlogPopup] = React.useState(false);
+  const router = useRouter();
+
   const [loading, setLoading] = useState(false);
 
   console.log("pendingVerification", pendingVerification);
@@ -122,6 +126,7 @@ const FormUI = ({
         message: inputValue?.workExperience,
         phone: inputValue?.mobile,
         work_experience: inputValue?.workExperience,
+        pageDirection: id ? id : path,
       });
       console.log("emailRes", emailRes);
 
@@ -135,17 +140,33 @@ const FormUI = ({
         console.log("sahiltest", response);
         // alert("Inquiry submitted successfully");
         setLoading(false);
-        setTimeout(() => {
-          window.location.reload();
-        }, 100);
+        setBlogPopup(true);
+        // setTimeout(() => {
+        //   window.location.reload();
+        // }, 100);
       }
     } catch (error) {
       console.log(error);
     }
   };
 
+  const handleSavePop = () => {
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
+  };
+
   return (
     <>
+      {blogPopup && (
+        <LinkModelBox
+          buttonclose={() => setBlogPopup(false)}
+          buttonsave={handleSavePop}
+          modelheading="Form Submitted Successfully"
+          itemicon="sussess"
+          modelcontent="Thanks for submitting your inquiry. Our team will get back to you soon."
+        />
+      )}
       <div
         className={`max-w-[400px] z-0 rounded-[10px] border-[1px] border-slate-200 bg-slate-100 relative p-[20px] ${formWidth}`}
       >
