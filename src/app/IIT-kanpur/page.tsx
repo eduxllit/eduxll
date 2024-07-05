@@ -43,7 +43,7 @@ const IITKanpur = () => {
                 <span className="text-green-400">&nbsp; BUSINESS &nbsp;</span>
                 <span className="text-pink-300">SUSTAINABILITY</span>
               </h3>
-              <p>FOR PRACTITIONER: CORPORATE MIDDLE MANAGEMENT</p>
+              <p>FOR PRACTITIONERS: CORPORATE MIDDLE MANAGEMENT</p>
             </div>
             <div>
               <h4 className="text-green-600">FACULTY RESOURCES: IIT Kanpur</h4>
