@@ -57,6 +57,7 @@ const CreateCourse = () => {
   const [courses, setCourses] = useState({
     title: "",
     duration: "",
+    position: "",
     coursePrice: "",
     semesterPrice: "",
     priceContent: "",
@@ -294,6 +295,22 @@ const CreateCourse = () => {
                         value={courses.duration}
                         onChange={(e) =>
                           setCourses({ ...courses, duration: e.target.value })
+                        }
+                      />
+                    </div>
+                    <div className=" w-full">
+                      <label className="font-medium text-sm text-slate-600 dark:text-slate-400">
+                        Course Position in number*
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Course Duration"
+                        name="position"
+                        className="text-[14px] text-[#686868] form-input w-full rounded-md  border border-slate-400/60 dark:border-slate-400 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700"
+                        required
+                        value={courses.position}
+                        onChange={(e) =>
+                          setCourses({ ...courses, position: e.target.value })
                         }
                       />
                     </div>

@@ -51,6 +51,11 @@ const coursesSchema = new Schema({
     required: true,
     default: "",
   },
+  position: {
+    type: Number,
+    required: true,
+    default: "",
+  },
 
   coursePrice: {
     type: String,
