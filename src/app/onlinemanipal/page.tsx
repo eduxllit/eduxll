@@ -123,6 +123,7 @@ const OnlineManipal = () => {
             <div className="max-w-[30%] flex-1 max-sm:w-full max-sm:max-w-[100%] max-sm:mt-[10px]">
               <div className="forms ">
                 <OnlineManipalForm />
+                {/* <FormUI heading="Enter your details and our experts will get in touch with you shortly!" /> */}
               </div>
             </div>
           </div>
@@ -160,7 +161,7 @@ const OnlineManipal = () => {
               <Slidernav1 navfix="4" navsize="40" />
 
               <Swiper
-              slidesPerView={isMobile ? 1 : 6}
+                slidesPerView={isMobile ? 1 : 6}
                 spaceBetween={10}
                 loop={true}
                 height={200}
@@ -417,7 +418,8 @@ const OnlineManipal = () => {
               </div>
             </div>
             <div className="FormUIstyle max-sm:mt-[20px]">
-              <FormUI heading="" />
+              {/* <FormUI heading="" /> */}
+              <FormUI />
             </div>
           </div>
         </div>

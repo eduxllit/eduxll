@@ -667,7 +667,12 @@ const CreateCourse = () => {
                 </div>
 
                 <div className="inputfile flex flex-col gap-[10px] pt-[25px]">
-                  <div className="flex ">
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
                     <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
                       <svg
                         className="w-8 h-8"
@@ -688,9 +693,23 @@ const CreateCourse = () => {
                         onChange={(e: any) => setCourseImage(e.target.files[0])}
                       />
                     </label>
+                    {courseImage && (
+                      <Image
+                        src={URL.createObjectURL(courseImage)}
+                        width={100}
+                        height={100}
+                        alt="courseImage"
+                        className="rounded-md object-contain w-full h-[100px]"
+                      />
+                    )}
                   </div>
 
-                  <div>
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
                     <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
                       <svg
                         className="w-8 h-8"
@@ -716,11 +735,17 @@ const CreateCourse = () => {
                         src={URL.createObjectURL(universityImage)}
                         width={100}
                         height={100}
+                        className="rounded-md object-contain w-full h-[100px]"
                         alt="universityImage"
                       />
                     )}
                   </div>
-                  <div>
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
                     <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
                       <svg
                         className="w-8 h-8"
@@ -749,11 +774,17 @@ const CreateCourse = () => {
                         width={100}
                         height={100}
                         alt="universityLogo"
+                        className="rounded-md object-contain w-full h-[100px]"
                       />
                     )}
                   </div>
 
-                  <div>
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
                     <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
                       <svg
                         className="w-8 h-8"
@@ -780,10 +811,16 @@ const CreateCourse = () => {
                         width={100}
                         height={100}
                         alt="universityImage"
+                        className="rounded-md object-contain w-full h-[100px]"
                       />
                     )}
                   </div>
-                  <div>
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
                     <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
                       <svg
                         className="w-8 h-8"
@@ -810,53 +847,85 @@ const CreateCourse = () => {
                         width={100}
                         height={100}
                         alt="logoTwo"
+                        className="rounded-md object-contain w-full h-[100px]"
+                      />
+                    )}
+                  </div>
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
+                    <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
+                      <svg
+                        className="w-8 h-8"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                      </svg>
+                      <span className="mt-2 text-base leading-normal">
+                        Upload Course Certificate
+                      </span>
+                      <input
+                        type="file"
+                        className="hidden"
+                        name="certificate"
+                        onChange={(e: any) =>
+                          setCourseCertificate(e.target.files[0])
+                        }
+                      />
+                    </label>
+                    {courseCertificate && (
+                      <Image
+                        src={URL.createObjectURL(courseCertificate)}
+                        width={100}
+                        height={100}
+                        alt="courseCertificate"
+                        className="rounded-md object-contain w-full h-[100px]"
                       />
                     )}
                   </div>
 
-                  <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
-                    <svg
-                      className="w-8 h-8"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
-                    </svg>
-                    <span className="mt-2 text-base leading-normal">
-                      Upload Course Certificate
-                    </span>
-                    <input
-                      type="file"
-                      className="hidden"
-                      name="certificate"
-                      onChange={(e: any) =>
-                        setCourseCertificate(e.target.files[0])
-                      }
-                    />
-                  </label>
-
-                  <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
-                    <svg
-                      className="w-8 h-8"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
-                    </svg>
-                    <span className="mt-2 text-base leading-normal">
-                      Upload Course Brochure
-                    </span>
-                    <input
-                      type="file"
-                      className="hidden"
-                      name="brochure"
-                      onChange={(e: any) =>
-                        setCourseBrochure(e.target.files[0])
-                      }
-                    />
-                  </label>
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
+                    <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
+                      <svg
+                        className="w-8 h-8"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                      </svg>
+                      <span className="mt-2 text-base leading-normal">
+                        Upload Course Brochure
+                      </span>
+                      <input
+                        type="file"
+                        className="hidden"
+                        name="brochure"
+                        onChange={(e: any) =>
+                          setCourseBrochure(e.target.files[0])
+                        }
+                      />
+                    </label>
+                    {courseBrochure && (
+                      <Image
+                        src={URL.createObjectURL(courseBrochure)}
+                        width={100}
+                        height={100}
+                        alt="courseBrochure"
+                        className="rounded-md object-contain w-full h-[100px]"
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="mt-[10px] bg-[#ffe4e6] flex flex-col gap-[10px] p-[20px] justify-center rounded-md    border border-[#fda4af]">

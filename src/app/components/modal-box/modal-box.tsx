@@ -12,9 +12,11 @@ import {
 } from "@nextui-org/react";
 import Image from "next/image";
 import axios from "axios";
+import FormUI from "../form/FormUI";
 
 export default function ModalBox() {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
+  const [openPopup, setOpenPopup] = useState(false);
   const [otp, setOtp] = useState(false);
   const [login, setLogin] = useState(false);
   const loginForm = () => {
@@ -68,11 +70,29 @@ export default function ModalBox() {
   return (
     <>
       <Button
-        onPress={onOpen}
+        // onPress={onOpen}
+        onClick={() => setOpenPopup(true)}
         className="  justify-center items-center gap-spacing8 inline-flex whitespace-nowrap bg-gradient-to-r from-[#ee2c3c] to-[#da202f] rounded-lg shadow-cta text-white font-medium px-spacing24 py-spacing14 md:py-spacing10 z-10 min-w-124px"
       >
-        Sign up
+        Apply now
       </Button>
+      {openPopup && (
+        <div className="fixed backdrop-blur-md top-0 left-0 w-screen h-screen z-[99999] flex items-center justify-center">
+          <div className="w-[350px] relative">
+            <FormUI
+              heading="Apply Now"
+              className={"!gap-6"}
+              setOpenPopup={setOpenPopup}
+            />
+            <div
+              className="w-6 h-6 flex justify-center items-center bg-white border rounded-full absolute top-2 right-2 cursor-pointer"
+              onClick={() => setOpenPopup(false)}
+            >
+              <span className="mt-[-4px]">x</span>
+            </div>
+          </div>
+        </div>
+      )}
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (

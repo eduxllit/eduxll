@@ -16,6 +16,7 @@ import {
   FreeCoursesBranch,
   MasterBranch,
 } from "@/constant/ConstantAbroadData";
+import { deleteImageFromFirebase, uploadFiletoFirebase } from "@/app/utils";
 
 const IRichTextEditor = dynamic(() => import("@mantine/rte"), {
   ssr: false,
@@ -29,7 +30,11 @@ const featureOptions = [{ value: "latest-card", label: "Latest Card" }];
 const animatedComponents = makeAnimated();
 
 const CreateCourse = () => {
-  const [courseImage, setCourseImage] = useState<any>(null);
+  const [courseImage, setCourseImage] = useState<any>("");
+  const [universityImage, setUniversityImage] = useState<any>("");
+  const [universityLogo, setUniversityLogo] = useState<any>("");
+  const [logoOne, setLogoOne] = useState<any>("");
+  const [logoTwo, setLogoTwo] = useState<any>("");
   const [courseBrochure, setCourseBrochure] = useState<any>(null);
   const [courseCertificate, setCourseCertificate] = useState<any>(null);
   const [blogPopup, setBlogPopup] = React.useState(false);
@@ -67,8 +72,14 @@ const CreateCourse = () => {
     universityDescription: "",
     logoOnedescription: "",
     logoTwodescription: "",
-
     semesterPrice: "",
+    universityImage: "",
+    universityLogo: "",
+    logoOne: "",
+    logoTwo: "",
+    courseImage: "",
+    certificate: "",
+    brochure: "",
   });
   const [courseModule, setCourseModule] = useState([
     {
@@ -103,6 +114,13 @@ const CreateCourse = () => {
           universityDescription: response.data.universityDescription,
           logoOnedescription: response.data.logoOnedescription,
           logoTwodescription: response.data.logoTwodescription,
+          universityImage: response.data.universityImage,
+          universityLogo: response.data.universityLogo,
+          logoOne: response.data.logoOne,
+          logoTwo: response.data.logoTwo,
+          courseImage: response.data.courseImage,
+          certificate: response.data.certificate,
+          brochure: response.data.brochure,
         });
         setFeatureCategory(response.data.featureCategoryInsert);
         setCourseModule(response.data.courseModule);
@@ -117,7 +135,7 @@ const CreateCourse = () => {
 
   useEffect(() => {
     fetchCourse();
-  }, []);
+  }, [id]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     setLoadig(true);
@@ -134,6 +152,110 @@ const CreateCourse = () => {
     const response = await axios.patch(`/api/study/${id}`, courseData);
 
     if (response.status === 200) {
+      if (courseImage) {
+        const courseImageUrl = await uploadFiletoFirebase(courseImage);
+        if (courseImageUrl) {
+          const data = {
+            field: "courseImage",
+            url: courseImageUrl,
+            courseId: response?.data?._id,
+          };
+          const response2 = await axios.put("/api/study", data);
+          if (response2.status === 200) {
+            await deleteImageFromFirebase(courses.courseImage);
+          }
+        }
+      }
+
+      if (universityImage) {
+        const courseUniversityUrl = await uploadFiletoFirebase(universityImage);
+        if (courseUniversityUrl) {
+          const data = {
+            field: "certificate",
+            url: courseUniversityUrl,
+            courseId: response?.data?._id,
+          };
+          const response2 = await axios.put("/api/study", data);
+          if (response2.status === 200) {
+            await deleteImageFromFirebase(courses.universityImage);
+          }
+        }
+      }
+      if (universityLogo) {
+        const courseUniversityLogoUrl = await uploadFiletoFirebase(
+          universityLogo
+        );
+        if (courseUniversityLogoUrl) {
+          const data = {
+            field: "universityLogo",
+            url: courseUniversityLogoUrl,
+            courseId: response?.data?._id,
+          };
+          const response2 = await axios.put("/api/study", data);
+          if (response2.status === 200) {
+            await deleteImageFromFirebase(courses.universityLogo);
+          }
+        }
+      }
+      if (logoOne) {
+        const courselogoOneUrl = await uploadFiletoFirebase(logoOne);
+        if (courselogoOneUrl) {
+          const data = {
+            field: "logoOne",
+            url: courselogoOneUrl,
+            courseId: response?.data?._id,
+          };
+          const response2 = await axios.put("/api/study", data);
+          if (response2.status === 200) {
+            await deleteImageFromFirebase(courses.logoOne);
+          }
+        }
+      }
+      if (logoTwo) {
+        const courselogoTwoUrl = await uploadFiletoFirebase(logoTwo);
+        if (courselogoTwoUrl) {
+          const data = {
+            field: "logoTwo",
+            url: courselogoTwoUrl,
+            courseId: response?.data?._id,
+          };
+          const response2 = await axios.put("/api/study", data);
+          if (response2.status === 200) {
+            await deleteImageFromFirebase(courses.logoTwo);
+          }
+        }
+      }
+      if (courseCertificate) {
+        const courseCertificateUrl = await uploadFiletoFirebase(
+          courseCertificate
+        );
+        if (courseCertificateUrl) {
+          const data = {
+            field: "certificate",
+            url: courseCertificateUrl,
+            courseId: response?.data?._id,
+          };
+          const response2 = await axios.put("/api/study", data);
+          if (response2.status === 200) {
+            await deleteImageFromFirebase(courses.certificate);
+          }
+        }
+      }
+
+      if (courseBrochure) {
+        const ccourseBrochureUrl = await uploadFiletoFirebase(courseBrochure);
+        if (ccourseBrochureUrl) {
+          const data = {
+            field: "brochure",
+            url: ccourseBrochureUrl,
+            courseId: response?.data?._id,
+          };
+          const response2 = await axios.put("/api/study", data);
+          if (response2.status === 200) {
+            await deleteImageFromFirebase(courses.certificate);
+          }
+        }
+      }
       console.log(response?.data);
       setLoadig(false);
       setBlogPopup(true);
@@ -619,8 +741,13 @@ const CreateCourse = () => {
                   </div>
                 </div>
 
-                {/* <div className="inputfile flex flex-col gap-[10px] pt-[25px]">
-                  <div className="flex ">
+                <div className="inputfile flex flex-col gap-[10px] pt-[25px]">
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
                     <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
                       <svg
                         className="w-8 h-8"
@@ -630,8 +757,11 @@ const CreateCourse = () => {
                       >
                         <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
                       </svg>
+                      {/* <span className="mt-2 text-base leading-normal">
+                    {getFileNameFromFirebaseUrl(courses?.courseImage)}
+                  </span> */}
                       <span className="mt-2 text-base leading-normal">
-                        Upload Course Image
+                        Update Course Image
                       </span>
                       <input
                         type="file"
@@ -642,60 +772,260 @@ const CreateCourse = () => {
                       />
                     </label>
 
-                    {courseImage && (
+                    {courses?.courseImage && (
                       <Image
-                        src={URL.createObjectURL(courseImage)}
-                        width={100}
-                        height={100}
+                        src={courses?.courseImage}
+                        width={200}
+                        height={200}
                         alt="courseImage"
+                        className="rounded-md object-contain w-full w-full h-[100px]"
                       />
                     )}
                   </div>
 
-                  <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
-                    <svg
-                      className="w-8 h-8"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
-                    </svg>
-                    <span className="mt-2 text-base leading-normal">
-                      Upload Course Certificate
-                    </span>
-                    <input
-                      type="file"
-                      className="hidden"
-                      name="certificate"
-                      onChange={(e: any) =>
-                        setCourseCertificate(e.target.files[0])
-                      }
-                    />
-                  </label>
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
+                    <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
+                      <svg
+                        className="w-8 h-8"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                      </svg>
 
-                  <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
-                    <svg
-                      className="w-8 h-8"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
-                    </svg>
-                    <span className="mt-2 text-base leading-normal">
-                      Upload Course Brochure
-                    </span>
-                    <input
-                      type="file"
-                      className="hidden"
-                      name="brochure"
-                      onChange={(e: any) =>
-                        setCourseBrochure(e.target.files[0])
-                      }
-                    />
-                  </label>
-                </div> */}
+                      <span className="mt-2 text-base leading-normal">
+                        Update University Image
+                      </span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        className="hidden"
+                        name="universityImage"
+                        onChange={(e: any) =>
+                          setUniversityImage(e.target.files[0])
+                        }
+                      />
+                    </label>
+
+                    {courses?.universityImage && (
+                      <Image
+                        src={courses?.universityImage}
+                        width={200}
+                        height={200}
+                        alt="universityImage"
+                        className="rounded-md object-contain w-full h-[100px]"
+                      />
+                    )}
+                  </div>
+
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
+                    <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
+                      <svg
+                        className="w-8 h-8"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                      </svg>
+
+                      <span className="mt-2 text-base leading-normal">
+                        Update University Logo
+                      </span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        className="hidden"
+                        name="universityLogo"
+                        onChange={(e: any) =>
+                          setUniversityLogo(e.target.files[0])
+                        }
+                      />
+                    </label>
+
+                    {courses?.universityLogo && (
+                      <Image
+                        src={courses?.universityLogo}
+                        width={200}
+                        height={200}
+                        alt="universityLogo"
+                        className="rounded-md object-contain w-full h-[100px]"
+                      />
+                    )}
+                  </div>
+
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
+                    <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
+                      <svg
+                        className="w-8 h-8"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                      </svg>
+
+                      <span className="mt-2 text-base leading-normal">
+                        Update Rank Logo One
+                      </span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        className="hidden"
+                        name="rankLogoOne"
+                        onChange={(e: any) => setLogoOne(e.target.files[0])}
+                      />
+                    </label>
+
+                    {courses?.logoOne && (
+                      <Image
+                        src={courses?.logoOne}
+                        width={200}
+                        height={200}
+                        alt="logoOne"
+                        className="rounded-md object-contain w-full h-[100px]"
+                      />
+                    )}
+                  </div>
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
+                    <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
+                      <svg
+                        className="w-8 h-8"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                      </svg>
+
+                      <span className="mt-2 text-base leading-normal">
+                        Update Rank Logo Two
+                      </span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        className="hidden"
+                        name="logoTwo"
+                        onChange={(e: any) => setLogoTwo(e.target.files[0])}
+                      />
+                    </label>
+
+                    {courses?.logoTwo && (
+                      <Image
+                        src={courses?.logoTwo}
+                        width={200}
+                        height={200}
+                        alt="logoTwo"
+                        className="rounded-md object-contain w-full h-[100px]"
+                      />
+                    )}
+                  </div>
+
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
+                    <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
+                      <svg
+                        className="w-8 h-8"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                      </svg>
+                      {/* <span className="mt-2 text-base leading-normal">
+                    {getFileNameFromFirebaseUrl(courses?.certificate)}
+                  </span> */}
+                      <span className="mt-2 text-base leading-normal">
+                        Update Course Certificate
+                      </span>
+                      <input
+                        type="file"
+                        className="hidden"
+                        name="certificate"
+                        onChange={(e: any) =>
+                          setCourseCertificate(e.target.files[0])
+                        }
+                      />
+                    </label>
+                    {courses?.certificate && (
+                      <Image
+                        src={courses?.certificate}
+                        width={200}
+                        height={200}
+                        alt="courseImage"
+                        className="rounded-md object-contain w-full w-full h-[100px]"
+                      />
+                    )}
+                  </div>
+
+                  <div
+                    className="gap-[10px] grid "
+                    style={{
+                      gridTemplateColumns: "2fr 1fr",
+                    }}
+                  >
+                    <label className="w-full rounded-md  border border-slate-400/60 flex flex-col items-center px-4 py-6 bg-white text-blue   tracking-wide    cursor-pointer">
+                      <svg
+                        className="w-8 h-8"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                      </svg>
+
+                      {/* <span className="mt-2 text-base leading-normal">
+                    {getFileNameFromFirebaseUrl(courses?.brochure)}
+                  </span> */}
+
+                      <span className="mt-2 text-base leading-normal">
+                        Update Course Brochure
+                      </span>
+                      <input
+                        type="file"
+                        className="hidden"
+                        name="brochure"
+                        onChange={(e: any) =>
+                          setCourseBrochure(e.target.files[0])
+                        }
+                      />
+                    </label>
+                    {courses?.brochure && (
+                      <Image
+                        src={courses?.brochure}
+                        width={200}
+                        height={200}
+                        alt="courseImage"
+                        className="rounded-md object-contain w-full w-full h-[100px]"
+                      />
+                    )}
+                  </div>
+                </div>
               </div>
               <div className="mt-[10px] bg-[#ffe4e6] flex flex-col gap-[10px] p-[20px] justify-center rounded-md    border border-[#fda4af]">
                 <div className=" w-full">
