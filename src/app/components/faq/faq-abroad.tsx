@@ -32,7 +32,7 @@ const FaqComponent = ({ faqCollection }: faqProp) => {
                 <ul className="list-disc">
                  
                 <p>
-                  {value?.anslist?.map((item:string,ind:number)=>{
+                  {value?.anslist?.map((item:any,ind:number)=>{
                     return(
                       <li key={ind} className="ml-6 mt-4 text-sm">
                      {item?.list}
