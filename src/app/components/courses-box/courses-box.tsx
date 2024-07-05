@@ -37,23 +37,14 @@ const coursesArray = [
     
     imageUrl: "/svg/code-box-line.svg",
     title: "Computer Applications",
-<<<<<<< HEAD
-    
-=======
     linkuel: "#",
->>>>>>> 0290a4385f3d5f068002b800102cc84d194a4010
   },
   
   {
     imageUrl: "/svg/bar-chart-2-line.svg",
-<<<<<<< HEAD
-    title: "Business Management", 
-  }, 
-=======
     title: "Business Management",
     linkuel: "#",
   },
->>>>>>> 0290a4385f3d5f068002b800102cc84d194a4010
   {
     imageUrl: "/svg/megaphone-line.svg",
     title: "Journalism & Mass Communications ",

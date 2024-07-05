@@ -171,7 +171,7 @@ const IITKanpur = () => {
             ABOUT THE PROGRAM
           </h2>
           <p className="text-[18px] text-white  text-justify">
-            The "ESG and Business Sustainability " course, offered by IIT Kanpur
+            The &quot; ESG and Business Sustainability &quot; course, offered by IIT Kanpur
             in collaboration with EduXLL, provides an in-depth understanding of
             how to integrate Environmental, Social, and Governance (ESG)
             principles into core business strategies. This course is designed to
