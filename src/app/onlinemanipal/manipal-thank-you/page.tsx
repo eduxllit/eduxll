@@ -8,13 +8,7 @@ import React from 'react'
 const ManipalThankyou = () => {
   return (
     <>
-    {/* <Head>
-      <title>Manipal Online</title>
-      <meta name="description" content="Manipal Online" />
-       
-      
-       
-    </Head> */}
+     
     <Script
       src="https://shown.io/metrics/Er0LwMp191"
       strategy="afterInteractive"
