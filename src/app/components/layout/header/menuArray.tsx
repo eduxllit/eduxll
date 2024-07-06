@@ -5,7 +5,7 @@ export const menuArray = [
     submenu: [
       // { navlink: "About Us" },
       // { navlink: "Free Master Class" },
-      { navlink: "About EduXLL" },
+      { navlink: "About eduXLL" },
       // { navlink: "Webinars" },
       { navlink: "Management Team" },
       { navlink: "Our Faculty" }

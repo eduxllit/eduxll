@@ -108,10 +108,12 @@ const page = () => {
               <Image src={"/girl.jpg"} alt="image" width={630} height={270} />
               <div className="absolute sm:top-[20%] top-[2%] left-[3%] ">
                 <span className="font-semibold text-2xl text-[#2467ec] max-sm:text-[15px]">
-                  Start Now
+                Become a mentor and disseminate <br/> your knowledge.
+
                 </span>
-                <h3 className="sm:text-[20px] text-[10px] font-semibold md:mt-4 mt-2 md:mb-6 mb-2">
-                  Become a mentor and disseminate <br /> your knowledge.
+                <h3 className="sm:text-[18px] text-[10px] font-semibold md:mt-4 mt-2 md:mb-6 mb-2">
+                 Industry Mentorship for  Corporate Projects
+ 
                 </h3>
                 <Link href="/contact-us">
                   <button className="sm:text-md text-[12px] bg-gradient-to-r from-[#ee2c3c] to-[#da202f] text-white font-medium   text-white sm:px-6 px-4 sm:py-2 py-1 rounded-md">
@@ -126,7 +128,7 @@ const page = () => {
                 <span className="font-semibold text-2xl text-[#2467ec] max-sm:text-[15px] ">
                   Explore your rewards!
                 </span>
-                <h3 className="sm:text-[20px] text-[10px] font-semibold md:mt-4 mt-2 md:mb-6 mb-2">
+                <h3 className="sm:text-[18px] text-[10px] font-semibold md:mt-4 mt-2 md:mb-6 mb-2">
                   Sustain competitiveness in <br /> your centers of excellence
                 </h3>
                 <Link href="/contact-us">

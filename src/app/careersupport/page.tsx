@@ -20,7 +20,7 @@ const CareerSupport = () => {
             Comprehensive Career Guidance
           </h3>
           <p className="text-sm mb-[16px]">
-            At EduXLL, we are committed to not only providing top-notch online
+            At eduXLL, we are committed to not only providing top-notch online
             education but also ensuring our students are well-prepared for their
             professional journeys. Our comprehensive career support services are
             designed to guide you every step of the way, from the beginning of
@@ -67,7 +67,7 @@ const CareerSupport = () => {
             </h3>
             <p className="text-sm  mb-[16px]  max-sm:text">
               Choosing the right specialization is crucial for your career
-              development. EduXLL provides specialized training programs
+              development. eduXLL provides specialized training programs
               tailored to your interests and career aspirations. Our
               industry-aligned curriculum and expert faculty ensure that you
               acquire the skills and knowledge required to excel in your chosen
@@ -140,13 +140,13 @@ const CareerSupport = () => {
           </h3>
 
           <p className="text-sm ">
-            EduXLL is committed to your lifelong success. Even after you
+            eduXLL is committed to your lifelong success. Even after you
             graduate, you will have access to our career resources and support.
             Stay connected with our alumni network, continue learning through
             our advanced courses, and keep enhancing your skills to stay ahead
             in your career.
             <br />
-            At EduXLL, your success is our priority. Join us and take the first
+            At eduXLL, your success is our priority. Join us and take the first
             step towards a bright and successful future.
           </p>
         </div>

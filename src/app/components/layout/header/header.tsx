@@ -55,7 +55,7 @@ const Header = () => {
     item === "Free Master Class" && router.push("/free-masterclass");
     item === "Webinars" && router.push("/webinars");
     item === "Blog" && router.push("/blogs");
-    item === "About EduXLL" && router.push("/about-us");
+    item === "About eduXLL" && router.push("/about-us");
     item === "Management Team" && router.push("/managementteam");
     item === "Our Faculty" && router.push("/ourfaculty");
     item === "Contact us" && router.push("/contact-us");
