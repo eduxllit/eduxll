@@ -10,6 +10,7 @@ type FormUIProps = {
   className?: any;
   heading?: string;
   formWidth?: string;
+  handleRoute?: any;
 };
 
 const FormUI = ({
@@ -17,6 +18,7 @@ const FormUI = ({
   className,
   heading,
   formWidth,
+  handleRoute,
 }: FormUIProps) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [pendingVerification, setPendingVerification] = useState(false);
@@ -140,7 +142,12 @@ const FormUI = ({
         console.log("sahiltest", response);
         // alert("Inquiry submitted successfully");
         setLoading(false);
-        setBlogPopup(true);
+        if(handleRoute){
+          handleRoute()
+        }else{
+
+          setBlogPopup(true);
+        }
         // setTimeout(() => {
         //   window.location.reload();
         // }, 100);

@@ -16,6 +16,7 @@ import TestimonialsCard from "./Testimonials";
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
 import FormUI from "../components/form/FormUI";
+import { useRouter } from "next/navigation";
 
 const AmityOnline = () => {
   const mobileSize = 500;
@@ -40,6 +41,12 @@ const AmityOnline = () => {
 
   const [openPopup, setOpenPopup] = useState(false);
 
+  const router = useRouter(); 
+  const handleRoute = () => {
+    router.push("/amityonline/amity-thank-you");
+  };
+
+
   return (
     <>
       {openPopup && (
@@ -49,6 +56,7 @@ const AmityOnline = () => {
               heading="Apply Now"
               className={"!gap-6"}
               setOpenPopup={setOpenPopup}
+              handleRoute={handleRoute}
             />
             <div
               className="w-6 h-6 flex justify-center items-center bg-white border rounded-full absolute top-2 right-2 cursor-pointer"

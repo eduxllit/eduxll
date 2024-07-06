@@ -55,7 +55,9 @@ const ContactUs = () => {
         </div>
         <div className="max-w-[600px] m-auto w-full sm:p-6 p-2 bg-[#D6D6D682] rounded-md">
           <div className="bg-white sm:p-6 p-2 rounded-md">
-            <FormUI />
+            <FormUI 
+            heading="Contact Us"
+            />
           </div>
         </div>
       </div>

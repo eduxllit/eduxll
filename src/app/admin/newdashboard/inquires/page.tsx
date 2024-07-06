@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import SideBarLayout from "../ui/sidebarlayout/page";
 import Image from "next/image";
@@ -20,6 +21,22 @@ const getAllInquires = async () => {
 const FreeCourseList = async () => {
   const response: any = await getAllInquires();
   console.log("response inquires", { response });
+
+  // load more load less functionality and the limit is 10 inquires per array of inquires 
+  // const [loadMore, setLoadMore] = React.useState<any>([]);
+  const handleLoadMore = async () => {
+    try {
+      const inquires = await Inquiry.find().limit(10);
+      // setLoadMore(inquires);
+      return inquires;
+    } catch (error) {
+      return error;
+    }
+  };
+
+  // console.log("loadMore", { loadMore });
+
+
   return (
     <>
       <SideBarLayout>
@@ -114,6 +131,15 @@ const FreeCourseList = async () => {
                           })}
                         </tbody>
                       </table>
+                      
+                      {/* <div className="flex justify-center mt-4">
+                        <button 
+                        onClick={handleLoadMore}
+                        >
+ 
+                        </button>
+                         
+                        </div> */}
                     </div>
                   </div>
                 </div>

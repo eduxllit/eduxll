@@ -16,6 +16,7 @@ import ManipalCardDegree from "../components/manipalcarddegree/page";
 import ExperienceCard2 from "../components/manipalcarddegree/experiencecard2";
 import OnlineManipalForm from "../components/form/onlinemanipalform";
 import FormUI from "../components/form/FormUI";
+import { useRouter } from "next/navigation";
 
 const OnlineManipal = () => {
   const [activeTab, setActiveTab] = useState("Master's Degree");
@@ -39,6 +40,11 @@ const OnlineManipal = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const router = useRouter(); 
+  const handleRoute = () => {
+    router.push("/onlinemanipal/manipal-thank-you");
+  };
 
   return (
     <>
@@ -122,7 +128,9 @@ const OnlineManipal = () => {
             </div>
             <div className="max-w-[30%] flex-1 max-sm:w-full max-sm:max-w-[100%] max-sm:mt-[10px]">
               <div className="forms ">
-                <OnlineManipalForm />
+                <OnlineManipalForm 
+                handleRoute={handleRoute}
+                />
                 {/* <FormUI heading="Enter your details and our experts will get in touch with you shortly!" /> */}
               </div>
             </div>

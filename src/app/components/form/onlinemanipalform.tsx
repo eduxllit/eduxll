@@ -10,12 +10,14 @@ type FormUIProps = {
   setOpenPopup?: any;
   className?: any;
   heading?: string;
+  handleRoute?: any;
 };
 
 const OnlineManipalForm = ({
   setOpenPopup,
   className,
   heading,
+  handleRoute
 }: FormUIProps) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [pendingVerification, setPendingVerification] = useState(false);
@@ -136,7 +138,13 @@ const OnlineManipalForm = ({
         });
         console.log("sahiltest", response);
         setLoading(false);
-        setBlogPopup(true);
+        if(handleRoute){
+          handleRoute()
+        }else{
+
+          setBlogPopup(true);
+        }
+
 
         // setTimeout(() => {
         //   window.location.reload();
