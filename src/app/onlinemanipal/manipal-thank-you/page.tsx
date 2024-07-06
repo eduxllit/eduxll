@@ -3,6 +3,7 @@ import HeaderLayout from '@/app/components/headerLayout/HeaderLayout'
 import Link from 'next/link'
 import React from 'react' 
 
+ 
 const ManipalThankyou = () => {
   return (
     <>
