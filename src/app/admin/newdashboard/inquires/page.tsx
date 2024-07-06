@@ -21,7 +21,7 @@ const FreeCourseList = async () => {
   const response: any = await getAllInquires();
   console.log("response inquires", { response });
 
-  
+
 
   return (
     <>
