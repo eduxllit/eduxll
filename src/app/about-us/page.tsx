@@ -67,16 +67,7 @@ const AboutUs = () => {
             eduXLL, where learning knows no boundaries.
           </p>
 
-          {/* <button className="bg-green-700 flex md:mx-0 m-auto gap-2 py-3 text-white px-6 rounded-md mt-6">
-            <div className="bg-white w-fit p-[3px] rounded-full">
-              <Image src={"/svg/check.svg"} alt="view" width={16} height={16} />
-            </div>
-            <Link href="/contact-us" >
-
-            <span>Enrolled Today</span>
-            </Link>
-          </button> */}
-          {/* <Button text={"Enrolled Today"} /> */}
+         
         </div>
         <div>
           <Image
@@ -172,6 +163,32 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      <section className="sm:py-[50px] py-[30px] px-4 bg-[#FFFDF8]">
+        <div className="max-w-[1200px]  m-auto">
+          <div>
+            <h3 className="sm:text-3xl text-2xl text-justify font-semibold ">
+            About Edovu Ventures
+            </h3>
+            <p className=" text-justify">
+            At Edovu Ventures, we empower the future through cutting-edge education solutions around the globe.
+             As the parent company of K12 Schools, American EduGlobal Schools and eduXLL, we are pioneers in 
+            shaping the educational landscape, providing world-class learning experiences to our students.
+            </p>
+             <button className="bg-blue-700 flex md:mx-0 m-auto gap-2 py-3 text-white px-6 rounded-md mt-6">
+            <div className="bg-white w-fit p-[3px] rounded-full">
+              <Image src={"/svg/check.svg"} alt="view" width={16} height={16} />
+            </div>
+            <Link href="https://edovuventures.com/" target="_blank" >
+
+            <span>Read More</span>
+            </Link>
+          </button> 
+          
+          </div>
+        </div>
+      </section>
+
 
       {/*  <div className="bg-gradient-to-r from-[#ee2c3c] to-[#da202f] px-6 py-12 text-white font-semibold sm:text-[22px] text-[16px]">
         <div className="grid lg:grid-cols-[2fr_1fr] lg:gap-0 gap-4 text-center max-w-[1200px] m-auto">
