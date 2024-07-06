@@ -2,18 +2,24 @@ import Button from '@/app/components/button/Button'
 import HeaderLayout from '@/app/components/headerLayout/HeaderLayout'
 import Head from 'next/head'
 import Link from 'next/link'
+import Script from 'next/script'
 import React from 'react' 
 
  
 const ManipalThankyou = () => {
   return (
     <>
-    <Head>
+    {/* <Head>
       <title>Manipal Online</title>
       <meta name="description" content="Manipal Online" />
       <script defer src="https://shown.io/metrics/Er0LwMp191" type="text/javascript"></script>
        
-    </Head>
+    </Head> */}
+    <Script
+      src="https://shown.io/metrics/Er0LwMp191"
+      strategy="afterInteractive"
+      type="text/javascript"
+    />
     <HeaderLayout>
     <div className="bg-[#e2e8f0]">
       <div className="h-[340px]   relative bg-[url('/thankyou.jpg')] bg-no-repeat bg-cover">
