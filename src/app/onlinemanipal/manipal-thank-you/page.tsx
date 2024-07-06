@@ -8,22 +8,18 @@ import React from 'react'
 const ManipalThankyou = () => {
   return (
     <>
-    <Head>
+    {/* <Head>
       <title>Manipal Online</title>
       <meta name="description" content="Manipal Online" />
-      {/* <script defer src="https://shown.io/metrics/Er0LwMp191" type="text/javascript"></script> */}
-      <Script
+       
+      
+       
+    </Head> */}
+    <Script
       src="https://shown.io/metrics/Er0LwMp191"
       strategy="afterInteractive"
       type="text/javascript"
     />
-       
-    </Head>
-    {/* <Script
-      src="https://shown.io/metrics/Er0LwMp191"
-      strategy="afterInteractive"
-      type="text/javascript"
-    /> */}
     <HeaderLayout>
     <div className="bg-[#e2e8f0]">
       <div className="h-[340px]   relative bg-[url('/thankyou.jpg')] bg-no-repeat bg-cover">
