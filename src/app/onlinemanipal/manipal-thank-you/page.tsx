@@ -8,7 +8,7 @@ const ManipalThankyou = () => {
     <>
     <HeaderLayout>
     <div className="bg-[#e2e8f0]">
-      <div className="h-[300px]   relative bg-[url('/65e8a443d3a217849e428432_dhruv-hero-image.png')] bg-no-repeat bg-cover">
+      <div className="h-[340px]   relative bg-[url('/thankyou.jpg')] bg-no-repeat bg-cover">
         <div className="sm:pr-12 pr-4 lg:pl-32 pl-4 py-8 bg-gradient-to-r from-black to-transparent h-full">
            
           <div className="sm:absolute  mt-[100px] z-[9]"
