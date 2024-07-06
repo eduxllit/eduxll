@@ -1,5 +1,6 @@
 import Button from '@/app/components/button/Button'
 import HeaderLayout from '@/app/components/headerLayout/HeaderLayout'
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react' 
 
@@ -7,6 +8,12 @@ import React from 'react'
 const ManipalThankyou = () => {
   return (
     <>
+    <Head>
+      <title>Manipal Online</title>
+      <meta name="description" content="Manipal Online" />
+      <script defer src="https://shown.io/metrics/Er0LwMp191" type="text/javascript"></script>
+       
+    </Head>
     <HeaderLayout>
     <div className="bg-[#e2e8f0]">
       <div className="h-[340px]   relative bg-[url('/thankyou.jpg')] bg-no-repeat bg-cover">
