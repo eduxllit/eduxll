@@ -94,6 +94,9 @@ const CourseCard = ({
     (item: any) => item?.featureCategoryInsert[0]?.value === "latest-card"
   );
 
+  // i need last card show in first position and first card show in last position so i reverse the array here and then map it
+  // const reversedArray = isFeatured?.reverse();
+
   return (
     <>
       <div className="relative">
@@ -116,7 +119,10 @@ const CourseCard = ({
               <>
                 <SwiperSlide
                   key={index}
-                  className=""
+                  // className={}
+                  style={{
+                    order: `${item?.position}`,
+                  }}
                   onMouseEnter={() => setPopUp(item._id)}
                   onMouseLeave={() => setPopUp("")}
                 >

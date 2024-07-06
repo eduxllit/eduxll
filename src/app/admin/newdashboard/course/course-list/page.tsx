@@ -48,6 +48,11 @@ const Page = async () => {
                           <tr>
                             <th className="p-3 text-xs font-medium tracking-wider text-start text-gray-700 dark:text-gray-400 uppercase">
                               <a href="#" className="dataTable-sorter">
+                                Position Number
+                              </a>
+                            </th>
+                            <th className="p-3 text-xs font-medium tracking-wider text-start text-gray-700 dark:text-gray-400 uppercase">
+                              <a href="#" className="dataTable-sorter">
                                 Course Image
                               </a>
                             </th>
@@ -76,6 +81,9 @@ const Page = async () => {
                             return (
                               <React.Fragment key={course?._id}>
                                 <tr className="bg-white border-b border-dashed dark:bg-dark-card dark:border-gray-700">
+                                  <td className="p-3 text-sm font-medium whitespace-nowrap dark:text-black">
+                                    {course?.position}
+                                  </td>
                                   <td className="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
                                     <Image
                                       src={course?.courseImage}

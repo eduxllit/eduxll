@@ -131,7 +131,7 @@ const page = () => {
                 <h3 className="sm:text-[18px] text-[10px] font-semibold md:mt-4 mt-2 md:mb-6 mb-2">
                   Sustain competitiveness in <br /> your centers of excellence
                 </h3>
-                <Link href="/contact-us">
+                <Link href="/refer-and-earn">
                   <button className="bg-[#2467EC] sm:text-md text-[12px] text-white sm:px-6 px-4 sm:py-2 py-1 rounded-md">
                     Refer and Earn
                   </button>
