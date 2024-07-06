@@ -31,7 +31,7 @@ const ReferAndEarn = () => {
           />
         </div>
         <div className="sm:mt-0 mt-6">
-          <ReferAndEarnForm heading="Unlock Rewards Together Reach Out and Refer!" />
+          <ReferAndEarnForm heading="Refer Now!" />
         </div>
       </div>
       <div className="max-w-[1150px] m-auto px-4">
@@ -91,50 +91,29 @@ export default ReferAndEarn;
 const faqArray = [
   {
     question:
-      "What is the eligibility criteria to receive Referral Bonus after referring a friend?",
+      "Do I get a reward every time a friend of mine signs up?",
     answer:
-      "The referee must complete their admission process within 15 days from the date of application. The referee must paid the admission fees for the program.",
+      "You get a referral reward for every friend you refer through the website. You will be eligible to receive the reward once the referral pays their full fee.",
     anslist: null,
   },
   {
-    question: "Who is an enrolled user & who is not?",
+    question: "When and How will I get the reward for referral?",
     answer:
-      "Students who have paid for an eduXLL's course are “Enrolled” users. Students who have not completed admission or payment for any specific course are 'Non- Enrolled' users.",
-    anslist: [
-      {
-        list: "Go to https://eduxll.com/refer-and-earn/",
-      },
-      {
-        list: "Fill out the form with your details (likely your name & email).",
-      },
-      {
-        list: "Enter the name of the university you are associated with.",
-      },
-      {
-        list: "Provide your friend's name and email ID whom you would like to refer.",
-      },
-      {
-        list: "The referee must paid the full fees for the program.",
-      },
-    ],
-  },
-  {
-    question: "How can I refer my friends/connections?",
-    answer:
-      "The referee must complete their admission process within 15 days from the date of application. The referee must paid the admission fees for the program.",
+      "You will be eligible to receive the reward once your friend pays their full fee. You will be contacted by the eduXLL team to collect your reward. You will receive the referral reward 15 days after your friend has made the full payment of fees.",
     anslist: null,
   },
   {
-    question: "When can you expect to receive a Referral Bonus?",
+    question: "How will my friends be informed that I referred them?",
     answer:
-      "The referrer will receive the payout within 15 days after the referee successfully completes the admission process and pays the required admission fees for the program.",
+      "Your friends will receive an email confirmation from eduXLL informing them that they have been referred by you. They will be asked to confirm.",
     anslist: null,
   },
   {
-    question: "Why I have not still received my referral bonus?",
+    question: "4. How can I refer my friends/connections?",
     answer:
-      "The referee has not used your code on the application. The referee has not paid the full fees for the course.",
+      "Refer your friends from the eduXLL website.. You will have to provide your name, email id, mobile no. for us to contact you. You can refer your friends by entering their Name, Contact number and University on the website",
     anslist: null,
   },
+   
 ];
  
