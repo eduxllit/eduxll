@@ -12,7 +12,8 @@ const ManipalThankyou = () => {
     {/* <Head>
       <title>Manipal Online</title>
       <meta name="description" content="Manipal Online" />
-      <script defer src="https://shown.io/metrics/Er0LwMp191" type="text/javascript"></script>
+       
+      
        
     </Head> */}
     <Script
