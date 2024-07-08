@@ -35,8 +35,8 @@ export const enumToValue = (value: any) => {
       return "Security Analyst";
       case "Bachelor of Business Administration (BBA)":
       return "BBA";
-      case "AR/VR Consultant":
-        return "AR/VR Consultant";
+      case "AR-VR Consultant":
+        return "AR-VR Consultant";
         case "Blockchain Strategist":
         return "Blockchain Strategist";
   /*    case "IoT- Product Manager":

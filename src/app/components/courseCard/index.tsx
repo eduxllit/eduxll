@@ -33,7 +33,8 @@ const CourseCard = ({
   activeCourseBranch,
 }: CourseCardProps) => {
   const [data, setData] = useState<any>([]);
-  const [popUp, setPopUp] = useState("");
+  console.log("data",{data})
+  const [popUp, setPopUp] = useState(""); 
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -71,6 +72,7 @@ const CourseCard = ({
   }, [activeTab]);
 
   const getNestedCoursesbyBranch = async () => {
+    console.log("activeCourseBranch api", activeCourseBranch);
     const data = await axios.get(`/api/course/branch/${activeCourseBranch}`);
     console.log("test sgwg", data);
     if (data.status === 200) {
