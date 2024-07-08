@@ -57,6 +57,7 @@ const ContactUs = () => {
           <div className="bg-white sm:p-6 p-2 rounded-md">
             <FormUI 
             heading="Contact Us"
+            textbox={true}
             />
           </div>
         </div>

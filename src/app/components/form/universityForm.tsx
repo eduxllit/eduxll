@@ -14,7 +14,7 @@ type FormUIProps = {
   textbox?: boolean;
 };
 
-const FormUI = ({
+const UniversityForm = ({
   setOpenPopup,
   className,
   heading,
@@ -23,6 +23,7 @@ const FormUI = ({
   textbox,
 }: FormUIProps) => {
   const [selectedOption, setSelectedOption] = useState("");
+  const [selectedOptionCourses, setSelectedOptionCourses] = useState("");
   console.log("textbox",{textbox})
   const [pendingVerification, setPendingVerification] = useState(false);
   const [isMobileNoVerified, setIsMobileNoVerified] = useState(false);
@@ -45,11 +46,18 @@ const FormUI = ({
     email: "",
     workExperience: "",
     description: "",
+    courses:""
   });
+
+  console.log("inputValue", {inputValue});
 
   const handleChange = (event: any) => {
     setSelectedOption(event.target.value);
     setInputValue({ ...inputValue, workExperience: event.target.value });
+  };
+  const handleChangeCourse = (event: any) => {
+    setSelectedOptionCourses(event.target.value);
+    setInputValue({ ...inputValue, courses: event.target.value });
   };
 
   // validation function for email id ,  mobile no and name , work experience in years
@@ -67,7 +75,7 @@ const FormUI = ({
       name?.value === "" ||
       mobile?.value === "" ||
       email?.value === "" ||
-      workExperience?.value === ""
+      workExperience?.value === "" 
     ) {
       alert("Please fill all the fields");
     } else {
@@ -120,6 +128,7 @@ const FormUI = ({
       email: inputValue?.email,
       phone: inputValue?.mobile,
       work_experience: textbox? inputValue?.description : inputValue?.workExperience,
+      courses: inputValue?.courses,
     };
 
     try {
@@ -132,6 +141,7 @@ const FormUI = ({
         message: inputValue?.workExperience,
         phone: inputValue?.mobile,
         work_experience: textbox? inputValue?.description : inputValue?.workExperience,
+        courses: inputValue?.courses,
         pageDirection: id ? id : path,
       });
       console.log("emailRes", emailRes);
@@ -142,7 +152,9 @@ const FormUI = ({
           mobile: "",
           email: "",
           workExperience: "",
-          description:""
+          description:"",
+          courses:""
+
         });
         console.log("sahiltest", response);
         // alert("Inquiry submitted successfully");
@@ -293,36 +305,36 @@ const FormUI = ({
             />
           </div>
 
-          {textbox ? 
+        
           
-          <>
-          <textarea 
-          name="" id=""
-           placeholder="Enter your message"
-          className="py-[10px] px-[20px] block w-full border border-[#9f9f9f] rounded-[10px] text-sm"
-            value={inputValue.description}
-            onChange={(e) =>
-              setInputValue({ ...inputValue, description: e.target.value })
-            }
-            ></textarea>
-          </> : <>
+          
           <div className="max-w-sm space-y-3">
             <select
               value={selectedOption}
               onChange={handleChange}
               className="py-[10px] px-[20px] block w-full border border-[#9f9f9f] rounded-[10px] text-sm"
             >
-              <option value="Experience">Work Experience in years</option>
-              <option value="Currently">Currently a college student</option>
-              <option value="0 Years">0 Years</option>
-              <option value="1 Year">1 Year</option>
-              <option value="1-2 Year">1-2 Year</option>
-              <option value="2-3 Year">2-3 Year</option>
-              <option value="3-4 Year">3-4 Year</option>
-              <option value="4-5 Year">4-5 Year</option>
+              <option value="University name">University name</option>
+              <option value="Amity university">Amity university</option>
+              <option value="Manipal university">Manipal university</option>
+              <option value="IIT Kanpur">IIT Kanpur</option>
+              
             </select>
           </div>
-          </>}
+          <div className="max-w-sm space-y-3">
+            <select
+              value={selectedOptionCourses}
+              onChange={handleChangeCourse}
+              className="py-[10px] px-[20px] block w-full border border-[#9f9f9f] rounded-[10px] text-sm"
+            >
+              <option value="Courses">Courses</option>
+              <option value="Master">Master</option>
+              <option value="Bachelor">Bachelor</option>
+              <option value="Certificate">Certificate</option>
+              
+            </select>
+          </div>
+           
           
 
 
@@ -356,4 +368,4 @@ const FormUI = ({
   );
 };
 
-export default FormUI;
+export default UniversityForm;

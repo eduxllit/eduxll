@@ -12,7 +12,7 @@ import {
 } from "@nextui-org/react";
 import Image from "next/image";
 import axios from "axios";
-import FormUI from "../form/FormUI";
+import UniversityForm from "../form/universityForm";
 
 export default function ModalBox() {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
@@ -79,7 +79,7 @@ export default function ModalBox() {
       {openPopup && (
         <div className="fixed backdrop-blur-md top-0 left-0 w-screen h-screen z-[99999] flex items-center justify-center">
           <div className="w-[350px] relative">
-            <FormUI
+            <UniversityForm
               heading="Apply Now"
               className={"!gap-6"}
               setOpenPopup={setOpenPopup}
