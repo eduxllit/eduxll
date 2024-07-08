@@ -6,6 +6,7 @@ import Link from "next/link";
 import DeleteBlogButton from "@/app/components/blog/DeleteBlogButton";
 import DeleteFreeCourseButton from "@/app/components/free-Course/DeleteFreeCourseButton";
 import Inquiry from "@/app/models/inquiryModel";
+import Tbody from "@/app/components/Tbody";
 
 const getAllInquires = async () => {
   try {
@@ -74,7 +75,10 @@ const FreeCourseList = async () => {
                             </th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <Tbody 
+                        response={response}
+                        />
+                        {/* <tbody>
                           {response?.map((user: any, index: any) => (
                             <>
                               <tr className="bg-white border-b border-dashed dark:bg-dark-card dark:border-gray-700">
@@ -115,7 +119,7 @@ const FreeCourseList = async () => {
                           {response?.map((blog: any, index: any) => {
                             return <></>;
                           })}
-                        </tbody>
+                        </tbody> */}
                       </table>
                     </div>
                   </div>
