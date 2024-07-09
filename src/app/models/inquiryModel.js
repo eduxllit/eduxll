@@ -22,7 +22,11 @@ const InquirySchema = new Schema({
     work_experience:{
         type: String, 
         required : [true, "Please provide work experience"]
-    }
+    },
+    courses: {
+        type: String,
+        required: [false, "Please provide a course"],
+    },
 
 })
 

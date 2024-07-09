@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest, response: NextResponse) {
   try {
-    const { name, email, message, phone, work_experience, pageDirection } =
+    const { name, email, message, phone, work_experience, pageDirection , courses } =
       await request.json();
 
     const transporter = nodemailer.createTransport({
@@ -23,14 +23,14 @@ export async function POST(request: NextRequest, response: NextResponse) {
       subject: `Inquiry from Eduxll`,
 
       text: "Eduxll form",
-      html: `<b> Name: ${name} <br> Email: ${email} <br> Phone: ${phone} <br> Work Experience: ${work_experience}  <br> Page : ${pageDirection}  </b>`,
+      html: `<b> Name: ${name} <br> Email: ${email} <br> Phone: ${phone} <br> Work Experience: ${work_experience}  <br> Page : ${pageDirection} <br> ${courses && `Courses: ${courses}` }  </b>`,
     });
     const recipient = await transporter.sendMail({
       from: email,
       to: email,
       subject: `Eduxll`,
       text: "Eduxll",
-      html: `<b> We will contact you soon  </b> <br/> <b> contact no :+91 8448 198 656 </b>`,
+      html: `<b> We will contact you soon  </b> <br/> <b> contact no :+91 8448 198 656  <br> ${work_experience ? `Work Experience: ${work_experience}` : `University name: ${work_experience}`} </b>`,
     });
     console.log("Message sent: %s", recipient.messageId);
 
