@@ -36,6 +36,7 @@ const BestCourses = () => {
   const [popUp, setPopUp] = useState("");
   const [activeTab, setActiveTab] = useState("view-all");
   const [activeCourseBranch, setActiveCourseBranch] = useState("");
+  console.log("activeCourseBranch",{activeCourseBranch})
   const nestedFilter =
     activeTab === "master"
       ? MasterBranch
@@ -67,6 +68,8 @@ const BestCourses = () => {
           </div>
           <div className="flex  sm:gap-[45px] gap-4 mb-[10px] max-sm:justify-between">
             {CourseFilter?.map((item, index) => {
+
+              console.log("item cc", {item});
               return (
                 <>
                   <div
@@ -103,6 +106,7 @@ const BestCourses = () => {
                 modules={[Navigation]}
               >
                 {nestedFilter?.map((item: any, index: any) => {
+                  console.log("item nested", {item});
                   return (
                     <SwiperSlide key={index}>
                       <BadgeChip

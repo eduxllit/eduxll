@@ -167,8 +167,8 @@ export const CertificateBranch = [
   },
   {
     id:2,
-    label:"AR/VR Consultant",
-    value:"AR/VR Consultant"
+    label:"AR-VR Consultant",
+    value:"AR-VR Consultant"
   },
   /* {
     id:3,
@@ -181,12 +181,12 @@ export const CertificateBranch = [
     value:"Robotics Process Automation Consultant"
   },  */
   {
-    id:5,
+    id:3,
     label:"Blockchain Strategist",
     value:"Blockchain Strategist"
   },
   {
-    id:6,
+    id:4,
     label:"Security Analyst",
     value:"Security Analyst"
   },

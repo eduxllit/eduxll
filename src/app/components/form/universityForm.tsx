@@ -328,10 +328,28 @@ const UniversityForm = ({
               className="py-[10px] px-[20px] block w-full border border-[#9f9f9f] rounded-[10px] text-sm"
             >
               <option value="Courses">Courses</option>
-              <option value="Master">Master</option>
-              <option value="Bachelor">Bachelor</option>
-              <option value="Certificate">Certificate</option>
-              
+              <option value="MBA">Master of Business Administration (MBA)</option>
+              <option value="MCA">Master of Computer Applications (MCA)
+              </option>
+              <option value="MBA In Digital Karketing">MBA in Digital Marketing
+              </option>
+              <option value="MA in Public Policy & Governance">MA in Public Policy & Governance            
+              </option>
+
+              <option value="BBA">Bachelor of Business Administration (BBA)
+              </option>
+              <option value="B.Com"> Bachelor of Commerce (B.Com)         
+              </option>
+
+              <option value="ESG and Business Sustainability"> ESG and Business Sustainability      
+              </option>
+              <option value="AR-VR Consultant">AR-VR Consultant     
+              </option>
+              <option value="Blockchain Strategist">Blockchain Strategist        
+              </option>
+              <option value="Security Analyst"> Security Analyst        
+              </option>
+ 
             </select>
           </div>
            
