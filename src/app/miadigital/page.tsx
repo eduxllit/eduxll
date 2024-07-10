@@ -6,7 +6,7 @@ const MiaDigital = () => {
     <>
       <div>
         <div
-          className="relative bg-[url('/kanpur/banner.webp')] bg-contain py-8"
+          className="relative z-[9] before:absolute before:w-[100%] before:h-[100%] before:opacity-[0.5] before:top-[0px] before:z-[-1] before:left-[0px] before:bg-[#000] bg-[url('/kanpur/banner.webp')] bg-contain py-8 "
           style={{ backgroundSize: "100% 100%", backgroundRepeat: "no-repeat" }}
         >
           {/* <Image
@@ -32,8 +32,8 @@ const MiaDigital = () => {
                     <Image
                       src={"/miadigital/logo2.png"}
                       alt="logo"
-                      width={300}
-                      height={300}
+                      width={150}
+                      height={150}
                       objectFit="content"
                       className="object-contain"
                     />
