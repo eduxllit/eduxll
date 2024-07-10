@@ -109,7 +109,7 @@ const faqArray = [
     anslist: null,
   },
   {
-    question: "4. How can I refer my friends/connections?",
+    question: "How can I refer my friends/connections?",
     answer:
       "Refer your friends from the eduXLL website.. You will have to provide your name, email id, mobile no. for us to contact you. You can refer your friends by entering their Name, Contact number and University on the website",
     anslist: null,
