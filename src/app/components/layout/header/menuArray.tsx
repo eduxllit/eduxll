@@ -27,7 +27,7 @@ export const menuArray = [
       { navlink: "Blog" },
       // { navlink: "Webinars" },
       { navlink: "Contact us" },
-      { navlink: "Pay Now" },
+      // { navlink: "Pay Now" },
     ],
   },
 ];

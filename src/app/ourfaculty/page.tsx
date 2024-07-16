@@ -29,7 +29,7 @@ const ManagementTeam = () => {
     <Image src="/managementteam/1.webp" width={300} height={300} alt={""} objectFit="cover" className="w-[100%]" />
   </div>
   <div className="contentcard">
-    <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Name: Dr. KR Balachandran</h3>
+    <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Dr. K R Balachandran</h3>
     <p className="text-[14px] font-[500] leading-[1.3] text-[#21225F] mb-[8px]  ">Qualification:  Ph.D.(Operations Research) – University of California,Berkeley</p>
     <p className="text-[14px] font-[500] leading-[1.3] text-[#21225F] mb-[8px] ">Total Years of Work Experience: 52 years</p>
     <p className="text-[14px] font-[500] leading-[1.3] text-[#21225F] ">Expertise: Management Accounting, Operations, Control Systems</p>
@@ -42,7 +42,7 @@ const ManagementTeam = () => {
     <Image src="/managementteam/15.png" width={300} height={300} alt={""} objectFit="cover" className="w-[100%]" />
   </div>
   <div className="contentcard">
-    <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Name: Dr. Ravikesh Srivastava</h3>
+    <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Dr. Ravikesh Srivastava</h3>
     <p className="text-[14px] font-[500] leading-[1.3]  text-[#21225F] mb-[8px]  ">Qualification: Ph.D.– Banaras Hindu University</p>
     <p className="text-[14px] font-[500] leading-[1.3] text-[#21225F] mb-[8px] ">Total Years of Work Experience: 30+ years</p>
     <p className="text-[14px] font-[500] leading-[1.3] text-[#21225F] ">Dr. Srivastava has served as the
@@ -62,7 +62,7 @@ reputed B-Schools. </p>
     <Image src="/managementteam/766.PNG" width={300} height={300} alt={""} objectFit="cover" className="w-[100%]" />
   </div>
   <div className="contentcard">
-    <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Name: Dr. Rakhi Singh </h3>
+    <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Dr. Rakhi Singh </h3>
     <p className="text-[14px] font-[500] leading-[1.3]  text-[#21225F] mb-[8px]  ">Qualification: Ph.D.
 (Economics) – Banasthali
 Vidyapith</p>
@@ -83,7 +83,7 @@ Management, Small Business
     <Image src="/managementteam/7.jpg" width={300} height={300} alt={""} objectFit="cover" className="w-[100%]" />
   </div>
   <div className="contentcard">
-    <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Name: Prof. Anand Khanna</h3>
+    <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Prof. Anand Khanna</h3>
     <p className="text-[14px] font-[500] leading-[1.3]  text-[#21225F] mb-[8px]  ">Anand Khanna has nearly four
 decades of experience in
 Industry and Academics.</p>
@@ -109,7 +109,7 @@ Switchgears Ltd
     <Image src="/managementteam/8.png" width={300} height={300} alt={""}  objectFit="cover" className="w-[100%]" />
   </div>
   <div className="contentcard">
-    <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Name: Dr. Zeeshan</h3>
+    <h3 className="text-[#da202f] text-xl font-bold mb-[10px] ">Dr. Zeeshan</h3>
     <p className="text-[14px] font-[500] leading-[1.3]  text-[#21225F] mb-[8px]  ">Qualification: Ph.D.
     (Economics)- BITS Pilani</p>
     <p className="text-[14px] font-[500] leading-[1.3] text-[#21225F] mb-[8px] ">Total Years of Work

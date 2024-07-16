@@ -115,7 +115,7 @@ const Courses = async () => {
                   width={20}
                   height={16}
                 />
-                ENQUIRE: 08069451380
+                ENQUIRE: +91- 8448 198 656
               </div>
             </div>
           </div>

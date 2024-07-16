@@ -147,7 +147,7 @@ const Footer = () => {
                   </li>
                   <li className="text-[15px] text-[#808292] mb-[8px] font-medium">
                     <span className="text-[#21225f]">Phone:</span>
-                    +91 8448 198 656 <br /> +91 9773 774 209
+                    +91 8448 198 656 
                   </li>
                 </ul>
               </div>
@@ -221,5 +221,5 @@ const QuickLink = [
   // { link: "/webinars", navname: "webinars" },
   // { link: "/free-masterclass", navname: "Free Masterclass" },
   { link: "/careersupport", navname: "Career Support" },
-  { link: "https://eduxll.letzpe.com/",  navname: "Pay Now" },
+  // { link: "https://eduxll.letzpe.com/",  navname: "Pay Now" },
 ];

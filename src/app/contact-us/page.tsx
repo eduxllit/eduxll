@@ -49,7 +49,7 @@ const ContactUs = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2">Contact</h3>
-              <p className="text-sm">+91 8448 198 656 / +91 9773 774 209</p>
+              <p className="text-sm">+91 8448 198 656 </p>
             </div>
           </div>
         </div>

@@ -58,13 +58,13 @@ const ManagementTeam = () => {
             <div className="flex pt-[60px] max-sm:flex-col-reverse max-sm:flex-col gap-[20px] ">
             <div className="w-[70%] max-sm:w-[100%] max-sm:mt-[50px]">
                 <h2 className="sm:text-[35px] text-right max-sm:text-left text-2xl text-[#da202f] leading-[1.3] font-bold mb-[10px]">
-                Mr. PK Samal
+                Mr. P K Samal
                 </h2>
                 <h5 className="text-[16px] text-right max-sm:text-left font-[500] text-[#21225F] ">
                 Founder and MD
                 </h5>
                 <p className="text-sm mb-[16px] text-[#333] text-justify">
-                P K SAMAL, is a techno-management person with over 20 years of extensive experience in strategy planning, liasioning,
+                Mr. P K SAMAL, is a techno-management person with over 20 years of extensive experience in strategy planning, liasioning,
 international & national tie-ups in different areas, and operations management. He is the person behind setting up
 Lancaster University, UK in India. He is in the lead role as Director, Strategic Planning for tying up with Politecnico Di Milano
 university, Italy.
