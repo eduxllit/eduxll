@@ -6,7 +6,7 @@ const MiaDigital = () => {
     <>
       <div>
         <div
-          className="relative bg-[url('/kanpur/banner.webp')] bg-contain py-8"
+          className="relative z-[9] before:absolute before:w-[100%] before:h-[100%] before:opacity-[0.5] before:top-[0px] before:z-[-1] before:left-[0px] before:bg-[#000] bg-[url('/kanpur/banner.webp')] bg-contain py-8 "
           style={{ backgroundSize: "100% 100%", backgroundRepeat: "no-repeat" }}
         >
           {/* <Image
@@ -32,8 +32,8 @@ const MiaDigital = () => {
                     <Image
                       src={"/miadigital/logo2.png"}
                       alt="logo"
-                      width={300}
-                      height={300}
+                      width={150}
+                      height={150}
                       objectFit="content"
                       className="object-contain"
                     />
@@ -238,8 +238,257 @@ const MiaDigital = () => {
             </ul>
           </div>
         </div>
+
+        <div className="grid sm:grid-cols-[50%_50%]">
+          <div
+            className="before:z-[0] 
+          before:bg-[#3b5a77] 
+          before:absolute 
+          relative
+          before:block 
+          before:w-[100%] 
+          before:opacity-80 
+          before:h-[100%] 
+          before:left-[0px] 
+          before:top-[0px] 
+          bg-cover
+          z-[9]
+          bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHZUFe2nfBX2ghGWyZbNqenzucSWFEI9Ub_6qZjDx0TCsXyOmTdlyCtRU-xOh3DN3vFGw&usqp=CAU')] 
+          p-8 
+          h-full"
+          >
+            <h2 className="text-3xl font-semibold text-white tracking-wider mb-2 relative z-[9]">
+              ADMISSION REQUIRMENTS FOR MBA
+            </h2>
+            <span className="w-24 h-[3px] bg-[#fff] block relative z-[9]"></span>
+
+            <p className="mb-4 text-[18px] text-[#fff] text-justify mt-[16px] relative z-[9]">
+              The Master is addressed to students and professionals holding a
+              bachelor degree who want to receive specialized training on the
+              major issues related to contemporary global business.
+            </p>
+            <p className="mb-4 text-[18px] text-[#fff] text-justify mt-[16px] relative z-[9]">
+              <b>
+                AS A FIRST STEP, STUDENT INTERESTED TO ENROLL MUST SEND TO OUR
+                ADMISSIONS OFFICE THE FOLLOWING DOCUMENTS:
+              </b>
+            </p>
+            <ul className="mt-4 list-disc ml-[20px] relative z-[9]">
+              <li className=" text-[#fff]">
+                Copy of the identity document (possibly a passport or any
+                national valid identity document).
+              </li>
+              <li className=" text-[#fff]">
+                CV – Curriculum Vitae or Motivational letter if the student
+                doesn’t have any professional experience.
+              </li>
+              <li className=" text-[#fff]">
+                Copy of the bachelors degree and/or transcripts (we accept it in
+                the original language).
+              </li>
+            </ul>
+
+            <div className="grid grid-cols-[50%_50%] gap-[10px] relative z-[9]">
+              {requirementsambaarry?.map((item, index) => {
+                return (
+                  <>
+                    <div
+                      key={index}
+                      className="bg-[#fff] rounded-[8px] flex flex-col gap-[10px] p-[15px]"
+                    >
+                      <div className="image m-auto">
+                        <img src={item.image} alt={item.title} />
+                      </div>
+
+                      <div className="contentbox">
+                        <h3 className="mb-0 text-center text-[20px]">
+                          {item.title}
+                        </h3>
+                        <p className="mb-0 text-center text-[14px]">
+                          {item.content}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="bg-[#fff] p-8 h-full">
+            <h2 className="text-3xl font-semibold text-black tracking-wider mb-2 relative z-[9]">
+              ADMISSION REQUIRMENTS FOR MCS
+            </h2>
+            <span className="w-24 h-[3px] bg-black block relative z-[9]"></span>
+
+            <p className="mb-4 text-[18px] text-black text-justify mt-[16px] relative z-[9]">
+              THEMASTERISADDRESSEDTO:
+            </p>
+
+            <ul className="mt-4 list-disc ml-[20px] relative z-[9]">
+              <li className=" text-black">
+                Individuals with a technology background who wantto become
+                experts in cybersecurity and artificial intelligence.
+              </li>
+              <li className=" text-black">
+                Individuals with an engineering background and an
+                entrepreneurial mindset who wantto starttheir own business in
+                the domain ofthreat detection and prevention using data
+                analytics.
+              </li>
+              <li className=" text-black">
+                Security professionals who wantto advance their skills in data
+                analytics.
+              </li>
+            </ul>
+
+            <p className="mb-4 text-[18px] text-black text-justify mt-[16px] relative z-[9]">
+              AS A FIRST STEP,STUDENT INTERESTED TO ENROLL MUST SEND TO OUR
+              ADMISSIONS OFFICE THE FOLLOWING DOCUMENTS:
+            </p>
+
+            <ul className="mt-4 list-disc ml-[20px] relative z-[9]">
+              <li className=" text-black">
+                Copy ofthe identity document (possibly a passport or any
+                national valid identity document).
+              </li>
+              <li className=" text-black">
+                CV – Curriculum Vitae or Motivational letterifthe student
+                doesn’t have any professional experience.
+              </li>
+              <li className=" text-black">
+                Copy ofthe bachelors degree and/ortranscripts (we acceptitin the
+                original language){" "}
+              </li>
+            </ul>
+
+            <div className="grid grid-cols-[50%_50%] gap-[10px] relative z-[9]">
+              {requirementsamcsarry?.map((item, index) => {
+                return (
+                  <>
+                    <div
+                      key={index}
+                      className="bg-[#3b5a77] rounded-[8px] flex flex-col gap-[10px] p-[15px]"
+                    >
+                      <div className="image m-auto">
+                        <img src={item.image} alt={item.title} />
+                      </div>
+
+                      <div className="contentbox">
+                        <h3 className="mb-0 text-[#fff] text-center text-[20px]">
+                          {item.title}
+                        </h3>
+                        <p className="mb-0 text-[#fff] text-center text-[14px]">
+                          {item.content}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-8 items-center sm:px-12 px-4 mt-12 bg-green-100 py-12">
+          <Image
+            src={"/miadigital/Capture.jpg"}
+            alt="certificate"
+            width={850}
+            height={850}
+            className="w-full h-auto rounded-xl"
+          />
+          <div>
+            <h2 className="font-semibold sm:text-6xl text-2xl sm:text-left text-center mb-8">
+              CERTIFICATION
+            </h2>
+            <p className="text-xl mb-4 text-justify">
+              <b>ACCREDITATION </b>
+              RATINGS World Universities Rankings RANKINGS AND INTERNATIONAL
+              RECOGNITION
+            </p>
+            <p className="text-xl mb-4 text-justify">
+              MIA Digital University s master degree programs are accredited
+              under the European Higher Education Area (EHEA), awarding students
+              60 ECTS, equivalent to 1,500 hours of instruction.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-[#000] py-[20px] text-center ">
+          <div className="flex justify-center items-center">
+            <div className="flex gap-[10px]">
+              <div className="flex justify-center items-center">
+                <Image
+                  src={"/kanpur/phone-line.svg"}
+                  width={20}
+                  height={20}
+                  alt=""
+                />
+              </div>
+              <div className="text-[18px] text-white">+91 8448 198 656</div>
+            </div>
+
+            <div className="flex gap-[10px]">
+              <div className="flex justify-center items-center">
+                <Image
+                  src={"/kanpur/global-line.svg"}
+                  width={20}
+                  height={20}
+                  alt=""
+                />
+              </div>
+              <div className="text-[18px] text-white">www.eduxll.com</div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
 };
 export default MiaDigital;
+
+const requirementsambaarry = [
+  {
+    image: "/miadigital/time-fill.svg",
+    title: "DURATION",
+    content: "12 MONTHS",
+  },
+  {
+    image: "/miadigital/graduation-cap-fill.svg",
+    title: "DEGREE AWARDED",
+    content: "MASTER GLOBAL MBA",
+  },
+  {
+    image: "/miadigital/money-rupee-circle-fill.svg",
+    title: "PROGRAM FEES",
+    content: "INR. 2,79,000 + GST",
+  },
+  {
+    image: "/miadigital/global-fill.svg",
+    title: "LANGUAGE",
+    content: "ENGLISH",
+  },
+];
+const requirementsamcsarry = [
+  {
+    image: "/miadigital/time-fill.svg",
+    title: "DURATION",
+    content: "12 MONTHS",
+  },
+  {
+    image: "/miadigital/graduation-cap-fill.svg",
+    title: "DEGREE AWARDED",
+    content: "Masters in Computer Science",
+  },
+  {
+    image: "/miadigital/money-rupee-circle-fill.svg",
+    title: "PROGRAM FEES",
+    content: "INR. 2,95,000 + GST",
+  },
+  {
+    image: "/miadigital/global-fill.svg",
+    title: "LANGUAGE",
+    content: "ENGLISH",
+  },
+];
