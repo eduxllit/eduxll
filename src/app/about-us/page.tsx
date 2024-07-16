@@ -10,7 +10,7 @@ const AboutUs = () => {
         <div className="bg-gradient-to-r from-[#052044] to-transparent">
           <div className="text-white font-semibold lg:h-[300px] sm:h-[220px] h-[160px] grid content-center items-center sm:px-32 px-8">
             <h2 className="sm:text-4xl text-2xl block">About Us</h2>
-            <p className="sm:text-md text-sm font-normal mt-2">
+            <p className="sm:text-md   font-normal mt-2">
               <Link href={"#"}>Home</Link> /{" "}
               <Link href={"#"} className="text-[#97f1b9]">
                 About Us
@@ -24,10 +24,10 @@ const AboutUs = () => {
           <h3 className="sm:text-3xl text-2xl sm:text-left text-center font-semibold mb-2">
             About eduXLL
           </h3>
-          <p className="text-sm mb-[16px] text-justify">
+          <p className="  mb-[16px] text-justify">
             At eduXLL, we are redefining the boundaries of online education by
             offering a platform where ambition meets opportunity. Born from a
-            vision to make high-quality education accessible to all, EduXLL
+            vision to make high-quality education accessible to all, eduXLL
             bridges the gap between learners and their aspirations through a
             meticulously curated catalog of online courses. Our mission is to
             empower individuals around the globe by providing them with the
@@ -35,12 +35,12 @@ const AboutUs = () => {
             personal development.
           </p>
 
-          <p className="text-sm mb-[16px] text-justify">
+          <p className="  mb-[16px] text-justify">
             (eduXLL, a company owned by EDOVU VENTURES PRIVATE LIMITED committed
             to deliver world class education all over the world.)
           </p>
 
-          <p className="text-sm  mb-[16px] text-justify">
+          <p className="   mb-[16px] text-justify">
             Our unique educational model is built on the foundation of
             partnership with pioneering institutions and distinguished industry
             experts. This collaborative approach ensures our curriculum is not
@@ -50,7 +50,7 @@ const AboutUs = () => {
             interests and career paths, from business and technology to creative
             arts and beyond.
           </p>
-          <p className="text-sm text-justify">
+          <p className="   mb-[16px] text-justify">
             What sets eduXLL apart is our commitment to creating an engaging and
             supportive learning environment. Our platform is intuitive,
             user-friendly, and equipped with cutting-edge technology to deliver
@@ -60,7 +60,7 @@ const AboutUs = () => {
             learning with us a truly international experience.
           </p>
 
-          <p className="text-sm text-justify">
+          <p className="   mb-[16px] text-justify">
             In a world where continuous learning is the key to success, eduXLL
             stands as a beacon for those who seek to elevate themselves. Join us
             on this journey of discovery and growth. Your future starts here, at
@@ -113,24 +113,23 @@ const AboutUs = () => {
             <section className="sm:py-[50px] py-[20px]">
         <div className="max-w-[1200px] px-4 m-auto">
           <div className="grid grid-cols-2 sm:gap-[50px] gap-[30px] flex-1 justify-between">
-            <div className="text-sm text-justify p-[25px] bg-[#f3f3f3] rounded-[8px]">
+            <div className="  text-justify p-[25px] bg-[#f3f3f3] rounded-[8px]">
               <h3 className="sm:text-3xl text-center text-2xl sm:text-left text-center font-semibold ">
                 Our Vision
               </h3>
-              <p className="text-sm text-justify">
-                To create a learner-friendly knowledge platform that ensures and
+              <p className="   mb-[16px] text-justify">
+              To create a learner-friendly knowledge platform that ensures and
                 facilitate world-class quality of learning & teaching by
                 providing curriculum that is personalized, learner-focused,
                 flexible and inspiring, thus motivating learners to excel in
                 academics and professional environments..
               </p>
             </div>
-            <div className="text-sm text-justify  p-[25px] bg-[#f3f3f3] rounded-[8px]">
+            <div className="  text-justify  p-[25px] bg-[#f3f3f3] rounded-[8px]">
               <h3 className="text-3xl sm:text-left text-center font-semibold ">
                 Our Mission
               </h3>
-              <p className=" ">
-                {" "}
+              <p className="   mb-[16px] text-justify">
                 Prosper the spirit of continuous and comprehensive academic
                 excellence among all learners, and create courses with
                 customized learning opportunities for all participants that
@@ -147,8 +146,8 @@ const AboutUs = () => {
             <h3 className="sm:text-3xl text-2xl text-justify font-semibold ">
               Our Aim
             </h3>
-            <p className=" text-justify">
-              eduXLL envisions becoming a pivotal gateway for learners
+            <p className="   mb-[16px] text-justify">
+            eduXLL envisions becoming a pivotal gateway for learners
               worldwide, seeking to unlock their full potential and embark on
               prosperous career paths in Europe. By offering meticulously
               designed courses that are aligned with the European job
@@ -170,7 +169,7 @@ const AboutUs = () => {
             <h3 className="sm:text-3xl text-2xl text-justify font-semibold ">
             About Edovu Ventures
             </h3>
-            <p className=" text-justify">
+            <p className="   mb-[16px] text-justify">
             At Edovu Ventures, we empower the future through cutting-edge education solutions around the globe.
              As the parent company of K12 Schools, American EduGlobal Schools and eduXLL, we are pioneers in 
             shaping the educational landscape, providing world-class learning experiences to our students.

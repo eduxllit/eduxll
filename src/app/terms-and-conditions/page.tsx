@@ -131,7 +131,6 @@ that You will be the sole and exclusive owner and the only authorised user of th
 and User Password and accept sole responsibility for relating to its use, confidentiality
 and protection as well as for all account transactions initiated through Your account on
 eduXLL. You will not share the User ID and User Password with anyone, and You shall be
-<br/> <br/>
 solely liable and responsible for all the activities undertaken through Your account, and any
 consequences therefrom.
 <br/> <br/>
@@ -163,7 +162,7 @@ being provided by You for any reason whatsoever.
 
           </p>
           <br/>
-          <h2 className="text-[20px] font-[600] mb-[0px] capitalize">
+          <h2 className="text-[20px] font-[600] mb-[0px] ">
           eduXLL AVAILABLITY AND COMMUNICATION                    </h2>
           <p className="text-justify">
             <br/>
@@ -194,7 +193,7 @@ medium of communication on eduXLL shall be in English.
             </p> <br/>
 
             <br/>
-          <h2 className="text-[20px] font-[600] mb-[0px] capitalize">
+          <h2 className="text-[20px] font-[600] mb-[0px] ">
           TRANSACTIONS ON eduXLL                    </h2>
           <p className="text-justify">
             <br/>

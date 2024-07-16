@@ -180,7 +180,7 @@ and has also been a visiting faculty and trainer at B-Schools.
                 </h5>
                 <p className="text-sm mb-[16px] text-[#333] text-justify">
                 A distinguished educationist with an illustrious career spanning over 30 years, Dr. Srivastava continues to leave an indelible mark
-as a Professor and academic administrator. Notably, he has been serving as the Pro Vice chancellor of IMS Unison University
+as a Professor and academic administrator. Notably, he has served as the Pro Vice chancellor of IMS Unison University
 Dehradun. He has earlier served in senior academic and administrative positions at IMT Ghaziabad, FORE School of
 Management, IIM Lucknow, SP Jain and other reputed B-Schools. Prof. Ravikesh did his PhD from Banaras Hindu University.
 
