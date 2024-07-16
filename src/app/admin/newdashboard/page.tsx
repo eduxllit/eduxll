@@ -7,7 +7,7 @@ const NewDashboard = () => {
   return (
     <>
       <SideBarLayout>
-        <div>jhkjkh</div>
+        <div>Welcome to eduXLL</div>
       </SideBarLayout>
     </>
   );
