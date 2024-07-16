@@ -22,8 +22,6 @@ const FreeCourseList = async () => {
   const response: any = await getAllInquires();
   console.log("response inquires", { response });
 
-
-
   return (
     <>
       <SideBarLayout>
@@ -73,11 +71,14 @@ const FreeCourseList = async () => {
                                 Course Name
                               </a>
                             </th>
+                            <th className="p-3 text-xs font-medium tracking-wider text-start text-gray-700 dark:text-gray-400 uppercase">
+                              <a href="#" className="dataTable-sorter">
+                                Action
+                              </a>
+                            </th>
                           </tr>
                         </thead>
-                        <Tbody 
-                        response={response}
-                        />
+                        <Tbody response={response} />
                         {/* <tbody>
                           {response?.map((user: any, index: any) => (
                             <>
