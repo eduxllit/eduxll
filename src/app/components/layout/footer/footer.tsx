@@ -147,7 +147,7 @@ const Footer = () => {
                   </li>
                   <li className="text-[15px] text-[#808292] mb-[8px] font-medium">
                     <span className="text-[#21225f]">Phone:</span>
-                    +91 8448 198 656 
+                    +91 8448 198 656
                   </li>
                 </ul>
               </div>
@@ -190,15 +190,15 @@ const serarry = [
     link: "https://www.facebook.com/eduxllofficial/",
   },
   {
-    serarryicon: "soc/instagram-fill.svg",
+    serarryicon: "/soc/instagram-fill.svg",
     link: "https://www.instagram.com/eduxllofficial/?igsh=dzcya3doMWZwdzVn%20",
   },
   {
-    serarryicon: "soc/linkedin-fill.svg",
+    serarryicon: "/soc/linkedin-fill.svg",
     link: "https://www.linkedin.com/company/eduxll/?viewAsMember=true%20",
   },
   {
-    serarryicon: "soc/twitter-fill.svg",
+    serarryicon: "/soc/twitter-fill.svg",
     link: "https://twitter.com/eduxllofficial",
   },
 ];

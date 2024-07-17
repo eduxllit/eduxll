@@ -31,6 +31,7 @@ const News = async ({ params }: any) => {
   const paramA = params.id;
   const response = await getSingleBlog(paramA);
   console.log(params, "check kro bhai");
+  console.log(response, "response");
 
   return (
     <>
