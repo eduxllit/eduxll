@@ -41,7 +41,7 @@ const Header = () => {
   const [isToggled, setIsToggled] = useState(false);
   const [openPopup, setOpenPopup] = useState(false);
 
-  const [isToggleAbout,setIsToggledAbout] = useState(false);
+  const [isToggleAbout, setIsToggledAbout] = useState(false);
 
   // const userModelRef = useOnClickOutside(() => setIsToggled(false));
 
@@ -96,13 +96,12 @@ const Header = () => {
       : [];
 
   const ref = useRef<any>(null);
-  const refAbout = useRef<any>(null)
+  const refAbout = useRef<any>(null);
 
   useEffect(() => {
     const handleOutSideClick = (event: any) => {
       if (!ref.current?.contains(event.target)) {
         setIsToggled(false);
-       
       }
     };
 
@@ -116,7 +115,6 @@ const Header = () => {
     const handleOutSideClick = (event: any) => {
       if (!refAbout.current?.contains(event.target)) {
         setIsToggledAbout(false);
-       
       }
     };
 
@@ -208,8 +206,7 @@ const Header = () => {
                               )}
                             </div>
                           </div>
-                        ) :
-                        item?.menu==="About Us" ? (
+                        ) : item?.menu === "About Us" ? (
                           <div
                             className="flex items-center text-[15px] font-[400] text-[#000] relative"
                             onClick={() => setIsToggledAbout(!isToggleAbout)}
@@ -252,9 +249,7 @@ const Header = () => {
                               )}
                             </div>
                           </div>
-                        )
-                        :
-                        (
+                        ) : (
                           <a
                             onClick={() => toggleMore(item.menu)}
                             className="text-[15px] font-[400] text-[#000] !rounded-lg p-[10px] hover:bg-[#fcf1f5] hover:text-[#ee2c3c]"
@@ -435,7 +430,7 @@ const Header = () => {
                       </h3>
 
                       <div className="flex flex-wrap relative tabsliderlayout   gap-[10px] gap-y-[5px] my-[10px]">
-                        <Slidernav1 navfix="3" navsize="25" />
+                        {/* <Slidernav1 navfix="3" navsize="25" /> */}
                         <Swiper
                           slidesPerView={"auto"}
                           spaceBetween={15}
