@@ -1,9 +1,7 @@
 import mongoose from "mongoose";
 
-
-
 const MONGO_URI =
-  "mongodb+srv://nehat786:barbi78692@cluster0.2yzdsru.mongodb.net/";
+  "mongodb+srv://eduxllit:wWf84ndqEIgg4Q7y@cluster0.llhmwak.mongodb.net/";
 
 export async function connect() {
   try {
