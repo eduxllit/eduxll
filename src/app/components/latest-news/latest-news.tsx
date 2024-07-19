@@ -61,12 +61,14 @@ const LatestNews = ({ category }: any) => {
               Read Our Latest Blogs
             </h2>
             <div className="flex sm:mt-0 mt-4">
+            <Link href="/blogs" className="max-sm:hidden">
             <Button
               text={"View All  "}
               className={
                 "justify-center m-auto items-center gap-spacing8 inline-flex whitespace-nowrap bg-gradient-to-r from-[#ee2c3c] to-[#da202f] rounded-lg shadow-cta text-white font-medium px-spacing24 py-spacing14 md:py-spacing10 z-10 min-w-124px"
               }
             />
+           </Link>
             </div>
           </div>
 

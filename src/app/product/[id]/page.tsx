@@ -233,7 +233,7 @@ const ProductPage = async ({ params }: any) => {
             </div>
           </section>
 
-          <div className="md:mx-20  pt-[30px]  px-4" id="overview">
+          <div className="md:mx-15  pt-[30px]  px-4" id="overview">
             <div className="grid sm:grid-cols-[2fr_1fr] gap-[30px]">
               <div className="lg:pl-16">
                 <div
@@ -266,7 +266,7 @@ const ProductPage = async ({ params }: any) => {
             <div className="md:max-w-[1200px] w-[100%] mx-auto px-[15px] ">
               <div className="grid sm:grid-cols-2 gap-4 items-center">
                 <div className="certificatebigimage p-[20px] bg-[#fff] border border-[#cfcece]  certificate shadow-[0px 0px 10px] shadow-[#cfcbcb]">
-                  <div>
+                  <div class="md:mx-15  pt-[30px]  px-4">
                     <Image
                       src={response?.universityImage}
                       width={600}

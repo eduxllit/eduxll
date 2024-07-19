@@ -37,23 +37,23 @@ const coursesArray = [
     
     imageUrl: "/svg/code-box-line.svg",
     title: "Computer Applications",
-    linkuel: "/product/mca-from-manipal-university-jaipur1",
+    linkuel: "/product/mca-manipal-university-jaipur",
   },
   
   {
     imageUrl: "/svg/bar-chart-2-line.svg",
     title: "Business Management",
-    linkuel: "/product/mca-manipal-university-jaipur1",
+    linkuel: "/product/mba-from-manipal-university-jaipur",
   },
   {
     imageUrl: "/svg/megaphone-line.svg",
     title: "Digital Marketing",
-    linkuel: "/product/mba-in-digital-marketing-from-amity-university",
+    linkuel: "/product/mba-in-digital-marketing-amity-university",
   },
   {
     imageUrl: "/svg/service-line.svg",
     title: "ESG and Business Sustainability",
-    linkuel: "/product/esg-and-business-sustainability-iit-kanpur",
+    linkuel: "/product/esg-and-business-sustainability-certificate-course-from-iit-kanpur",
   },
   {
     imageUrl: "/svg/handbag-line.svg",
@@ -63,16 +63,16 @@ const coursesArray = [
   {
     imageUrl: "/svg/database-2-line.svg",
     title: "Augmented and Virtual Reality",
-    linkuel: "/product/arvr-consultant-from-nasscome1",
+    linkuel: "/product/arvr-consultant-from-nasscome",
   },
   {
     imageUrl: "/svg/cloud-line.svg",
     title: "Cyber Security",
-    linkuel: "/product/security-analyst-from-nasscom1",
+    linkuel: "/product/security-analyst-from-nasscom",
   },
   {
     imageUrl: "/svg/brain-line.svg",
     title: "Blockchain Technology",
-    linkuel: "/product/blockchain-strategist-from-nasscom1",
+    linkuel: "/product/blockchain-strategist-from-nasscom",
   },
 ];
