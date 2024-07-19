@@ -2,10 +2,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+<!-- new -->
+
 First, run the development server:
+
 <!-- changes
  -->
-
 
  <!-- git command for code push
  git add .
