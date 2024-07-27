@@ -16,7 +16,7 @@ const Tbody = ({ response }: any) => {
 
   const [currentPage, setCurrentPage] = React.useState(1);
   const [postsPerPage] = React.useState(10);
-  const [currentPosts, setCurrentPosts] = React.useState(response.slice(0, 10));
+  const [currentPosts, setCurrentPosts] = React.useState(response.slice(0, 20));
   const handleClick = () => {
     setCurrentPosts(response.slice(0, currentPage * postsPerPage));
     setCurrentPage(currentPage + 1);
@@ -40,9 +40,10 @@ const Tbody = ({ response }: any) => {
     <>
     <div>
     {currentPosts?.map((user: any, index: any) => { 
+      console.log("user", {user});
       return(
 <>
-<span>
+<span key={index}>
   <div>
 
   first name : {user?.name}
