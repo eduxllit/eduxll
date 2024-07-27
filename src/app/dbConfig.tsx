@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const MONGO_URI =
-  "mongodb+srv://eduxllit:wWf84ndqEIgg4Q7y@cluster0.llhmwak.mongodb.net/";
+  process.env.NEXT_MONGODB_URI
 
 export async function connect() {
   try {
