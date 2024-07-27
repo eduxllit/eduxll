@@ -34,7 +34,8 @@ const FreeCourseList = async () => {
               <div className="sm:-mx-6 lg:-mx-8">
                 <div className="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
                   <div className="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
-                    <div className="dataTable-container">
+                  <Tbody response={response} />
+                    {/* <div className="dataTable-container">
                       <table
                         className="w-full border-collapse dataTable-table"
                         id="datatable_1"
@@ -50,12 +51,7 @@ const FreeCourseList = async () => {
                               <a href="#" className="dataTable-sorter">
                                 User Email
                               </a>
-                            </th>
-                            {/* <th className="p-3 text-xs font-medium tracking-wider text-start text-gray-700 dark:text-gray-400 uppercase">
-                              <a href="#" className="dataTable-sorter">
-                                Blog Description
-                              </a>
-                            </th> */}
+                            </th> 
                             <th className="p-3 text-xs font-medium tracking-wider text-start text-gray-700 dark:text-gray-400 uppercase">
                               <a href="#" className="dataTable-sorter">
                                 User Phone Number
@@ -79,50 +75,9 @@ const FreeCourseList = async () => {
                           </tr>
                         </thead>
                         <Tbody response={response} />
-                        {/* <tbody>
-                          {response?.map((user: any, index: any) => (
-                            <>
-                              <tr className="bg-white border-b border-dashed dark:bg-dark-card dark:border-gray-700">
-                                <td className="p-3 text-sm font-medium whitespace-nowrap dark:text-blue">
-                                  <div
-                                    className="titlemet titlemet line-clamp-1 max-w-[200px]"
-                                    title={user?.name}
-                                  >
-                                    {user?.name}
-                                  </div>
-                                </td>
-                                <td className="p-3  text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                  <div
-                                    className="titlemet line-clamp-1 max-w-[200px]"
-                                    title={user?.email}
-                                  >
-                                    {user?.email}
-                                  </div>
-                                </td>
-
-                                <td className="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                  {user?.phone}
-                                </td>
-                                <td className="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                  <div className="flex gap-[10px]">
-                                    {user?.work_experience}
-                                  </div>
-                                </td>
-                                <td
-                                  className="p-3 text-sm font-medium whitespace-nowrap dark:text-blue"
-                                  key={index}
-                                >
-                                  {user?.courseName}
-                                </td>
-                              </tr>
-                            </>
-                          ))}
-                          {response?.map((blog: any, index: any) => {
-                            return <></>;
-                          })}
-                        </tbody> */}
+                        
                       </table>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

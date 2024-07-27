@@ -38,7 +38,35 @@ const Tbody = ({ response }: any) => {
 
   return (
     <>
-      <tbody>
+    <div>
+    {currentPosts?.map((user: any, index: any) => { 
+      return(
+<>
+<span>
+  <div>
+
+  first name : {user?.name}
+  </div>
+  <div>
+
+  Email : {user?.email}
+  </div>
+  <div>
+
+  Phone : {user?.phone} 
+  </div>
+  <div>
+
+  Course Name : {user?.courseName}
+  </div>
+
+</span>
+</>
+      )
+    }
+    )}
+    </div>
+      {/* <tbody>
         {currentPosts?.map((user: any, index: any) => {
           const id = user?._id.toString();
           return (
@@ -87,7 +115,7 @@ const Tbody = ({ response }: any) => {
         {response?.map((blog: any, index: any) => {
           return <></>;
         })}
-      </tbody>
+      </tbody> */}
 
       <div>
         <button
