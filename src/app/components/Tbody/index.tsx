@@ -1,10 +1,6 @@
 "use client";
 import React from "react";
 import Button from "../button/Button";
-import DeleteBlogButton from "../blog/DeleteBlogButton";
-import Image from "next/image";
-import axios from "axios";
-import { useRouter } from "next/navigation";
 
 type TbodyProps = {
   response: any;
@@ -12,108 +8,71 @@ type TbodyProps = {
 
 const Tbody = ({ response }: any) => {
   // need when user click on show more button load other 10 data and in starting it will show 10 data
-  const router = useRouter();
-
-  const [dynamicData, setDynamicData] = React.useState<any>([]);
-
-  console.log("dynamicData", { dynamicData });
-
-  React.useEffect(() => {
-    setDynamicData(response);
-  }, [response]);
-
   const [currentPage, setCurrentPage] = React.useState(1);
-  const [postsPerPage] = React.useState(10);
-  const [currentPosts, setCurrentPosts] = React.useState(
-    dynamicData.slice(0, 20)
-  );
-
+  const [postsPerPage] = React.useState(11);
+  const [currentPosts, setCurrentPosts] = React.useState(response.slice(0, 11));
   const handleClick = () => {
-    setCurrentPosts(dynamicData.slice(0, currentPage * postsPerPage));
+    setCurrentPosts(response.slice(0, currentPage * postsPerPage));
     setCurrentPage(currentPage + 1);
   };
 
-  const handleDeleteBlog = async (id: any) => {
-    console.log("sahil id check", id);
-    try {
-      const response = await axios.delete(`/api/inquiry/${id}`);
-      if (response.status === 200) {
-        // alert("Deleted Successfully");
-      }
+  React.useEffect(() => {
+    setCurrentPosts(response.slice(0, 11));
+  }, [response]);
 
-      router.push("/admin/newdashboard/inquires");
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  console.log("currentPosts", { currentPosts });
 
   return (
     <>
-      <div>
-        {dynamicData?.map((user: any, index: any) => {
-          console.log("user", { user });
-          return (
-            <>
-              <span key={index}>
-                <div>first name : {user?.name}</div>
-                <div>Email : {user?.email}</div>
-                <div>Phone : {user?.phone}</div>
-                <div>Course Name : {user?.courseName}</div>
-              </span>
-            </>
-          );
-        })}
-      </div>
-      {/* <tbody>
-        {currentPosts?.map((user: any, index: any) => {
-          const id = user?._id.toString();
-          return (
-            <>
-              <tr className="bg-white border-b border-dashed dark:bg-dark-card dark:border-gray-700">
-                <td className="p-3 text-sm font-medium whitespace-nowrap dark:text-blue">
-                  <div
-                    className="titlemet titlemet line-clamp-1 max-w-[200px]"
-                    title={user?.name}
-                  >
-                    {user?.name}
-                  </div>
-                </td>
-                <td className="p-3  text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                  <div
-                    className="titlemet line-clamp-1 max-w-[200px]"
-                    title={user?.email}
-                  >
-                    {user?.email}
-                  </div>
-                </td>
-
-                <td className="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                  {user?.phone}
-                </td>
-                <td className="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                  <div className="flex gap-[10px]">{user?.work_experience}</div>
-                </td>
-                <td
-                  className="p-3 text-sm font-medium whitespace-nowrap dark:text-blue"
-                  key={index}
+      <tbody>
+        {currentPosts?.map((user: any, index: any) => (
+          <>
+            <tr className="bg-white border-b border-dashed dark:bg-dark-card dark:border-gray-700">
+              <td className="p-3 text-sm font-medium whitespace-nowrap dark:text-blue">
+                <div
+                  className="titlemet titlemet line-clamp-1 max-w-[200px]"
+                  title={index + 1}
                 >
-                  {user?.courseName}
-                </td>
-                <td
-                  className="p-3 text-sm font-medium whitespace-nowrap dark:text-blue"
-                  key={index}
+                  {index + 1}
+                </div>
+              </td>
+              <td className="p-3 text-sm font-medium whitespace-nowrap dark:text-blue">
+                <div
+                  className="titlemet titlemet line-clamp-1 max-w-[200px]"
+                  title={user?.name}
                 >
-                  <DeleteBlogButton id={id} model="inquiry" />
-                </td>
-              </tr>
-            </>
-          );
-        })}
+                  {user?.name}
+                </div>
+              </td>
 
+              <td className="p-3  text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                <div
+                  className="titlemet line-clamp-1 max-w-[200px]"
+                  title={user?.email}
+                >
+                  {user?.email}
+                </div>
+              </td>
+
+              <td className="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                {user?.phone}
+              </td>
+              <td className="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                <div className="flex gap-[10px]">{user?.work_experience}</div>
+              </td>
+              <td
+                className="p-3 text-sm font-medium whitespace-nowrap dark:text-blue"
+                key={index}
+              >
+                {user?.courseName}
+              </td>
+            </tr>
+          </>
+        ))}
         {response?.map((blog: any, index: any) => {
           return <></>;
         })}
-      </tbody> */}
+      </tbody>
 
       <div>
         <button
@@ -125,7 +84,7 @@ const Tbody = ({ response }: any) => {
             marginTop: "20px",
           }}
         >
-          {currentPosts?.length === 1 ? "Show More" : "No More Data"}
+          {currentPosts?.length === 1 ? " No More Data" : "Show More"}
         </button>
       </div>
     </>
