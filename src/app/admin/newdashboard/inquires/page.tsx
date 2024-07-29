@@ -8,17 +8,6 @@ import DeleteFreeCourseButton from "@/app/components/free-Course/DeleteFreeCours
 import Inquiry from "@/app/models/inquiryModel";
 import Tbody from "@/app/components/Tbody";
 
-// const getAllInquires = async () => {
-//   try {
-//     connect();
-//     const inquires = await Inquiry.find();
-//     return inquires;
-//   } catch (error) {
-//     return error;
-//   }
-// };
-
-// need to get data from database and show it here in table and Rebuild the page every 10 seconds to get the latest data from the database
 const getAllInquires = async () => {
   try {
     connect();
@@ -32,11 +21,6 @@ const getAllInquires = async () => {
 const FreeCourseList = async () => {
   const response: any = await getAllInquires();
   console.log("response inquires", { response });
-  //Rebuild the page every 10 seconds to get the latest data from the database of response
-  setInterval(async () => {
-    const response: any = await getAllInquires();
-    console.log("response inquires", { response });
-  }, 1000);
 
   return (
     <>
