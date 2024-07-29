@@ -14,11 +14,22 @@ const Tbody = ({ response }: any) => {
   // need when user click on show more button load other 10 data and in starting it will show 10 data
   const router = useRouter();
 
+  const [dynamicData, setDynamicData] = React.useState<any>([]);
+
+  console.log("dynamicData", { dynamicData });
+
+  React.useEffect(() => {
+    setDynamicData(response);
+  }, [response]);
+
   const [currentPage, setCurrentPage] = React.useState(1);
   const [postsPerPage] = React.useState(10);
-  const [currentPosts, setCurrentPosts] = React.useState(response.slice(0, 20));
+  const [currentPosts, setCurrentPosts] = React.useState(
+    dynamicData.slice(0, 20)
+  );
+
   const handleClick = () => {
-    setCurrentPosts(response.slice(0, currentPage * postsPerPage));
+    setCurrentPosts(dynamicData.slice(0, currentPage * postsPerPage));
     setCurrentPage(currentPage + 1);
   };
 
@@ -38,35 +49,21 @@ const Tbody = ({ response }: any) => {
 
   return (
     <>
-    <div>
-    {currentPosts?.map((user: any, index: any) => { 
-      console.log("user", {user});
-      return(
-<>
-<span key={index}>
-  <div>
-
-  first name : {user?.name}
-  </div>
-  <div>
-
-  Email : {user?.email}
-  </div>
-  <div>
-
-  Phone : {user?.phone} 
-  </div>
-  <div>
-
-  Course Name : {user?.courseName}
-  </div>
-
-</span>
-</>
-      )
-    }
-    )}
-    </div>
+      <div>
+        {dynamicData?.map((user: any, index: any) => {
+          console.log("user", { user });
+          return (
+            <>
+              <span key={index}>
+                <div>first name : {user?.name}</div>
+                <div>Email : {user?.email}</div>
+                <div>Phone : {user?.phone}</div>
+                <div>Course Name : {user?.courseName}</div>
+              </span>
+            </>
+          );
+        })}
+      </div>
       {/* <tbody>
         {currentPosts?.map((user: any, index: any) => {
           const id = user?._id.toString();
