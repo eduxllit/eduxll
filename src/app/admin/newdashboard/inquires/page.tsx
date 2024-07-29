@@ -10,7 +10,7 @@ import Tbody from "@/app/components/Tbody";
 
 const getAllInquires = async () => {
   try {
-    connect();
+    await connect();
     const inquires = await Inquiry.find();
     return inquires;
   } catch (error) {
@@ -34,7 +34,7 @@ const FreeCourseList = async () => {
               <div className="sm:-mx-6 lg:-mx-8">
                 <div className="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
                   <div className="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
-                  <Tbody response={response} />
+                    <Tbody response={response} />
                     {/* <div className="dataTable-container">
                       <table
                         className="w-full border-collapse dataTable-table"
