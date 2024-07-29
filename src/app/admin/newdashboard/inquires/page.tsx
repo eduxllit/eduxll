@@ -1,12 +1,6 @@
 "use client";
 import React from "react";
 import SideBarLayout from "../ui/sidebarlayout/page";
-import Image from "next/image";
-import { connect } from "@/app/dbConfig";
-import Link from "next/link";
-import DeleteBlogButton from "@/app/components/blog/DeleteBlogButton";
-import DeleteFreeCourseButton from "@/app/components/free-Course/DeleteFreeCourseButton";
-import Inquiry from "@/app/models/inquiryModel";
 import Tbody from "@/app/components/Tbody";
 import axios from "axios";
 import * as XLSX from "xlsx";
