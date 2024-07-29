@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import SideBarLayout from "../ui/sidebarlayout/page";
 import Image from "next/image";
@@ -7,20 +8,37 @@ import DeleteBlogButton from "@/app/components/blog/DeleteBlogButton";
 import DeleteFreeCourseButton from "@/app/components/free-Course/DeleteFreeCourseButton";
 import Inquiry from "@/app/models/inquiryModel";
 import Tbody from "@/app/components/Tbody";
+import axios from "axios";
 
-const getAllInquires = async () => {
-  try {
-    connect();
-    const inquires = await Inquiry.find();
-    return inquires;
-  } catch (error) {
-    return error;
-  }
-};
+// const getAllInquires = async () => {
+//   try {
+//     connect();
+//     const inquires = await Inquiry.find();
+//     return inquires;
+//   } catch (error) {
+//     return error;
+//   }
+// };
 
-const FreeCourseList = async () => {
-  const response: any = await getAllInquires();
-  console.log("response inquires", { response });
+const FreeCourseList = () => {
+  // const response: any = await getAllInquires();
+  // console.log("response inquires", { response });
+
+  const [response, setResponse] = React.useState<any>([]);
+
+  const getAllInquiryData = async () => {
+    const data = await axios.get("/api/inquiry");
+    if (data.status === 200) {
+      console.log("data inquiry", data);
+      setResponse(data?.data);
+    }
+  };
+
+  React.useEffect(() => {
+    getAllInquiryData();
+  }, []);
+
+  console.log("response data", { response });
 
   return (
     <>
