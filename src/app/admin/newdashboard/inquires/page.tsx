@@ -10,10 +10,17 @@ import Tbody from "@/app/components/Tbody";
 
 const getAllInquires = async () => {
   try {
+    console.log("Attempting to connect to the database...");
     await connect();
+    console.log("Connected to the database.");
+
+    console.log("Fetching inquiries...");
     const inquires = await Inquiry.find();
+    console.log("Inquiries fetched:", inquires);
+
     return inquires;
   } catch (error) {
+    console.error("Error fetching inquiries:", error);
     return error;
   }
 };
