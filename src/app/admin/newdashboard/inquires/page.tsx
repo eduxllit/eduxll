@@ -5,7 +5,7 @@ import { connect } from "@/app/dbConfig";
 import Link from "next/link";
 import DeleteBlogButton from "@/app/components/blog/DeleteBlogButton";
 import DeleteFreeCourseButton from "@/app/components/free-Course/DeleteFreeCourseButton";
-import Inquiry from "@/app/models/inquiryModel";
+import Inquiry from "../../../models/inquiryModel";
 import Tbody from "@/app/components/Tbody";
 
 const getAllInquires = async () => {
