@@ -54,18 +54,37 @@ const LogoSlider = () => {
                 return (
                   <>
                     <div className="flex  items-center justify-center h-[100% ] cursor-pointer">
-                      <Link href={item?.link} target="_blank">
-                        <Image
-                          src={item.logo}
-                          width={160}
-                          height={70}
-                          key={index}
-                          alt=""
-                          objectFit="contain"
-                          objectPosition="center"
-                          className="  h-[70px] object-contain  "
-                        />
-                      </Link>
+                      {item?.link === "#" ? (
+                        <>
+                          <Link href={item?.link} target="_self">
+                            <Image
+                              src={item.logo}
+                              width={160}
+                              height={70}
+                              key={index}
+                              alt=""
+                              objectFit="contain"
+                              objectPosition="center"
+                              className="  h-[70px] object-contain  "
+                            />
+                          </Link>
+                        </>
+                      ) : (
+                        <>
+                          <Link href={item?.link} target="_blank">
+                            <Image
+                              src={item.logo}
+                              width={160}
+                              height={70}
+                              key={index}
+                              alt=""
+                              objectFit="contain"
+                              objectPosition="center"
+                              className="  h-[70px] object-contain  "
+                            />
+                          </Link>
+                        </>
+                      )}
                     </div>
                   </>
                 );
