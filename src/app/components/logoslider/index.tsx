@@ -104,13 +104,19 @@ const logosliderarry = [
   //   logo: "/logoslider/5.webp",
   //   link: "#",
   // },
-   {
-     logo: "/logoslider/miauniv.png",
-     link: "#",
-   },
+  {
+    logo: "/logoslider/miauniv.png",
+    link: "#",
+  },
   {
     logo: "/logoslider/IIT-Kanpur.png",
-    link: "/IIT-kanpur",
+    // link: "/IIT-kanpur",
+    link: "#",
+  },
+  {
+    logo: "/logoslider/logo3.jpeg",
+    // link: "/IIT-kanpur",
+    link: "#",
   },
   {
     logo: "/logoslider/manipal-Univ.webp",
